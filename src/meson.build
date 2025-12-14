@@ -59,7 +59,7 @@ sources = files(
   'Layouts/HeaderBar.vala',
   'Layouts/SidebarSourceRow.vala',
   'Layouts/ProjectContainerRow.vala',
-  
+
   'Widgets/ColorPickerRow.vala',
   'Widgets/MagicButton.vala',
   'Widgets/EditableTextView.vala',
@@ -95,7 +95,7 @@ sources = files(
   'Views/Label/Labels.vala',
   'Views/Label/LabelSourceRow.vala',
   'Views/Filter.vala',
-  
+
   'Views/Scheduled/Scheduled.vala',
   'Views/Scheduled/ScheduledDay.vala',
   'Views/Scheduled/ScheduledRange.vala',
@@ -115,7 +115,7 @@ sources = files(
   'Dialogs/ItemChangeHistory.vala',
   'Dialogs/ErrorDialog.vala',
   'Dialogs/CompletedTasks.vala',
-  
+
   'Dialogs/QuickFind/QuickFind.vala',
   'Dialogs/QuickFind/QuickFindItem.vala',
   'Dialogs/QuickFind/Synapse.vala',
@@ -144,13 +144,18 @@ if get_option('evolution')
     sources += 'Dialogs/CalendarSync.vala'
 endif
 
+if is_windows
+    sources += import('windows').compile_resources('../data/io.github.alainm23.planify.rc')
+endif
+
 executable(
   application_id,
   sources,
   asresources,
   config_file,
   dependencies: deps,
-  install: true
+  install: true,
+  win_subsystem: 'windows'
 )
 
 

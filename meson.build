@@ -8,6 +8,8 @@ gnome = import('gnome')
 i18n = import('i18n')
 pkgconfig = import('pkgconfig')
 
+is_windows = (host_machine.system() == 'windows')
+
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 add_project_arguments('-DLIBICAL_GLIB_UNSTABLE_API=1', language: 'c')
 
@@ -130,8 +132,10 @@ summary({
   'Profile': get_option('profile'),
 }, section: 'Development')
 
+should_update_desktop_db = (not is_windows)
+
 gnome.post_install(
   glib_compile_schemas: true,
   gtk_update_icon_cache: true,
-  update_desktop_database: true,
+  update_desktop_database: should_update_desktop_db
 )
