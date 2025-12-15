@@ -161,7 +161,7 @@ if is_windows
   sources += import('windows').compile_resources(winrc_file)
 endif
 
-executable(
+app = executable(
   application_id,
   sources,
   asresources,
@@ -181,6 +181,7 @@ if is_windows
       'sh',
       '@INPUT@'
     ],
-    build_by_default: true
+    build_by_default: true,
+    depends: app
   )
 endif
