@@ -174,14 +174,13 @@ executable(
 # on Windows, run the script to put all necessary files in build/dist
 if is_windows
   win_dist = custom_target(
-      'win-dist',
-      input: '../build-aux/windows-build.sh',
-      output: 'some.txt',
-      command: [
+    'win-dist',
+    input: '../build-aux/windows-build.sh',
+    output: 'some.txt',
+    command: [
       'sh',
       '@INPUT@'
-      ],
-      build_by_default: true #,
-      # depends: app
+    ],
+    build_by_default: true
   )
 endif
