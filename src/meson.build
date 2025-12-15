@@ -4,27 +4,27 @@ deps = [
   m_dep
 ]
 
-if get_option('webkit')
-    if webkitgtk_dep.found()
-        deps += webkitgtk_dep
-    endif
+if with_webkit
+  if webkitgtk_dep.found()
+      deps += webkitgtk_dep
+  endif
 endif
 
 
-if get_option('portal')
-    if libportal_dep.found()
-        deps += libportal_dep
-    endif
-    if libportal_gtk4_dep.found()
-        deps += libportal_gtk4_dep
-    endif
+if with_portal
+  if libportal_dep.found()
+      deps += libportal_dep
+  endif
+  if libportal_gtk4_dep.found()
+      deps += libportal_gtk4_dep
+  endif
 endif
 
 
-if get_option('evolution')
-    if libedataserver_dep.found()
-        deps += libedataserver_dep
-    endif
+if with_evolution
+  if libedataserver_dep.found()
+      deps += libedataserver_dep
+  endif
 endif
 
 
@@ -138,14 +138,27 @@ sources = files(
   'Dialogs/Preferences/Pages/Accounts/InboxPage.vala'
 )
 
-if get_option('evolution')
+if with_evolution
     sources += 'Widgets/EventRow.vala'
     sources += 'Widgets/EventsList.vala'
     sources += 'Dialogs/CalendarSync.vala'
 endif
 
 if is_windows
-    sources += import('windows').compile_resources('../data/io.github.alainm23.planify.rc')
+  # if Windows build, prepare the resource file
+  if is_windows
+  # process the resource file (inject version number)
+  winrc_conf = configuration_data()
+  winrc_conf.set('version', meson.project_version().replace('.', ',') + ',0')
+  winrc_file = configure_file(
+      input: files('../data/io.github.alainm23.planify.rc.in'),
+      output: 'io.github.alainm23.planify.rc',
+      configuration: winrc_conf
+  )
+  endif
+
+  # apply Windows resource file (icon and metadata) to the executable
+  sources += import('windows').compile_resources(winrc_file)
 endif
 
 executable(
@@ -155,7 +168,20 @@ executable(
   config_file,
   dependencies: deps,
   install: true,
-  win_subsystem: 'windows'
+  win_subsystem: 'windows'  # prevent unnecessary console window on Windows
 )
 
-
+# on Windows, run the script to put all necessary files in build/dist
+if is_windows
+  win_dist = custom_target(
+      'win-dist',
+      input: '../build-aux/windows-build.sh',
+      output: 'some.txt',
+      command: [
+      'sh',
+      '@INPUT@'
+      ],
+      build_by_default: true #,
+      # depends: app
+  )
+endif

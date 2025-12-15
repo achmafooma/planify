@@ -8,7 +8,14 @@ gnome = import('gnome')
 i18n = import('i18n')
 pkgconfig = import('pkgconfig')
 
+# is this a Windows build?
 is_windows = (host_machine.system() == 'windows')
+
+# parse webkit, portal, and evolution options
+# on Windows these are unsupported and are forced to false
+with_webkit = (get_option('webkit') and not is_windows)
+with_portal = (get_option('portal') and not is_windows)
+with_evolution = (get_option('evolution') and not is_windows)
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 add_project_arguments('-DLIBICAL_GLIB_UNSTABLE_API=1', language: 'c')
@@ -28,7 +35,7 @@ libspelling = dependency('libspelling-1', required: get_option('spelling'))
 gtksourceview_dep = dependency('gtksourceview-5')
 m_dep = meson.get_compiler('c').find_library('m', required : false)
 
-if get_option('webkit')
+if with_webkit
     webkitgtk_dep = dependency('webkitgtk-6.0')
     add_project_arguments('-D', 'USE_WEBKITGTK', language: 'vala')
     if not webkitgtk_dep.found()
@@ -40,7 +47,7 @@ if libspelling.found ()
   add_project_arguments(['--define=WITH_LIBSPELLING'], language: 'vala')
 endif
 
-if get_option('portal')
+if with_portal
     libportal_dep = dependency('libportal', required: true)
     libportal_gtk4_dep = dependency('libportal-gtk4', required: true)
     add_project_arguments('-D', 'WITH_LIBPORTAL', language: 'vala')
@@ -52,7 +59,7 @@ if get_option('portal')
     endif
 endif
 
-if get_option('evolution')
+if with_evolution
     libecal_dep = dependency('libecal-2.0', version: '>= 3.45.1')
     libedataserver_dep = dependency('libedataserver-1.2', version: '>= 3.45.1')
     add_project_arguments('-D', 'WITH_EVOLUTION', language: 'vala')
@@ -132,6 +139,7 @@ summary({
   'Profile': get_option('profile'),
 }, section: 'Development')
 
+# desktop update not needed on Windows (throws a spurious error)
 should_update_desktop_db = (not is_windows)
 
 gnome.post_install(

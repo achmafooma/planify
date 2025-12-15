@@ -1,12 +1,11 @@
 #include <windows.h>  // Required for versioning macros
-1   24  "io.github.alainm23.planify.manifest"
 
-IDI_ICON1 ICON "icons/io.github.alainm23.planify.ico"
+IDI_ICON1 ICON "../../data/icons/io.github.alainm23.planify.ico"
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,0
- PRODUCTVERSION 1,0,0,0
  FILEFLAGSMASK 0x3fL
+ FILEVERSION @version@
+ PRODUCTVERSION @version@
  FILEFLAGS 0x0L
  FILEOS VOS_NT_WINDOWS32
  FILETYPE VFT_APP
@@ -15,14 +14,13 @@ BEGIN
     BEGIN
         BLOCK "040904B0"  // Language (English - United States)
         BEGIN
-            VALUE "CompanyName", "Alain"
-            VALUE "FileDescription", "Forget about forgetting things"
-            VALUE "FileVersion", "1.0.0.0"
-            VALUE "InternalName", "Planify"
-            VALUE "OriginalFilename", "io.github.alainm23.planify.exe"
-            VALUE "LegalCopyright", "GPL-3.0+ License"
             VALUE "ProductName", "Planify"
-            VALUE "ProductVersion", "1.0.0.0"
+            VALUE "ProductVersion", "@version@"
+            VALUE "FileVersion", "@version@"
+            VALUE "FileDescription", "Planify - Forget about forgetting things"
+            VALUE "CompanyName", "Alain"
+            VALUE "LegalCopyright", "GPL-3.0+ License"
+            VALUE "OriginalFilename", "io.github.alainm23.planify.exe"
         END
     END
     BLOCK "VarFileInfo"
