@@ -22,6 +22,10 @@ cp -rv /ucrt64/share/icons/Adwaita dist/share/icons
 cp -rv /ucrt64/share/icons/hicolor dist/share/icons
 cp -rv ../data/icons/hicolor dist/share/icons
 
+# copy the translation files
+mkdir -p dist/share/locale
+cp -rv po/* dist/share/locale/
+
 # copy the necessary glib schemas
 mkdir -p dist/share/glib-2.0/schemas
 cp -v /ucrt64/share/glib-2.0/schemas/gschemas.compiled dist/share/glib-2.0/schemas

@@ -181,6 +181,7 @@ if is_windows
       'sh',
       '@INPUT@'
     ],
+    install: false,
     build_by_default: true,
     depends: app
   )
