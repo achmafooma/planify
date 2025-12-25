@@ -27,7 +27,7 @@ msgstr "Розділи"
 msgid "Tasks"
 msgstr "Завдання"
 
-#: core/Enum.vala:177 core/Enum.vala:534 core/Objects/Filters/Labels.vala:33
+#: core/Enum.vala:177 core/Enum.vala:530 core/Objects/Filters/Labels.vala:33
 #: core/Widgets/LabelPicker/LabelButton.vala:76 src/Dialogs/LabelPicker.vala:46
 #: src/Dialogs/Preferences/Pages/Backup.vala:364 src/Layouts/ItemBoard.vala:781
 #: src/Layouts/ItemRow.vala:1294
@@ -42,82 +42,64 @@ msgstr "Фільтри"
 msgid "Lists"
 msgstr "Списки"
 
-#: core/Enum.vala:218
+#: core/Enum.vala:214
 msgid "Don't Repeat"
 msgstr "Не повторювати"
 
-#: core/Enum.vala:220
+#: core/Enum.vala:216
+#, fuzzy, c-format
 msgid "Every minute"
-msgstr "Кожну хвилину"
+msgid_plural "Every %d minutes"
+msgstr[0] "Кожну хвилину"
+msgstr[1] "Кожну хвилину"
 
-# c-format
-#: core/Enum.vala:220
-#, c-format
-msgid "Every %d minutes"
-msgstr "Кожні %d хвилин"
-
-#: core/Enum.vala:222
+#: core/Enum.vala:218
+#, fuzzy, c-format
 msgid "Every hour"
-msgstr "Щогодини"
+msgid_plural "Every %d hours"
+msgstr[0] "Щогодини"
+msgstr[1] "Щогодини"
 
-# c-format
-#: core/Enum.vala:222
-#, c-format
-msgid "Every %d hours"
-msgstr "Кожні %d годин"
-
-#: core/Enum.vala:224
+#: core/Enum.vala:220
+#, fuzzy, c-format
 msgid "Every day"
-msgstr "Щодня"
+msgid_plural "Every %d days"
+msgstr[0] "Щодня"
+msgstr[1] "Щодня"
 
-# # c-format
-#: core/Enum.vala:224
-#, c-format
-msgid "Every %d days"
-msgstr "Кожні %d днів"
-
-#: core/Enum.vala:226
+#: core/Enum.vala:222
+#, fuzzy, c-format
 msgid "Every week"
-msgstr "Щотижня"
+msgid_plural "Every %d weeks"
+msgstr[0] "Щотижня"
+msgstr[1] "Щотижня"
 
-# # c-format
-#: core/Enum.vala:226
-#, c-format
-msgid "Every %d weeks"
-msgstr "Кожні %d тижнів"
-
-#: core/Enum.vala:228
+#: core/Enum.vala:224
+#, fuzzy, c-format
 msgid "Every month"
-msgstr "Щомісяця"
+msgid_plural "Every %d months"
+msgstr[0] "Щомісяця"
+msgstr[1] "Щомісяця"
 
-# # c-format
-#: core/Enum.vala:228
-#, c-format
-msgid "Every %d months"
-msgstr "Кожні %d місяців"
-
-#: core/Enum.vala:230
+#: core/Enum.vala:226
+#, fuzzy, c-format
 msgid "Every year"
-msgstr "Щороку"
+msgid_plural "Every %d years"
+msgstr[0] "Щороку"
+msgstr[1] "Щороку"
 
-# # c-format
-#: core/Enum.vala:230
-#, c-format
-msgid "Every %d years"
-msgstr "Кожні %d років"
-
-#: core/Enum.vala:280 src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:39
+#: core/Enum.vala:276 src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:39
 #: src/Dialogs/Preferences/Pages/Accounts/NextcloudSetup.vala:38
 msgid "Nextcloud"
 msgstr "Nextcloud"
 
-#: core/Enum.vala:283 core/Services/CalDAV/CalDAVClient.vala:121
+#: core/Enum.vala:279 core/Services/CalDAV/CalDAVClient.vala:121
 #: src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:40
 #: src/Dialogs/Preferences/Pages/Accounts/CalDAVSetup.vala:42
 msgid "CalDAV"
 msgstr "CalDAV"
 
-#: core/Enum.vala:345 core/Enum.vala:531 core/Widgets/PriorityButton.vala:90
+#: core/Enum.vala:341 core/Enum.vala:527 core/Widgets/PriorityButton.vala:90
 #: src/Views/Project/Project.vala:501 src/Views/Project/Project.vala:546
 #: src/Views/Scheduled/Scheduled.vala:230
 #: src/Views/Scheduled/Scheduled.vala:259 src/Views/Today.vala:633
@@ -125,43 +107,43 @@ msgstr "CalDAV"
 msgid "Priority"
 msgstr "Пріоритет"
 
-#: core/Enum.vala:348
+#: core/Enum.vala:344
 msgid "Label"
 msgstr "Мітки"
 
-#: core/Enum.vala:351 src/Views/Project/Project.vala:499
+#: core/Enum.vala:347 src/Views/Project/Project.vala:499
 #: src/Views/Scheduled/Scheduled.vala:228 src/Views/Today.vala:631
 msgid "Due Date"
 msgstr "Дата виконання"
 
-#: core/Enum.vala:354 core/Widgets/SectionPicker/SectionButton.vala:35
+#: core/Enum.vala:350 core/Widgets/SectionPicker/SectionButton.vala:35
 #: src/Dialogs/CompletedTasks.vala:315 src/Widgets/ItemDetailCompleted.vala:80
 msgid "Section"
 msgstr "Розділ"
 
-#: core/Enum.vala:463
+#: core/Enum.vala:459
 msgid "Task Created"
 msgstr "Завдання створено"
 
-#: core/Enum.vala:466
+#: core/Enum.vala:462
 msgid "Task Updated"
 msgstr "Завдання оновлено"
 
-#: core/Enum.vala:522
+#: core/Enum.vala:518
 msgid "Content"
 msgstr "Зміст"
 
-#: core/Enum.vala:525 src/Dialogs/Project.vala:148 src/Dialogs/Section.vala:91
+#: core/Enum.vala:521 src/Dialogs/Project.vala:148 src/Dialogs/Section.vala:91
 #: src/Layouts/ItemRow.vala:1998 src/Layouts/ItemSidebarView.vala:181
 #: src/Widgets/EventRow.vala:321 src/Widgets/ItemDetailCompleted.vala:113
 msgid "Description"
 msgstr "Опис"
 
-#: core/Enum.vala:528 core/Objects/Filters/Scheduled.vala:48
+#: core/Enum.vala:524 core/Objects/Filters/Scheduled.vala:48
 msgid "Scheduled"
 msgstr "Заплановане"
 
-#: core/Enum.vala:537 core/Widgets/PinButton.vala:41
+#: core/Enum.vala:533 core/Widgets/PinButton.vala:41
 #: src/Layouts/ItemBoard.vala:762 src/Layouts/ItemBoard.vala:775
 #: src/Layouts/ItemRow.vala:1275 src/Layouts/ItemRow.vala:1288
 msgid "Pin"
@@ -330,10 +312,13 @@ msgstr "Завдання скопійовано в буфер обміну"
 
 # c-format
 #: core/Objects/Item.vala:1633 core/Utils/Util.vala:889
-#: src/Widgets/MultiSelectToolbar.vala:375
-#, c-format
+#: src/Widgets/MultiSelectToolbar.vala:376
+#: src/Widgets/MultiSelectToolbar.vala:379
+#, fuzzy, c-format
 msgid "Task moved to %s"
-msgstr "Завдання перемещіно в %s"
+msgid_plural "%d tasks moved to %s"
+msgstr[0] "Завдання перемещіно в %s"
+msgstr[1] "Завдання перемещіно в %s"
 
 # c-format
 #: core/Objects/Label.vala:206
@@ -670,13 +655,17 @@ msgstr "Нд,"
 
 #: core/Utils/Datetime.vala:639
 #, c-format
-msgid "in %d days"
-msgstr ""
+msgid "in %d day"
+msgid_plural "in %d days"
+msgstr[0] ""
+msgstr[1] ""
 
 #: core/Utils/Datetime.vala:641
 #, c-format
-msgid "%d days ago"
-msgstr ""
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] ""
+msgstr[1] ""
 
 #: core/Utils/Datetime.vala:660
 msgid "%a, %b %-e, %Y"
@@ -1338,12 +1327,12 @@ msgstr "Пошук"
 msgid "Search or Create"
 msgstr "Створити чи знайти"
 
-#: core/Widgets/MarkdownEditor.vala:1360 src/Layouts/ItemBoard.vala:842
+#: core/Widgets/MarkdownEditor.vala:1378 src/Layouts/ItemBoard.vala:842
 #: src/Layouts/ItemRow.vala:1362
 msgid "Apply"
 msgstr "Застосувати"
 
-#: core/Widgets/MarkdownEditor.vala:1365
+#: core/Widgets/MarkdownEditor.vala:1383
 msgid "Remove link"
 msgstr "Видалити посилання"
 
@@ -1565,15 +1554,14 @@ msgstr "Видалити всі виконані завдання"
 
 # # c-format
 #: src/Dialogs/CompletedTasks.vala:165
-#, c-format
+#, fuzzy, c-format
 msgid "This will delete %d completed task and its subtasks from project %s"
-msgstr "Буде видалено %d завершених завдань та їхні підзавдання з проєкту %s"
-
-# # c-format
-#: src/Dialogs/CompletedTasks.vala:166
-#, c-format
-msgid "This will delete %d completed tasks and their subtasks from project %s"
-msgstr "Бууде видалено %d завершених завдань та їхні підзавдання з проєкиу %s"
+msgid_plural ""
+"This will delete %d completed tasks and their subtasks from project %s"
+msgstr[0] ""
+"Буде видалено %d завершених завдань та їхні підзавдання з проєкту %s"
+msgstr[1] ""
+"Буде видалено %d завершених завдань та їхні підзавдання з проєкту %s"
 
 #: src/Dialogs/CompletedTasks.vala:322 src/Views/Project/Project.vala:596
 #: src/Views/Scheduled/Scheduled.vala:270 src/Views/Today.vala:673
@@ -1637,15 +1625,11 @@ msgstr ""
 
 # # c-format
 #: src/Dialogs/ItemChangeHistory.vala:138
-#, c-format
+#, fuzzy, c-format
 msgid "Load more history from %d week ago…"
-msgstr "Завантажити історію %d-тижневої давності…"
-
-# # c-format
-#: src/Dialogs/ItemChangeHistory.vala:139
-#, c-format
-msgid "Load more history from %d weeks ago…"
-msgstr "Завантажити історію %d-тижневої давності…"
+msgid_plural "Load more history from %d weeks ago…"
+msgstr[0] "Завантажити історію %d-тижневої давності…"
+msgstr[1] "Завантажити історію %d-тижневої давності…"
 
 #: src/Dialogs/Label.vala:45
 msgid "New Label"
@@ -2849,7 +2833,7 @@ msgstr "Planify перезавантажиться, щоб застосуват�
 msgid "Restart Now"
 msgstr "Перезавантажити зараз"
 
-#: src/Services/Backups.vala:566
+#: src/Services/Backups.vala:565
 msgid "Planify Backup Files"
 msgstr "Планування резервних копій файлів"
 
@@ -2889,24 +2873,19 @@ msgid "Great job, nothing left to do 🎉"
 msgstr "Чудова робота, більше нічого не залишилося робити 🎉"
 
 #: src/Views/Filter.vala:612
+#, fuzzy
 msgid "Delete Completed Task"
-msgstr "Видалити всі виконані завдання"
-
-#: src/Views/Filter.vala:613
-msgid "Delete Completed Tasks"
-msgstr "Видалити всі виконані завдання"
+msgid_plural "Delete Completed Tasks"
+msgstr[0] "Видалити всі виконані завдання"
+msgstr[1] "Видалити всі виконані завдання"
 
 # # c-format
 #: src/Views/Filter.vala:617
-#, c-format
+#, fuzzy, c-format
 msgid "This will delete %d completed task and its subtasks"
-msgstr "Будуть видалені завершені завдання (%d) та їх підзавдання"
-
-# # c-format
-#: src/Views/Filter.vala:618
-#, c-format
-msgid "This will delete %d completed tasks and their subtasks"
-msgstr "Будуть видалені завершені завдання (%d) та їх підзавдання"
+msgid_plural "This will delete %d completed tasks and their subtasks"
+msgstr[0] "Будуть видалені завершені завдання (%d) та їх підзавдання"
+msgstr[1] "Будуть видалені завершені завдання (%d) та їх підзавдання"
 
 #: src/Views/Label/LabelSourceRow.vala:49
 msgid "No labels available. Create one by clicking on the '+' button"
@@ -3120,13 +3099,17 @@ msgstr "Повідомити про проблему"
 
 #: src/Widgets/EventRow.vala:207
 #, c-format
-msgid "In %d minutes"
-msgstr "Через %d хвилин"
+msgid "In %d minute"
+msgid_plural "In %d minutes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/Widgets/EventRow.vala:209
 #, c-format
-msgid "In %d hours"
-msgstr "Через %d годин"
+msgid "In %d hour"
+msgid_plural "In %d hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/Widgets/EventRow.vala:214
 msgid "Happening now"
@@ -3214,31 +3197,18 @@ msgstr "Ви впевнені, що хочете видалити це завд�
 
 # # c-format
 #: src/Widgets/MultiSelectToolbar.vala:272
-#, c-format
+#, fuzzy, c-format
 msgid "Delete %d To-Do"
-msgstr "Видалити завдання (%d)"
-
-# # c-format
-#: src/Widgets/MultiSelectToolbar.vala:273
-#, c-format
-msgid "Delete %d To-Dos"
-msgstr "Видалити завдання (%d)"
+msgid_plural "Delete %d To-Dos"
+msgstr[0] "Видалити завдання (%d)"
+msgstr[1] "Видалити завдання (%d)"
 
 #: src/Widgets/MultiSelectToolbar.vala:278
-#, c-format
+#, fuzzy, c-format
 msgid "Are you sure you want to delete this %d to-do?"
-msgstr "Ви впевнені, що хочете видалити ці завдання (%d)?"
-
-# # c-format
-#: src/Widgets/MultiSelectToolbar.vala:279
-#, c-format
-msgid "Are you sure you want to delete these %d to-dos?"
-msgstr "Ви впевнені, що хочете видалити ці завдання (%d)?"
-
-#: src/Widgets/MultiSelectToolbar.vala:376
-#, c-format
-msgid "%d tasks moved to %s"
-msgstr ""
+msgid_plural "Are you sure you want to delete these %d to-dos?"
+msgstr[0] "Ви впевнені, що хочете видалити ці завдання (%d)?"
+msgstr[1] "Ви впевнені, що хочете видалити ці завдання (%d)?"
 
 #: src/Widgets/NewVersionPopup.vala:42
 msgid "New version available!"
@@ -3410,6 +3380,74 @@ msgstr "Відкрити «Мітки»"
 msgctxt "shortcut window"
 msgid "Open Pinboard"
 msgstr "Відкрити «Закріплені»"
+
+# c-format
+#, c-format
+#~ msgid "Every %d minutes"
+#~ msgstr "Кожні %d хвилин"
+
+# c-format
+#, c-format
+#~ msgid "Every %d hours"
+#~ msgstr "Кожні %d годин"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d days"
+#~ msgstr "Кожні %d днів"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d weeks"
+#~ msgstr "Кожні %d тижнів"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d months"
+#~ msgstr "Кожні %d місяців"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d years"
+#~ msgstr "Кожні %d років"
+
+# # c-format
+#, c-format
+#~ msgid ""
+#~ "This will delete %d completed tasks and their subtasks from project %s"
+#~ msgstr ""
+#~ "Бууде видалено %d завершених завдань та їхні підзавдання з проєкиу %s"
+
+# # c-format
+#, c-format
+#~ msgid "Load more history from %d weeks ago…"
+#~ msgstr "Завантажити історію %d-тижневої давності…"
+
+#~ msgid "Delete Completed Tasks"
+#~ msgstr "Видалити всі виконані завдання"
+
+# # c-format
+#, c-format
+#~ msgid "This will delete %d completed tasks and their subtasks"
+#~ msgstr "Будуть видалені завершені завдання (%d) та їх підзавдання"
+
+#, c-format
+#~ msgid "In %d minutes"
+#~ msgstr "Через %d хвилин"
+
+#, c-format
+#~ msgid "In %d hours"
+#~ msgstr "Через %d годин"
+
+# # c-format
+#, c-format
+#~ msgid "Delete %d To-Dos"
+#~ msgstr "Видалити завдання (%d)"
+
+# # c-format
+#, c-format
+#~ msgid "Are you sure you want to delete these %d to-dos?"
+#~ msgstr "Ви впевнені, що хочете видалити ці завдання (%d)?"
 
 #~ msgid "Backup"
 #~ msgstr "Резервні копії"

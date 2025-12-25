@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: alainmh23@gmail.com\n"
 "POT-Creation-Date: 2025-11-02 17:57+0000\n"
-"PO-Revision-Date: 2025-12-18 02:00+0000\n"
+"PO-Revision-Date: 2025-12-21 01:00+0000\n"
 "Last-Translator: 麋麓 BigELK176 <BigELK176@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/planner/io-github-alainm23-planify/zh_Hant/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15.1-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: core/Enum.vala:168 src/Dialogs/Preferences/Pages/Backup.vala:352
 #: src/Dialogs/Preferences/Pages/General.vala:55
@@ -27,7 +27,7 @@ msgstr "階段"
 msgid "Tasks"
 msgstr "任務"
 
-#: core/Enum.vala:177 core/Enum.vala:534 core/Objects/Filters/Labels.vala:33
+#: core/Enum.vala:177 core/Enum.vala:530 core/Objects/Filters/Labels.vala:33
 #: core/Widgets/LabelPicker/LabelButton.vala:76 src/Dialogs/LabelPicker.vala:46
 #: src/Dialogs/Preferences/Pages/Backup.vala:364 src/Layouts/ItemBoard.vala:781
 #: src/Layouts/ItemRow.vala:1294
@@ -42,76 +42,58 @@ msgstr "篩選"
 msgid "Lists"
 msgstr "清單"
 
-#: core/Enum.vala:218
+#: core/Enum.vala:214
 msgid "Don't Repeat"
 msgstr "不要重複"
 
-#: core/Enum.vala:220
+#: core/Enum.vala:216
+#, fuzzy, c-format
 msgid "Every minute"
-msgstr "每分鐘"
+msgid_plural "Every %d minutes"
+msgstr[0] "每分鐘"
+
+#: core/Enum.vala:218
+#, fuzzy, c-format
+msgid "Every hour"
+msgid_plural "Every %d hours"
+msgstr[0] "每小時"
 
 #: core/Enum.vala:220
-#, c-format
-msgid "Every %d minutes"
-msgstr "每隔 %d 分鐘"
-
-#: core/Enum.vala:222
-msgid "Every hour"
-msgstr "每小時"
-
-#: core/Enum.vala:222
-#, c-format
-msgid "Every %d hours"
-msgstr "每隔 %d 小時"
-
-#: core/Enum.vala:224
+#, fuzzy, c-format
 msgid "Every day"
-msgstr "每日"
+msgid_plural "Every %d days"
+msgstr[0] "每日"
+
+#: core/Enum.vala:222
+#, fuzzy, c-format
+msgid "Every week"
+msgid_plural "Every %d weeks"
+msgstr[0] "每週"
 
 #: core/Enum.vala:224
-#, c-format
-msgid "Every %d days"
-msgstr "每隔 %d 日"
-
-#: core/Enum.vala:226
-msgid "Every week"
-msgstr "每週"
-
-#: core/Enum.vala:226
-#, c-format
-msgid "Every %d weeks"
-msgstr "每隔 %d 週"
-
-#: core/Enum.vala:228
+#, fuzzy, c-format
 msgid "Every month"
-msgstr "每月"
+msgid_plural "Every %d months"
+msgstr[0] "每月"
 
-#: core/Enum.vala:228
-#, c-format
-msgid "Every %d months"
-msgstr "每隔 %d 月"
-
-#: core/Enum.vala:230
+#: core/Enum.vala:226
+#, fuzzy, c-format
 msgid "Every year"
-msgstr "每年"
+msgid_plural "Every %d years"
+msgstr[0] "每年"
 
-#: core/Enum.vala:230
-#, c-format
-msgid "Every %d years"
-msgstr "每隔 %d 年"
-
-#: core/Enum.vala:280 src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:39
+#: core/Enum.vala:276 src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:39
 #: src/Dialogs/Preferences/Pages/Accounts/NextcloudSetup.vala:38
 msgid "Nextcloud"
 msgstr "Nextcloud 私有雲端"
 
-#: core/Enum.vala:283 core/Services/CalDAV/CalDAVClient.vala:121
+#: core/Enum.vala:279 core/Services/CalDAV/CalDAVClient.vala:121
 #: src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:40
 #: src/Dialogs/Preferences/Pages/Accounts/CalDAVSetup.vala:42
 msgid "CalDAV"
 msgstr "CalDAV 行事曆協議"
 
-#: core/Enum.vala:345 core/Enum.vala:531 core/Widgets/PriorityButton.vala:90
+#: core/Enum.vala:341 core/Enum.vala:527 core/Widgets/PriorityButton.vala:90
 #: src/Views/Project/Project.vala:501 src/Views/Project/Project.vala:546
 #: src/Views/Scheduled/Scheduled.vala:230
 #: src/Views/Scheduled/Scheduled.vala:259 src/Views/Today.vala:633
@@ -119,43 +101,43 @@ msgstr "CalDAV 行事曆協議"
 msgid "Priority"
 msgstr "優先等級"
 
-#: core/Enum.vala:348
+#: core/Enum.vala:344
 msgid "Label"
 msgstr "標籤"
 
-#: core/Enum.vala:351 src/Views/Project/Project.vala:499
+#: core/Enum.vala:347 src/Views/Project/Project.vala:499
 #: src/Views/Scheduled/Scheduled.vala:228 src/Views/Today.vala:631
 msgid "Due Date"
 msgstr "到期日"
 
-#: core/Enum.vala:354 core/Widgets/SectionPicker/SectionButton.vala:35
+#: core/Enum.vala:350 core/Widgets/SectionPicker/SectionButton.vala:35
 #: src/Dialogs/CompletedTasks.vala:315 src/Widgets/ItemDetailCompleted.vala:80
 msgid "Section"
 msgstr "階段"
 
-#: core/Enum.vala:463
+#: core/Enum.vala:459
 msgid "Task Created"
 msgstr "任務已經建立"
 
-#: core/Enum.vala:466
+#: core/Enum.vala:462
 msgid "Task Updated"
 msgstr "任務已經更新"
 
-#: core/Enum.vala:522
+#: core/Enum.vala:518
 msgid "Content"
 msgstr "目錄"
 
-#: core/Enum.vala:525 src/Dialogs/Project.vala:148 src/Dialogs/Section.vala:91
+#: core/Enum.vala:521 src/Dialogs/Project.vala:148 src/Dialogs/Section.vala:91
 #: src/Layouts/ItemRow.vala:1998 src/Layouts/ItemSidebarView.vala:181
 #: src/Widgets/EventRow.vala:321 src/Widgets/ItemDetailCompleted.vala:113
 msgid "Description"
 msgstr "描述"
 
-#: core/Enum.vala:528 core/Objects/Filters/Scheduled.vala:48
+#: core/Enum.vala:524 core/Objects/Filters/Scheduled.vala:48
 msgid "Scheduled"
 msgstr "行程"
 
-#: core/Enum.vala:537 core/Widgets/PinButton.vala:41
+#: core/Enum.vala:533 core/Widgets/PinButton.vala:41
 #: src/Layouts/ItemBoard.vala:762 src/Layouts/ItemBoard.vala:775
 #: src/Layouts/ItemRow.vala:1275 src/Layouts/ItemRow.vala:1288
 msgid "Pin"
@@ -323,10 +305,12 @@ msgid "Task copied to clipboard"
 msgstr "任務已經複製至剪貼簿"
 
 #: core/Objects/Item.vala:1633 core/Utils/Util.vala:889
-#: src/Widgets/MultiSelectToolbar.vala:375
-#, c-format
+#: src/Widgets/MultiSelectToolbar.vala:376
+#: src/Widgets/MultiSelectToolbar.vala:379
+#, fuzzy, c-format
 msgid "Task moved to %s"
-msgstr "任務已經移至 %s"
+msgid_plural "%d tasks moved to %s"
+msgstr[0] "任務已經移至 %s"
 
 #: core/Objects/Label.vala:206
 #, c-format
@@ -654,13 +638,15 @@ msgstr "週日、"
 
 #: core/Utils/Datetime.vala:639
 #, c-format
-msgid "in %d days"
-msgstr ""
+msgid "in %d day"
+msgid_plural "in %d days"
+msgstr[0] ""
 
 #: core/Utils/Datetime.vala:641
 #, c-format
-msgid "%d days ago"
-msgstr ""
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] ""
 
 #: core/Utils/Datetime.vala:660
 msgid "%a, %b %-e, %Y"
@@ -1257,17 +1243,17 @@ msgstr "添加時間"
 
 #: core/Widgets/DeadlineButton.vala:51 core/Widgets/DeadlineButton.vala:132
 msgid "Set Deadline"
-msgstr ""
+msgstr "設定截止日期"
 
 #: core/Widgets/DeadlineButton.vala:57 core/Widgets/DeadlineButton.vala:87
 #: core/Widgets/DeadlineButton.vala:94 core/Widgets/DeadlineButton.vala:101
 #: core/Widgets/DeadlineButton.vala:154
 msgid "Set a Deadline"
-msgstr ""
+msgstr "設定截止日期"
 
 #: core/Widgets/DeadlineButton.vala:149
 msgid "Deadline"
-msgstr ""
+msgstr "截止日期"
 
 #: core/Widgets/LabelPicker/LabelButton.vala:81
 #: core/Widgets/LabelPicker/LabelButton.vala:135
@@ -1305,12 +1291,12 @@ msgstr "搜尋"
 msgid "Search or Create"
 msgstr "搜尋或建立"
 
-#: core/Widgets/MarkdownEditor.vala:1360 src/Layouts/ItemBoard.vala:842
+#: core/Widgets/MarkdownEditor.vala:1378 src/Layouts/ItemBoard.vala:842
 #: src/Layouts/ItemRow.vala:1362
 msgid "Apply"
 msgstr "套用"
 
-#: core/Widgets/MarkdownEditor.vala:1365
+#: core/Widgets/MarkdownEditor.vala:1383
 msgid "Remove link"
 msgstr "移除連結"
 
@@ -1533,14 +1519,11 @@ msgid "Delete All Completed Tasks"
 msgstr "刪除全部已經完成任務"
 
 #: src/Dialogs/CompletedTasks.vala:165
-#, c-format
+#, fuzzy, c-format
 msgid "This will delete %d completed task and its subtasks from project %s"
-msgstr "這將刪除 %d 個已經完成的任務及其子任務，來自專案 %s"
-
-#: src/Dialogs/CompletedTasks.vala:166
-#, c-format
-msgid "This will delete %d completed tasks and their subtasks from project %s"
-msgstr "這將刪除 %d 個已經完成的任務及其子任務，來自專案 %s"
+msgid_plural ""
+"This will delete %d completed tasks and their subtasks from project %s"
+msgstr[0] "這將刪除 %d 個已經完成的任務及其子任務，來自專案 %s"
 
 #: src/Dialogs/CompletedTasks.vala:322 src/Views/Project/Project.vala:596
 #: src/Views/Scheduled/Scheduled.vala:270 src/Views/Today.vala:673
@@ -1602,14 +1585,10 @@ msgid ""
 msgstr "您的變更歷史記錄將會顯示於此，一旦開始進行變更。"
 
 #: src/Dialogs/ItemChangeHistory.vala:138
-#, c-format
+#, fuzzy, c-format
 msgid "Load more history from %d week ago…"
-msgstr "載入更多歷史記錄自 %d 週之前…"
-
-#: src/Dialogs/ItemChangeHistory.vala:139
-#, c-format
-msgid "Load more history from %d weeks ago…"
-msgstr "載入更多歷史記錄自 %d 週之前…"
+msgid_plural "Load more history from %d weeks ago…"
+msgstr[0] "載入更多歷史記錄自 %d 週之前…"
 
 #: src/Dialogs/Label.vala:45
 msgid "New Label"
@@ -2789,7 +2768,7 @@ msgstr "Planify 將會重新啟動以套用變更"
 msgid "Restart Now"
 msgstr "立即重新啟動"
 
-#: src/Services/Backups.vala:566
+#: src/Services/Backups.vala:565
 msgid "Planify Backup Files"
 msgstr "Planify 備份檔案"
 
@@ -2829,22 +2808,16 @@ msgid "Great job, nothing left to do 🎉"
 msgstr "做得好，清光光一件不留 🎉"
 
 #: src/Views/Filter.vala:612
+#, fuzzy
 msgid "Delete Completed Task"
-msgstr "刪除已經完成任務"
-
-#: src/Views/Filter.vala:613
-msgid "Delete Completed Tasks"
-msgstr "刪除已經完成任務"
+msgid_plural "Delete Completed Tasks"
+msgstr[0] "刪除已經完成任務"
 
 #: src/Views/Filter.vala:617
-#, c-format
+#, fuzzy, c-format
 msgid "This will delete %d completed task and its subtasks"
-msgstr "這將刪除 %d 已經完成任務及其子任務"
-
-#: src/Views/Filter.vala:618
-#, c-format
-msgid "This will delete %d completed tasks and their subtasks"
-msgstr "這將刪除 %d 已經完成任務及其子任務"
+msgid_plural "This will delete %d completed tasks and their subtasks"
+msgstr[0] "這將刪除 %d 已經完成任務及其子任務"
 
 #: src/Views/Label/LabelSourceRow.vala:49
 msgid "No labels available. Create one by clicking on the '+' button"
@@ -2876,7 +2849,7 @@ msgstr "新建任務"
 
 #: src/Views/Project/Project.vala:333 src/Views/Project/Project.vala:365
 msgid "Project Deadline"
-msgstr ""
+msgstr "專案截止日期"
 
 #: src/Views/Project/Project.vala:338
 msgid "Select"
@@ -3056,13 +3029,15 @@ msgstr "提報問題"
 
 #: src/Widgets/EventRow.vala:207
 #, c-format
-msgid "In %d minutes"
-msgstr "於 %d 分鐘內"
+msgid "In %d minute"
+msgid_plural "In %d minutes"
+msgstr[0] ""
 
 #: src/Widgets/EventRow.vala:209
 #, c-format
-msgid "In %d hours"
-msgstr "於 %d 小時內"
+msgid "In %d hour"
+msgid_plural "In %d hours"
+msgstr[0] ""
 
 #: src/Widgets/EventRow.vala:214
 msgid "Happening now"
@@ -3147,29 +3122,16 @@ msgid "Are you sure you want to delete this to-do?"
 msgstr "您確定要刪除此待辦事項？"
 
 #: src/Widgets/MultiSelectToolbar.vala:272
-#, c-format
+#, fuzzy, c-format
 msgid "Delete %d To-Do"
-msgstr "刪除 %d 待辦事項"
-
-#: src/Widgets/MultiSelectToolbar.vala:273
-#, c-format
-msgid "Delete %d To-Dos"
-msgstr "刪除 %d 待辦事項"
+msgid_plural "Delete %d To-Dos"
+msgstr[0] "刪除 %d 待辦事項"
 
 #: src/Widgets/MultiSelectToolbar.vala:278
-#, c-format
+#, fuzzy, c-format
 msgid "Are you sure you want to delete this %d to-do?"
-msgstr "您確定要刪除此 %d 個待辦事項嗎？"
-
-#: src/Widgets/MultiSelectToolbar.vala:279
-#, c-format
-msgid "Are you sure you want to delete these %d to-dos?"
-msgstr "您確定要刪除此 %d 個待辦事項嗎？"
-
-#: src/Widgets/MultiSelectToolbar.vala:376
-#, c-format
-msgid "%d tasks moved to %s"
-msgstr "%d 任務移至 %s"
+msgid_plural "Are you sure you want to delete these %d to-dos?"
+msgstr[0] "您確定要刪除此 %d 個待辦事項嗎？"
 
 #: src/Widgets/NewVersionPopup.vala:42
 msgid "New version available!"
@@ -3339,6 +3301,74 @@ msgstr "開啟標籤"
 msgctxt "shortcut window"
 msgid "Open Pinboard"
 msgstr "開啟釘貼看板"
+
+#, c-format
+#~ msgid "Every %d minutes"
+#~ msgstr "每隔 %d 分鐘"
+
+#, c-format
+#~ msgid "Every %d hours"
+#~ msgstr "每隔 %d 小時"
+
+#, c-format
+#~ msgid "Every %d days"
+#~ msgstr "每隔 %d 日"
+
+#, c-format
+#~ msgid "Every %d weeks"
+#~ msgstr "每隔 %d 週"
+
+#, c-format
+#~ msgid "Every %d months"
+#~ msgstr "每隔 %d 月"
+
+#, c-format
+#~ msgid "Every %d years"
+#~ msgstr "每隔 %d 年"
+
+#, c-format
+#~ msgid "in %d days"
+#~ msgstr "於 %d 日內"
+
+#, c-format
+#~ msgid "%d days ago"
+#~ msgstr "%d 日之前"
+
+#, c-format
+#~ msgid ""
+#~ "This will delete %d completed tasks and their subtasks from project %s"
+#~ msgstr "這將刪除 %d 個已經完成的任務及其子任務，來自專案 %s"
+
+#, c-format
+#~ msgid "Load more history from %d weeks ago…"
+#~ msgstr "載入更多歷史記錄自 %d 週之前…"
+
+#~ msgid "Delete Completed Tasks"
+#~ msgstr "刪除已經完成任務"
+
+#, c-format
+#~ msgid "This will delete %d completed tasks and their subtasks"
+#~ msgstr "這將刪除 %d 已經完成任務及其子任務"
+
+#, c-format
+#~ msgid "In %d minutes"
+#~ msgstr "於 %d 分鐘內"
+
+#, c-format
+#~ msgid "In %d hours"
+#~ msgstr "於 %d 小時內"
+
+#, c-format
+#~ msgid "Delete %d To-Dos"
+#~ msgstr "刪除 %d 待辦事項"
+
+#, c-format
+#~ msgid "Are you sure you want to delete these %d to-dos?"
+#~ msgstr "您確定要刪除此 %d 個待辦事項嗎？"
+
+#, c-format
+#~ msgid "%d tasks moved to %s"
+#~ msgstr "%d 任務移至 %s"
 
 #~ msgid "Backup"
 #~ msgstr "備份"

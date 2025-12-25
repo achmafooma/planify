@@ -27,7 +27,7 @@ msgstr "अनुभाग"
 msgid "Tasks"
 msgstr "कार्य"
 
-#: core/Enum.vala:177 core/Enum.vala:534 core/Objects/Filters/Labels.vala:33
+#: core/Enum.vala:177 core/Enum.vala:530 core/Objects/Filters/Labels.vala:33
 #: core/Widgets/LabelPicker/LabelButton.vala:76 src/Dialogs/LabelPicker.vala:46
 #: src/Dialogs/Preferences/Pages/Backup.vala:364 src/Layouts/ItemBoard.vala:781
 #: src/Layouts/ItemRow.vala:1294
@@ -42,82 +42,64 @@ msgstr "फिल्टर"
 msgid "Lists"
 msgstr "सूचियां"
 
-#: core/Enum.vala:218
+#: core/Enum.vala:214
 msgid "Don't Repeat"
 msgstr "दोहराएं नहीं"
 
-#: core/Enum.vala:220
+#: core/Enum.vala:216
+#, fuzzy, c-format
 msgid "Every minute"
-msgstr "हर मिनट"
+msgid_plural "Every %d minutes"
+msgstr[0] "हर मिनट"
+msgstr[1] "हर मिनट"
 
-# # c-format
-#: core/Enum.vala:220
-#, c-format
-msgid "Every %d minutes"
-msgstr "हर %d मिनट"
-
-#: core/Enum.vala:222
+#: core/Enum.vala:218
+#, fuzzy, c-format
 msgid "Every hour"
-msgstr "हर घंटे"
+msgid_plural "Every %d hours"
+msgstr[0] "हर घंटे"
+msgstr[1] "हर घंटे"
 
-# # c-format
-#: core/Enum.vala:222
-#, c-format
-msgid "Every %d hours"
-msgstr "हर %d घंटे"
-
-#: core/Enum.vala:224
+#: core/Enum.vala:220
+#, fuzzy, c-format
 msgid "Every day"
-msgstr "हर दिन"
+msgid_plural "Every %d days"
+msgstr[0] "हर दिन"
+msgstr[1] "हर दिन"
 
-# # c-format
-#: core/Enum.vala:224
-#, c-format
-msgid "Every %d days"
-msgstr "हर %d दिन"
-
-#: core/Enum.vala:226
+#: core/Enum.vala:222
+#, fuzzy, c-format
 msgid "Every week"
-msgstr "हर हफ्ते"
+msgid_plural "Every %d weeks"
+msgstr[0] "हर हफ्ते"
+msgstr[1] "हर हफ्ते"
 
-# # c-format
-#: core/Enum.vala:226
-#, c-format
-msgid "Every %d weeks"
-msgstr "हर %d हफ्ते"
-
-#: core/Enum.vala:228
+#: core/Enum.vala:224
+#, fuzzy, c-format
 msgid "Every month"
-msgstr "हर महीने"
+msgid_plural "Every %d months"
+msgstr[0] "हर महीने"
+msgstr[1] "हर महीने"
 
-# # c-format
-#: core/Enum.vala:228
-#, c-format
-msgid "Every %d months"
-msgstr "हर %d महीने"
-
-#: core/Enum.vala:230
+#: core/Enum.vala:226
+#, fuzzy, c-format
 msgid "Every year"
-msgstr "हर वर्ष"
+msgid_plural "Every %d years"
+msgstr[0] "हर वर्ष"
+msgstr[1] "हर वर्ष"
 
-# # c-format
-#: core/Enum.vala:230
-#, c-format
-msgid "Every %d years"
-msgstr "हर %d वर्ष"
-
-#: core/Enum.vala:280 src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:39
+#: core/Enum.vala:276 src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:39
 #: src/Dialogs/Preferences/Pages/Accounts/NextcloudSetup.vala:38
 msgid "Nextcloud"
 msgstr "Nextcloud"
 
-#: core/Enum.vala:283 core/Services/CalDAV/CalDAVClient.vala:121
+#: core/Enum.vala:279 core/Services/CalDAV/CalDAVClient.vala:121
 #: src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:40
 #: src/Dialogs/Preferences/Pages/Accounts/CalDAVSetup.vala:42
 msgid "CalDAV"
 msgstr "CalDAV"
 
-#: core/Enum.vala:345 core/Enum.vala:531 core/Widgets/PriorityButton.vala:90
+#: core/Enum.vala:341 core/Enum.vala:527 core/Widgets/PriorityButton.vala:90
 #: src/Views/Project/Project.vala:501 src/Views/Project/Project.vala:546
 #: src/Views/Scheduled/Scheduled.vala:230
 #: src/Views/Scheduled/Scheduled.vala:259 src/Views/Today.vala:633
@@ -125,43 +107,43 @@ msgstr "CalDAV"
 msgid "Priority"
 msgstr "वरीयता"
 
-#: core/Enum.vala:348
+#: core/Enum.vala:344
 msgid "Label"
 msgstr "लेबल"
 
-#: core/Enum.vala:351 src/Views/Project/Project.vala:499
+#: core/Enum.vala:347 src/Views/Project/Project.vala:499
 #: src/Views/Scheduled/Scheduled.vala:228 src/Views/Today.vala:631
 msgid "Due Date"
 msgstr "देय तारीख"
 
-#: core/Enum.vala:354 core/Widgets/SectionPicker/SectionButton.vala:35
+#: core/Enum.vala:350 core/Widgets/SectionPicker/SectionButton.vala:35
 #: src/Dialogs/CompletedTasks.vala:315 src/Widgets/ItemDetailCompleted.vala:80
 msgid "Section"
 msgstr "अनुभाग"
 
-#: core/Enum.vala:463
+#: core/Enum.vala:459
 msgid "Task Created"
 msgstr "कार्य निर्मित"
 
-#: core/Enum.vala:466
+#: core/Enum.vala:462
 msgid "Task Updated"
 msgstr "कार्य अद्यतित"
 
-#: core/Enum.vala:522
+#: core/Enum.vala:518
 msgid "Content"
 msgstr "सामग्री"
 
-#: core/Enum.vala:525 src/Dialogs/Project.vala:148 src/Dialogs/Section.vala:91
+#: core/Enum.vala:521 src/Dialogs/Project.vala:148 src/Dialogs/Section.vala:91
 #: src/Layouts/ItemRow.vala:1998 src/Layouts/ItemSidebarView.vala:181
 #: src/Widgets/EventRow.vala:321 src/Widgets/ItemDetailCompleted.vala:113
 msgid "Description"
 msgstr "विवरण"
 
-#: core/Enum.vala:528 core/Objects/Filters/Scheduled.vala:48
+#: core/Enum.vala:524 core/Objects/Filters/Scheduled.vala:48
 msgid "Scheduled"
 msgstr "अनुसूचित"
 
-#: core/Enum.vala:537 core/Widgets/PinButton.vala:41
+#: core/Enum.vala:533 core/Widgets/PinButton.vala:41
 #: src/Layouts/ItemBoard.vala:762 src/Layouts/ItemBoard.vala:775
 #: src/Layouts/ItemRow.vala:1275 src/Layouts/ItemRow.vala:1288
 msgid "Pin"
@@ -331,10 +313,13 @@ msgstr "कार्य को क्लिपबोर्ड पर कॉप�
 
 # # c-format
 #: core/Objects/Item.vala:1633 core/Utils/Util.vala:889
-#: src/Widgets/MultiSelectToolbar.vala:375
-#, c-format
+#: src/Widgets/MultiSelectToolbar.vala:376
+#: src/Widgets/MultiSelectToolbar.vala:379
+#, fuzzy, c-format
 msgid "Task moved to %s"
-msgstr "कार्य को %s पर भेजा गया"
+msgid_plural "%d tasks moved to %s"
+msgstr[0] "कार्य को %s पर भेजा गया"
+msgstr[1] "कार्य को %s पर भेजा गया"
 
 # # c-format
 #: core/Objects/Label.vala:206
@@ -679,13 +664,17 @@ msgstr "रवि,"
 
 #: core/Utils/Datetime.vala:639
 #, c-format
-msgid "in %d days"
-msgstr ""
+msgid "in %d day"
+msgid_plural "in %d days"
+msgstr[0] ""
+msgstr[1] ""
 
 #: core/Utils/Datetime.vala:641
 #, c-format
-msgid "%d days ago"
-msgstr ""
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] ""
+msgstr[1] ""
 
 #: core/Utils/Datetime.vala:660
 msgid "%a, %b %-e, %Y"
@@ -1356,12 +1345,12 @@ msgstr "खोजें"
 msgid "Search or Create"
 msgstr "खोजें या बनाएं"
 
-#: core/Widgets/MarkdownEditor.vala:1360 src/Layouts/ItemBoard.vala:842
+#: core/Widgets/MarkdownEditor.vala:1378 src/Layouts/ItemBoard.vala:842
 #: src/Layouts/ItemRow.vala:1362
 msgid "Apply"
 msgstr ""
 
-#: core/Widgets/MarkdownEditor.vala:1365
+#: core/Widgets/MarkdownEditor.vala:1383
 #, fuzzy
 msgid "Remove link"
 msgstr "हटाएं"
@@ -1591,13 +1580,12 @@ msgstr "सभी पूर्ण कार्य मिटाएं"
 #: src/Dialogs/CompletedTasks.vala:165
 #, fuzzy, c-format
 msgid "This will delete %d completed task and its subtasks from project %s"
-msgstr "यह परियोजना %2$s से %1$d पूर्ण किए गए कार्यों और उनके उप-कार्यों को मिटा देगा"
-
-# # c-format
-#: src/Dialogs/CompletedTasks.vala:166
-#, c-format
-msgid "This will delete %d completed tasks and their subtasks from project %s"
-msgstr "यह परियोजना %2$s से %1$d पूर्ण किए गए कार्यों और उनके उप-कार्यों को मिटा देगा"
+msgid_plural ""
+"This will delete %d completed tasks and their subtasks from project %s"
+msgstr[0] ""
+"यह परियोजना %2$s से %1$d पूर्ण किए गए कार्यों और उनके उप-कार्यों को मिटा देगा"
+msgstr[1] ""
+"यह परियोजना %2$s से %1$d पूर्ण किए गए कार्यों और उनके उप-कार्यों को मिटा देगा"
 
 #: src/Dialogs/CompletedTasks.vala:322 src/Views/Project/Project.vala:596
 #: src/Views/Scheduled/Scheduled.vala:270 src/Views/Today.vala:673
@@ -1662,13 +1650,9 @@ msgstr "जब परिवर्तन करना शुरू करें�
 #: src/Dialogs/ItemChangeHistory.vala:138
 #, fuzzy, c-format
 msgid "Load more history from %d week ago…"
-msgstr "%d सप्ताह पहले का और इतिहास लोड करें…"
-
-# # c-format
-#: src/Dialogs/ItemChangeHistory.vala:139
-#, c-format
-msgid "Load more history from %d weeks ago…"
-msgstr "%d सप्ताह पहले का और इतिहास लोड करें…"
+msgid_plural "Load more history from %d weeks ago…"
+msgstr[0] "%d सप्ताह पहले का और इतिहास लोड करें…"
+msgstr[1] "%d सप्ताह पहले का और इतिहास लोड करें…"
 
 #: src/Dialogs/Label.vala:45
 msgid "New Label"
@@ -2870,7 +2854,7 @@ msgstr ""
 msgid "Restart Now"
 msgstr ""
 
-#: src/Services/Backups.vala:566
+#: src/Services/Backups.vala:565
 msgid "Planify Backup Files"
 msgstr "प्लॅानिफाई की बैकअप फाइलें"
 
@@ -2916,24 +2900,17 @@ msgstr ""
 #: src/Views/Filter.vala:612
 #, fuzzy
 msgid "Delete Completed Task"
-msgstr "सभी पूर्ण कार्य मिटाएं"
-
-#: src/Views/Filter.vala:613
-#, fuzzy
-msgid "Delete Completed Tasks"
-msgstr "सभी पूर्ण कार्य मिटाएं"
+msgid_plural "Delete Completed Tasks"
+msgstr[0] "सभी पूर्ण कार्य मिटाएं"
+msgstr[1] "सभी पूर्ण कार्य मिटाएं"
 
 # # c-format
 #: src/Views/Filter.vala:617
 #, fuzzy, c-format
 msgid "This will delete %d completed task and its subtasks"
-msgstr "यह %d पूर्ण किए गए कार्यों और उनके उप-कार्यों को हटा देगा"
-
-# # c-format
-#: src/Views/Filter.vala:618
-#, c-format
-msgid "This will delete %d completed tasks and their subtasks"
-msgstr "यह %d पूर्ण किए गए कार्यों और उनके उप-कार्यों को हटा देगा"
+msgid_plural "This will delete %d completed tasks and their subtasks"
+msgstr[0] "यह %d पूर्ण किए गए कार्यों और उनके उप-कार्यों को हटा देगा"
+msgstr[1] "यह %d पूर्ण किए गए कार्यों और उनके उप-कार्यों को हटा देगा"
 
 #: src/Views/Label/LabelSourceRow.vala:49
 msgid "No labels available. Create one by clicking on the '+' button"
@@ -3147,13 +3124,17 @@ msgstr "समस्या दर्ज करें"
 
 #: src/Widgets/EventRow.vala:207
 #, c-format
-msgid "In %d minutes"
-msgstr ""
+msgid "In %d minute"
+msgid_plural "In %d minutes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/Widgets/EventRow.vala:209
 #, c-format
-msgid "In %d hours"
-msgstr ""
+msgid "In %d hour"
+msgid_plural "In %d hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/Widgets/EventRow.vala:214
 msgid "Happening now"
@@ -3245,29 +3226,16 @@ msgstr "क्या आप वाकई इस कार्य को मिट
 #: src/Widgets/MultiSelectToolbar.vala:272
 #, fuzzy, c-format
 msgid "Delete %d To-Do"
-msgstr "%d कार्य मिटाएं"
-
-# # c-format
-#: src/Widgets/MultiSelectToolbar.vala:273
-#, c-format
-msgid "Delete %d To-Dos"
-msgstr "%d कार्य मिटाएं"
+msgid_plural "Delete %d To-Dos"
+msgstr[0] "%d कार्य मिटाएं"
+msgstr[1] "%d कार्य मिटाएं"
 
 #: src/Widgets/MultiSelectToolbar.vala:278
 #, fuzzy, c-format
 msgid "Are you sure you want to delete this %d to-do?"
-msgstr "क्या आप वाकई इस कार्य को मिटाना चाहते हैं?"
-
-# # c-format
-#: src/Widgets/MultiSelectToolbar.vala:279
-#, c-format
-msgid "Are you sure you want to delete these %d to-dos?"
-msgstr "क्या आप वाकई इन %d कार्यों को मिटाना चाहते हैं?"
-
-#: src/Widgets/MultiSelectToolbar.vala:376
-#, c-format
-msgid "%d tasks moved to %s"
-msgstr ""
+msgid_plural "Are you sure you want to delete these %d to-dos?"
+msgstr[0] "क्या आप वाकई इस कार्य को मिटाना चाहते हैं?"
+msgstr[1] "क्या आप वाकई इस कार्य को मिटाना चाहते हैं?"
 
 #: src/Widgets/NewVersionPopup.vala:42
 #, fuzzy
@@ -3439,6 +3407,67 @@ msgstr "लेबल खोलें"
 msgctxt "shortcut window"
 msgid "Open Pinboard"
 msgstr "पिनबोर्ड खोलें"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d minutes"
+#~ msgstr "हर %d मिनट"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d hours"
+#~ msgstr "हर %d घंटे"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d days"
+#~ msgstr "हर %d दिन"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d weeks"
+#~ msgstr "हर %d हफ्ते"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d months"
+#~ msgstr "हर %d महीने"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d years"
+#~ msgstr "हर %d वर्ष"
+
+# # c-format
+#, c-format
+#~ msgid ""
+#~ "This will delete %d completed tasks and their subtasks from project %s"
+#~ msgstr ""
+#~ "यह परियोजना %2$s से %1$d पूर्ण किए गए कार्यों और उनके उप-कार्यों को मिटा देगा"
+
+# # c-format
+#, c-format
+#~ msgid "Load more history from %d weeks ago…"
+#~ msgstr "%d सप्ताह पहले का और इतिहास लोड करें…"
+
+#, fuzzy
+#~ msgid "Delete Completed Tasks"
+#~ msgstr "सभी पूर्ण कार्य मिटाएं"
+
+# # c-format
+#, c-format
+#~ msgid "This will delete %d completed tasks and their subtasks"
+#~ msgstr "यह %d पूर्ण किए गए कार्यों और उनके उप-कार्यों को हटा देगा"
+
+# # c-format
+#, c-format
+#~ msgid "Delete %d To-Dos"
+#~ msgstr "%d कार्य मिटाएं"
+
+# # c-format
+#, c-format
+#~ msgid "Are you sure you want to delete these %d to-dos?"
+#~ msgstr "क्या आप वाकई इन %d कार्यों को मिटाना चाहते हैं?"
 
 #, fuzzy
 #~ msgid "Backup"

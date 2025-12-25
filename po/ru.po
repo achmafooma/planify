@@ -27,7 +27,7 @@ msgstr "Разделы"
 msgid "Tasks"
 msgstr "Задачи"
 
-#: core/Enum.vala:177 core/Enum.vala:534 core/Objects/Filters/Labels.vala:33
+#: core/Enum.vala:177 core/Enum.vala:530 core/Objects/Filters/Labels.vala:33
 #: core/Widgets/LabelPicker/LabelButton.vala:76 src/Dialogs/LabelPicker.vala:46
 #: src/Dialogs/Preferences/Pages/Backup.vala:364 src/Layouts/ItemBoard.vala:781
 #: src/Layouts/ItemRow.vala:1294
@@ -42,82 +42,64 @@ msgstr "Фильтры"
 msgid "Lists"
 msgstr "Списки"
 
-#: core/Enum.vala:218
+#: core/Enum.vala:214
 msgid "Don't Repeat"
 msgstr "Не повторять"
 
-#: core/Enum.vala:220
+#: core/Enum.vala:216
+#, fuzzy, c-format
 msgid "Every minute"
-msgstr "Каждую минуту"
+msgid_plural "Every %d minutes"
+msgstr[0] "Каждую минуту"
+msgstr[1] "Каждую минуту"
 
-# c-format
-#: core/Enum.vala:220
-#, c-format
-msgid "Every %d minutes"
-msgstr "Каждые %d мин"
-
-#: core/Enum.vala:222
+#: core/Enum.vala:218
+#, fuzzy, c-format
 msgid "Every hour"
-msgstr "Каждый час"
+msgid_plural "Every %d hours"
+msgstr[0] "Каждый час"
+msgstr[1] "Каждый час"
 
-# c-format
-#: core/Enum.vala:222
-#, c-format
-msgid "Every %d hours"
-msgstr "Каждые %d ч"
-
-#: core/Enum.vala:224
+#: core/Enum.vala:220
+#, fuzzy, c-format
 msgid "Every day"
-msgstr "Каждый день"
+msgid_plural "Every %d days"
+msgstr[0] "Каждый день"
+msgstr[1] "Каждый день"
 
-# # c-format
-#: core/Enum.vala:224
-#, c-format
-msgid "Every %d days"
-msgstr "Каждые %d дней"
-
-#: core/Enum.vala:226
+#: core/Enum.vala:222
+#, fuzzy, c-format
 msgid "Every week"
-msgstr "Каждую неделю"
+msgid_plural "Every %d weeks"
+msgstr[0] "Каждую неделю"
+msgstr[1] "Каждую неделю"
 
-# # c-format
-#: core/Enum.vala:226
-#, c-format
-msgid "Every %d weeks"
-msgstr "Каждые %d недель"
-
-#: core/Enum.vala:228
+#: core/Enum.vala:224
+#, fuzzy, c-format
 msgid "Every month"
-msgstr "Каждый месяц"
+msgid_plural "Every %d months"
+msgstr[0] "Каждый месяц"
+msgstr[1] "Каждый месяц"
 
-# # c-format
-#: core/Enum.vala:228
-#, c-format
-msgid "Every %d months"
-msgstr "Каждые %d месяцев"
-
-#: core/Enum.vala:230
+#: core/Enum.vala:226
+#, fuzzy, c-format
 msgid "Every year"
-msgstr "Каждый год"
+msgid_plural "Every %d years"
+msgstr[0] "Каждый год"
+msgstr[1] "Каждый год"
 
-# # c-format
-#: core/Enum.vala:230
-#, c-format
-msgid "Every %d years"
-msgstr "Каждые %d г. (лет)"
-
-#: core/Enum.vala:280 src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:39
+#: core/Enum.vala:276 src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:39
 #: src/Dialogs/Preferences/Pages/Accounts/NextcloudSetup.vala:38
 msgid "Nextcloud"
 msgstr "Облако Nextcloud"
 
-#: core/Enum.vala:283 core/Services/CalDAV/CalDAVClient.vala:121
+#: core/Enum.vala:279 core/Services/CalDAV/CalDAVClient.vala:121
 #: src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:40
 #: src/Dialogs/Preferences/Pages/Accounts/CalDAVSetup.vala:42
 msgid "CalDAV"
 msgstr "протокол CalDAV"
 
-#: core/Enum.vala:345 core/Enum.vala:531 core/Widgets/PriorityButton.vala:90
+#: core/Enum.vala:341 core/Enum.vala:527 core/Widgets/PriorityButton.vala:90
 #: src/Views/Project/Project.vala:501 src/Views/Project/Project.vala:546
 #: src/Views/Scheduled/Scheduled.vala:230
 #: src/Views/Scheduled/Scheduled.vala:259 src/Views/Today.vala:633
@@ -125,43 +107,43 @@ msgstr "протокол CalDAV"
 msgid "Priority"
 msgstr "По приоритету"
 
-#: core/Enum.vala:348
+#: core/Enum.vala:344
 msgid "Label"
 msgstr "Метка"
 
-#: core/Enum.vala:351 src/Views/Project/Project.vala:499
+#: core/Enum.vala:347 src/Views/Project/Project.vala:499
 #: src/Views/Scheduled/Scheduled.vala:228 src/Views/Today.vala:631
 msgid "Due Date"
 msgstr "По сроку выполнения"
 
-#: core/Enum.vala:354 core/Widgets/SectionPicker/SectionButton.vala:35
+#: core/Enum.vala:350 core/Widgets/SectionPicker/SectionButton.vala:35
 #: src/Dialogs/CompletedTasks.vala:315 src/Widgets/ItemDetailCompleted.vala:80
 msgid "Section"
 msgstr "Раздел"
 
-#: core/Enum.vala:463
+#: core/Enum.vala:459
 msgid "Task Created"
 msgstr "Задача создана"
 
-#: core/Enum.vala:466
+#: core/Enum.vala:462
 msgid "Task Updated"
 msgstr "Задача обновлена"
 
-#: core/Enum.vala:522
+#: core/Enum.vala:518
 msgid "Content"
 msgstr "Содержимое"
 
-#: core/Enum.vala:525 src/Dialogs/Project.vala:148 src/Dialogs/Section.vala:91
+#: core/Enum.vala:521 src/Dialogs/Project.vala:148 src/Dialogs/Section.vala:91
 #: src/Layouts/ItemRow.vala:1998 src/Layouts/ItemSidebarView.vala:181
 #: src/Widgets/EventRow.vala:321 src/Widgets/ItemDetailCompleted.vala:113
 msgid "Description"
 msgstr "Описание"
 
-#: core/Enum.vala:528 core/Objects/Filters/Scheduled.vala:48
+#: core/Enum.vala:524 core/Objects/Filters/Scheduled.vala:48
 msgid "Scheduled"
 msgstr "Предстоящее"
 
-#: core/Enum.vala:537 core/Widgets/PinButton.vala:41
+#: core/Enum.vala:533 core/Widgets/PinButton.vala:41
 #: src/Layouts/ItemBoard.vala:762 src/Layouts/ItemBoard.vala:775
 #: src/Layouts/ItemRow.vala:1275 src/Layouts/ItemRow.vala:1288
 msgid "Pin"
@@ -330,10 +312,13 @@ msgstr "Задача скопирована в буфер обмена"
 
 # c-format
 #: core/Objects/Item.vala:1633 core/Utils/Util.vala:889
-#: src/Widgets/MultiSelectToolbar.vala:375
-#, c-format
+#: src/Widgets/MultiSelectToolbar.vala:376
+#: src/Widgets/MultiSelectToolbar.vala:379
+#, fuzzy, c-format
 msgid "Task moved to %s"
-msgstr "Задача перемещена в %s"
+msgid_plural "%d tasks moved to %s"
+msgstr[0] "Задача перемещена в %s"
+msgstr[1] "Задача перемещена в %s"
 
 # c-format
 #: core/Objects/Label.vala:206
@@ -672,13 +657,17 @@ msgstr "Вс,"
 
 #: core/Utils/Datetime.vala:639
 #, c-format
-msgid "in %d days"
-msgstr ""
+msgid "in %d day"
+msgid_plural "in %d days"
+msgstr[0] ""
+msgstr[1] ""
 
 #: core/Utils/Datetime.vala:641
 #, c-format
-msgid "%d days ago"
-msgstr ""
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] ""
+msgstr[1] ""
 
 #: core/Utils/Datetime.vala:660
 msgid "%a, %b %-e, %Y"
@@ -1337,12 +1326,12 @@ msgstr "Поиск"
 msgid "Search or Create"
 msgstr "Создать или найти"
 
-#: core/Widgets/MarkdownEditor.vala:1360 src/Layouts/ItemBoard.vala:842
+#: core/Widgets/MarkdownEditor.vala:1378 src/Layouts/ItemBoard.vala:842
 #: src/Layouts/ItemRow.vala:1362
 msgid "Apply"
 msgstr "Применить"
 
-#: core/Widgets/MarkdownEditor.vala:1365
+#: core/Widgets/MarkdownEditor.vala:1383
 msgid "Remove link"
 msgstr "Удалить ссылку"
 
@@ -1561,17 +1550,14 @@ msgstr "Удалять все выполненные задачи"
 
 # # c-format
 #: src/Dialogs/CompletedTasks.vala:165
-#, c-format
+#, fuzzy, c-format
 msgid "This will delete %d completed task and its subtasks from project %s"
-msgstr ""
+msgid_plural ""
+"This will delete %d completed tasks and their subtasks from project %s"
+msgstr[0] ""
 "Это приведёт к удалению %d выполненной задачи и их подзадач из проекта %s"
-
-# # c-format
-#: src/Dialogs/CompletedTasks.vala:166
-#, c-format
-msgid "This will delete %d completed tasks and their subtasks from project %s"
-msgstr ""
-"Это приведёт к удалению %d выполненных задач и их подзадач из проекта %s"
+msgstr[1] ""
+"Это приведёт к удалению %d выполненной задачи и их подзадач из проекта %s"
 
 #: src/Dialogs/CompletedTasks.vala:322 src/Views/Project/Project.vala:596
 #: src/Views/Scheduled/Scheduled.vala:270 src/Views/Today.vala:673
@@ -1637,15 +1623,11 @@ msgstr ""
 
 # # c-format
 #: src/Dialogs/ItemChangeHistory.vala:138
-#, c-format
+#, fuzzy, c-format
 msgid "Load more history from %d week ago…"
-msgstr "Загрузить журнал за %d-недель назад…"
-
-# # c-format
-#: src/Dialogs/ItemChangeHistory.vala:139
-#, c-format
-msgid "Load more history from %d weeks ago…"
-msgstr "Загрузить журнал %d-недельной давности…"
+msgid_plural "Load more history from %d weeks ago…"
+msgstr[0] "Загрузить журнал за %d-недель назад…"
+msgstr[1] "Загрузить журнал за %d-недель назад…"
 
 #: src/Dialogs/Label.vala:45
 msgid "New Label"
@@ -2847,7 +2829,7 @@ msgstr "Planify перезапустится, чтобы применить из
 msgid "Restart Now"
 msgstr "Перезапустить сейчас"
 
-#: src/Services/Backups.vala:566
+#: src/Services/Backups.vala:565
 msgid "Planify Backup Files"
 msgstr "Резервные копии Planify"
 
@@ -2887,24 +2869,19 @@ msgid "Great job, nothing left to do 🎉"
 msgstr "Отличная работа, больше ничего не нужно делать 🎉"
 
 #: src/Views/Filter.vala:612
+#, fuzzy
 msgid "Delete Completed Task"
-msgstr "Удалять выполненную задачу"
-
-#: src/Views/Filter.vala:613
-msgid "Delete Completed Tasks"
-msgstr "Удалять выполненные задачи"
+msgid_plural "Delete Completed Tasks"
+msgstr[0] "Удалять выполненную задачу"
+msgstr[1] "Удалять выполненную задачу"
 
 # # c-format
 #: src/Views/Filter.vala:617
-#, c-format
+#, fuzzy, c-format
 msgid "This will delete %d completed task and its subtasks"
-msgstr "Это приведёт к удалению %d выполненных задач и их подзадач"
-
-# # c-format
-#: src/Views/Filter.vala:618
-#, c-format
-msgid "This will delete %d completed tasks and their subtasks"
-msgstr "Будут удалены завершённые задачи (%d) и их подзадачи"
+msgid_plural "This will delete %d completed tasks and their subtasks"
+msgstr[0] "Это приведёт к удалению %d выполненных задач и их подзадач"
+msgstr[1] "Это приведёт к удалению %d выполненных задач и их подзадач"
 
 #: src/Views/Label/LabelSourceRow.vala:49
 msgid "No labels available. Create one by clicking on the '+' button"
@@ -3118,13 +3095,17 @@ msgstr "Сообщить о проблеме"
 
 #: src/Widgets/EventRow.vala:207
 #, c-format
-msgid "In %d minutes"
-msgstr "Через %d минут"
+msgid "In %d minute"
+msgid_plural "In %d minutes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/Widgets/EventRow.vala:209
 #, c-format
-msgid "In %d hours"
-msgstr "Через %d часов"
+msgid "In %d hour"
+msgid_plural "In %d hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/Widgets/EventRow.vala:214
 msgid "Happening now"
@@ -3212,31 +3193,18 @@ msgstr "Вы уверены, что хотите удалить это зада�
 
 # # c-format
 #: src/Widgets/MultiSelectToolbar.vala:272
-#, c-format
+#, fuzzy, c-format
 msgid "Delete %d To-Do"
-msgstr "Удалить %d заданий"
-
-# # c-format
-#: src/Widgets/MultiSelectToolbar.vala:273
-#, c-format
-msgid "Delete %d To-Dos"
-msgstr "Удалить задания (%d)"
+msgid_plural "Delete %d To-Dos"
+msgstr[0] "Удалить %d заданий"
+msgstr[1] "Удалить %d заданий"
 
 #: src/Widgets/MultiSelectToolbar.vala:278
-#, c-format
+#, fuzzy, c-format
 msgid "Are you sure you want to delete this %d to-do?"
-msgstr "Вы уверены, что хотите удалить это задание %d?"
-
-# # c-format
-#: src/Widgets/MultiSelectToolbar.vala:279
-#, c-format
-msgid "Are you sure you want to delete these %d to-dos?"
-msgstr "Вы уверены, что хотите удалить эти задания (%d)?"
-
-#: src/Widgets/MultiSelectToolbar.vala:376
-#, c-format
-msgid "%d tasks moved to %s"
-msgstr ""
+msgid_plural "Are you sure you want to delete these %d to-dos?"
+msgstr[0] "Вы уверены, что хотите удалить это задание %d?"
+msgstr[1] "Вы уверены, что хотите удалить это задание %d?"
 
 #: src/Widgets/NewVersionPopup.vala:42
 msgid "New version available!"
@@ -3409,6 +3377,74 @@ msgstr "Открыть «Метки»"
 msgctxt "shortcut window"
 msgid "Open Pinboard"
 msgstr "Открыть «Закреплённые»"
+
+# c-format
+#, c-format
+#~ msgid "Every %d minutes"
+#~ msgstr "Каждые %d мин"
+
+# c-format
+#, c-format
+#~ msgid "Every %d hours"
+#~ msgstr "Каждые %d ч"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d days"
+#~ msgstr "Каждые %d дней"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d weeks"
+#~ msgstr "Каждые %d недель"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d months"
+#~ msgstr "Каждые %d месяцев"
+
+# # c-format
+#, c-format
+#~ msgid "Every %d years"
+#~ msgstr "Каждые %d г. (лет)"
+
+# # c-format
+#, c-format
+#~ msgid ""
+#~ "This will delete %d completed tasks and their subtasks from project %s"
+#~ msgstr ""
+#~ "Это приведёт к удалению %d выполненных задач и их подзадач из проекта %s"
+
+# # c-format
+#, c-format
+#~ msgid "Load more history from %d weeks ago…"
+#~ msgstr "Загрузить журнал %d-недельной давности…"
+
+#~ msgid "Delete Completed Tasks"
+#~ msgstr "Удалять выполненные задачи"
+
+# # c-format
+#, c-format
+#~ msgid "This will delete %d completed tasks and their subtasks"
+#~ msgstr "Будут удалены завершённые задачи (%d) и их подзадачи"
+
+#, c-format
+#~ msgid "In %d minutes"
+#~ msgstr "Через %d минут"
+
+#, c-format
+#~ msgid "In %d hours"
+#~ msgstr "Через %d часов"
+
+# # c-format
+#, c-format
+#~ msgid "Delete %d To-Dos"
+#~ msgstr "Удалить задания (%d)"
+
+# # c-format
+#, c-format
+#~ msgid "Are you sure you want to delete these %d to-dos?"
+#~ msgstr "Вы уверены, что хотите удалить эти задания (%d)?"
 
 #~ msgid "Backup"
 #~ msgstr "Резервная копия"
