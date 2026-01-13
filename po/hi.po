@@ -3390,10 +3390,6 @@ msgctxt "shortcut window"
 msgid "Open Pinboard"
 msgstr "पिनबोर्ड खोलें"
 
-#, fuzzy
-#~ msgid "Planify is syncing your tasks, this may take a few minutes"
-#~ msgstr "प्लॅानिफाई आपके कार्यों को समन्वयित कर रहा है, इसमें कुछ मिनट लग सकते हैं"
-
 # # c-format
 #, c-format
 #~ msgid "Every %d minutes"
@@ -3447,6 +3443,10 @@ msgstr "पिनबोर्ड खोलें"
 #, c-format
 #~ msgid "Load more history from %d weeks ago…"
 #~ msgstr "%d सप्ताह पहले का और इतिहास लोड करें…"
+
+#, fuzzy
+#~ msgid "Planify is syncing your tasks, this may take a few minutes"
+#~ msgstr "प्लॅानिफाई आपके कार्यों को समन्वयित कर रहा है, इसमें कुछ मिनट लग सकते हैं"
 
 #, fuzzy
 #~ msgid "Delete Completed Tasks"

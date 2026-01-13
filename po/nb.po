@@ -3352,9 +3352,6 @@ msgctxt "shortcut window"
 msgid "Open Pinboard"
 msgstr "Åpne oppslagstavle"
 
-#~ msgid "Planify is syncing your tasks, this may take a few minutes"
-#~ msgstr "Planify synkroniserer oppgavene dine. Dette kan ta noen minutter"
-
 #~ msgid "Todoist Sync"
 #~ msgstr "Todoist Synk"
 
@@ -3367,3 +3364,6 @@ msgstr "Åpne oppslagstavle"
 
 #~ msgid "Please enter your credentials"
 #~ msgstr "Vennligst skriv inn påloggingsinformasjonen din"
+
+#~ msgid "Planify is syncing your tasks, this may take a few minutes"
+#~ msgstr "Planify synkroniserer oppgavene dine. Dette kan ta noen minutter"

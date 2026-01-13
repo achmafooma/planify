@@ -3418,11 +3418,6 @@ msgctxt "shortcut window"
 msgid "Open Pinboard"
 msgstr "Отваряне на „Закачени“"
 
-#, fuzzy
-#~ msgid "Planify is syncing your tasks, this may take a few minutes"
-#~ msgstr ""
-#~ "Planify синхронизира задачите ви, което може да отнеме няколко минути"
-
 #~ msgid "Todoist Sync"
 #~ msgstr "Todoist Синхронизация"
 
@@ -3435,6 +3430,11 @@ msgstr "Отваряне на „Закачени“"
 
 #~ msgid "Please enter your credentials"
 #~ msgstr "Въведете данни за идентификация"
+
+#, fuzzy
+#~ msgid "Planify is syncing your tasks, this may take a few minutes"
+#~ msgstr ""
+#~ "Planify синхронизира задачите ви, което може да отнеме няколко минути"
 
 # # c-format
 #, c-format

@@ -3281,13 +3281,13 @@ msgctxt "shortcut window"
 msgid "Open Pinboard"
 msgstr ""
 
-#~ msgid "Planify is syncing your tasks, this may take a few minutes"
-#~ msgstr ""
-#~ "El Planify està sincronitzant les vostres tasques, això pot trigar uns "
-#~ "minuts"
-
 #~ msgid "Todoist Sync"
 #~ msgstr "Sincronització amb Todoist"
 
 #~ msgid "Loading"
 #~ msgstr "Carregant"
+
+#~ msgid "Planify is syncing your tasks, this may take a few minutes"
+#~ msgstr ""
+#~ "El Planify està sincronitzant les vostres tasques, això pot trigar uns "
+#~ "minuts"
