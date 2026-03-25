@@ -113,7 +113,7 @@ public class Services.CalDAV.Providers.Nextcloud : Object {
                             var dav_endpoint = yield Core.get_default ().resolve_well_known_caldav (session, server);
 
                             var calendar_home = yield Core.get_default ().resolve_calendar_home (CalDAVType.NEXTCLOUD, dav_endpoint, login_name, app_password, cancellable, ignore_ssl);
-                            
+
                             var login_response = yield Core.get_default ().login (CalDAVType.NEXTCLOUD, dav_endpoint, login_name, app_password, calendar_home, cancellable, ignore_ssl);
 
                             return login_response;

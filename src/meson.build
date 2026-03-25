@@ -146,7 +146,7 @@ endif
 
 if is_windows
   # if Windows build, prepare the resource file
-  if is_windows
+
   # process the resource file (inject version number)
   winrc_conf = configuration_data()
   winrc_conf.set('version', meson.project_version().replace('.', ',') + ',0')
@@ -155,7 +155,6 @@ if is_windows
       output: 'io.github.alainm23.planify.rc',
       configuration: winrc_conf
   )
-  endif
 
   # apply Windows resource file (icon and metadata) to the executable
   sources += import('windows').compile_resources(winrc_file)

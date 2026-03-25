@@ -80,7 +80,7 @@ public class Utils.Datetime {
 
         return returned;
     }
-    
+
     public static string days_left (GLib.DateTime datetime, bool show_today = false) {
         string return_value = "";
         var days = datetime.difference (new GLib.DateTime.now_local ()) / TimeSpan.DAY;
@@ -347,7 +347,7 @@ public class Utils.Datetime {
         if (duedate.recurrency_weeks == null || duedate.recurrency_weeks == "") {
             return datetime.get_day_of_week ();
         }
-        
+
         string[] weeks = duedate.recurrency_weeks.split (",");
         int day_of_week = datetime.get_day_of_week ();
         int index = 0;
@@ -370,7 +370,7 @@ public class Utils.Datetime {
         if (duedate.recurrency_weeks == null || duedate.recurrency_weeks == "") {
             return datetime.add_days (duedate.recurrency_interval * 7);
         }
-        
+
         string[] weeks = duedate.recurrency_weeks.split (","); // [1, 2, 3]
         int day_of_week = datetime.get_day_of_week (); // 2
         int days = 0;
@@ -596,11 +596,63 @@ public class Utils.Datetime {
     public static ICal.Timezone ? get_system_timezone () {
         #if WITH_EVOLUTION
         return ECal.util_get_system_timezone ();
-        #else    
+        #elif IS_WINDOWS
+        string win_tzid = new GLib.TimeZone.local ().get_identifier ();
+        string tzid = windows_to_ical_timezone(win_tzid);
+        return ICal.Timezone.get_builtin_timezone (tzid);
+        #else
         string tzid = new GLib.TimeZone.local ().get_identifier ();
         return ICal.Timezone.get_builtin_timezone (tzid);
         #endif
     }
+
+    #if IS_WINDOWS
+    /** Converts a Windows timezone ID to a timezone ID that libical understands */
+    public static string windows_to_ical_timezone (string tzid) {
+        try {
+            string tz_path = GLib.Path.build_filename ("..", "share", "windowsZones.xml");
+            var root = new GXml.XDocument.from_file (GLib.File.new_for_path(tz_path)).document_element;
+
+            if (root == null)
+                return null;
+
+
+            // Walk the tree manually (simplest possible)
+            foreach (var windowsZones in root.child_nodes) {
+                if (windowsZones.node_name != "windowsZones")
+                    continue;
+
+                foreach (var mapTimezones in windowsZones.child_nodes) {
+                    if (mapTimezones.node_name != "mapTimezones")
+                        continue;
+
+                    foreach (var node in mapTimezones.child_nodes) {
+                        if (node.node_name != "mapZone")
+                            continue;
+
+                        var elem = node as GXml.DomElement;
+                        if (elem == null)
+                            continue;
+
+                        // Windows ID is in "other"
+                        if (elem.get_attribute ("other") == tzid) {
+                            // IANA IDs are in "type"
+                            var type = elem.get_attribute ("type");
+                            if (type != null && type.length > 0) {
+                                // Return the first IANA ID
+                                return type.split (" ")[0];
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (Error e) {
+            warning ("Failed to load windowsZones.xml: %s", e.message);
+        }
+
+        return null;
+    }
+    #endif
 
 
     public static string get_markdown_format_date (Objects.Item item) {
@@ -625,7 +677,7 @@ public class Utils.Datetime {
     public static string get_relative_time_from_date (GLib.DateTime date) {
         var date_only = get_date_only (date);
         var today = get_date_only (new GLib.DateTime.now_local ());
-                
+
         string relative_time;
         if (is_today (date_only)) {
             relative_time = _("Today");
@@ -641,13 +693,13 @@ public class Utils.Datetime {
                 relative_time = GLib.ngettext ("%d day ago", "%d days ago", -days_diff).printf (-days_diff);
             }
         }
-        
+
         return relative_time;
     }
 
     public static string get_short_date_format_from_date (GLib.DateTime date) {
         var date_only = get_date_only (date);
-        
+
         var day_name = date_only.format ("%a");
         var day_month = date_only.format ("%e %b");
 

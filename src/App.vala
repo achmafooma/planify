@@ -37,7 +37,6 @@ public class Planify : Adw.Application {
     private static bool clear_database = false;
     private static string lang = "";
 
-    
     #if WITH_LIBPORTAL
     private Xdp.Portal ? portal = null;
     #endif
@@ -135,8 +134,8 @@ public class Planify : Adw.Application {
     #if WITH_LIBPORTAL
     public async bool ask_for_background (Xdp.BackgroundFlags flags = Xdp.BackgroundFlags.AUTOSTART) {
         bool run_in_background = Services.Settings.get_default ().settings.get_boolean ("run-in-background");
-        string[] daemon_command = run_in_background ? 
-            new string[] { Build.APPLICATION_ID, "--background" } : 
+        string[] daemon_command = run_in_background ?
+            new string[] { Build.APPLICATION_ID, "--background" } :
             new string[] { Build.APPLICATION_ID };
 
         if (portal == null) {
@@ -174,7 +173,7 @@ public class Planify : Adw.Application {
             main_window.destroy ();
             main_window = null;
         }
-        
+
         activate ();
     }
 

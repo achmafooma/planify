@@ -12,6 +12,9 @@ pkgconfig = import('pkgconfig')
 
 # is this a Windows build?
 is_windows = (host_machine.system() == 'windows')
+if is_windows
+    add_project_arguments('-D', 'IS_WINDOWS', language: 'vala')
+endif
 
 # parse webkit, portal, and evolution options
 # on Windows these are unsupported and are forced to false
