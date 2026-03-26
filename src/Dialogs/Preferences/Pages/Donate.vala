@@ -76,7 +76,7 @@ public class Dialogs.Preferences.Pages.Donate : Dialogs.Preferences.Pages.BasePa
 
         signal_map[patreon_row.activated.connect (() => {
             try {
-                AppInfo.launch_default_for_uri (Constants.PATREON_URL, null);
+                Util.open_url (Constants.PATREON_URL);
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
@@ -90,7 +90,7 @@ public class Dialogs.Preferences.Pages.Donate : Dialogs.Preferences.Pages.BasePa
 
         signal_map[paypal_row.activated.connect (() => {
             try {
-                AppInfo.launch_default_for_uri (Constants.PAYPAL_ME_URL, null);
+                Util.open_url (Constants.PAYPAL_ME_URL);
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
@@ -104,7 +104,7 @@ public class Dialogs.Preferences.Pages.Donate : Dialogs.Preferences.Pages.BasePa
 
         signal_map[liberapay_row.activated.connect (() => {
             try {
-                AppInfo.launch_default_for_uri (Constants.LIBERAPAY_URL, null);
+                Util.open_url (Constants.LIBERAPAY_URL);
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
@@ -118,7 +118,7 @@ public class Dialogs.Preferences.Pages.Donate : Dialogs.Preferences.Pages.BasePa
 
         signal_map[kofi_row.activated.connect (() => {
             try {
-                AppInfo.launch_default_for_uri (Constants.KOFI_URL, null);
+                Util.open_url (Constants.KOFI_URL);
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }

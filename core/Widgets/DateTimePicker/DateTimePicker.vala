@@ -34,7 +34,7 @@ public class Widgets.DateTimePicker.DateTimePicker : Gtk.Popover {
     private Gtk.Revealer repeat_option_revealer;
     private Gtk.Stack main_stack;
     private Widgets.DateTimePicker.RepeatConfig repeat_config_widget;
-    
+
     bool _has_time = false;
     public bool has_time {
         get {
@@ -389,7 +389,7 @@ public class Widgets.DateTimePicker.DateTimePicker : Gtk.Popover {
         box.append (no_date_button);
         no_date_button.clicked.connect (() => {
             duedate = new Objects.DueDate ();
-            
+
             reset ();
 
             duedate_changed ();
@@ -655,7 +655,7 @@ public class Widgets.DateTimePicker.DateTimePicker : Gtk.Popover {
         value.is_recurring = is_recurring;
         value.recurrency_type = type;
         value.recurrency_interval = interval;
-        
+
         if (weeks != null) {
             value.recurrency_weeks = weeks;
         }
@@ -719,7 +719,7 @@ public class Widgets.DateTimePicker.DateTimePicker : Gtk.Popover {
             if (calendar_scroll_view.date != null) {
                 set_date (calendar_scroll_view.date, false);
                 visible_no_date = true;
-                main_stack.visible_child_name = "main"; 
+                main_stack.visible_child_name = "main";
             }
         })] = calendar_scroll_view;
 
@@ -873,7 +873,7 @@ public class Widgets.DateTimePicker.DateTimePicker : Gtk.Popover {
     public class OptionButton : Gtk.Box {
         public Gtk.Button main_button { get; private set; }
         public Gtk.Revealer clear_revealer { get; private set; }
-        
+
         private Gtk.Label label;
         private Gtk.Image add_icon;
 

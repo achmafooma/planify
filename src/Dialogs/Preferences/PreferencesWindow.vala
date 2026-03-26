@@ -125,7 +125,7 @@ public class Dialogs.Preferences.PreferencesWindow : Adw.PreferencesDialog {
         };
         home_page_row.add_prefix (generate_icon ("go-home-symbolic"));
         home_page_row.add_suffix (generate_icon ("go-next-symbolic"));
-        
+
         signal_map[home_page_row.activated.connect (() => {
             push_subpage (build_page ("home-view"));
         })] = home_page_row;
@@ -230,7 +230,7 @@ public class Dialogs.Preferences.PreferencesWindow : Adw.PreferencesDialog {
 
         signal_map[issue_row.activated.connect (() => {
             try {
-                AppInfo.launch_default_for_uri (Constants.ISSUE_URL, null);
+                Util.open_url (Constants.ISSUE_URL);
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
@@ -239,13 +239,13 @@ public class Dialogs.Preferences.PreferencesWindow : Adw.PreferencesDialog {
         var translation_row = new Widgets.TranslationRow ();
         translation_row.icon_name = "language-symbolic";
         setup_visibility_detection (translation_row);
-        
+
         var click_gesture = new Gtk.GestureClick ();
         translation_row.add_controller (click_gesture);
-        
+
         signal_map[click_gesture.pressed.connect (() => {
             try {
-                AppInfo.launch_default_for_uri (Constants.WEBLATE_URL, null);
+                Util.open_url (Constants.WEBLATE_URL);
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
@@ -275,7 +275,7 @@ public class Dialogs.Preferences.PreferencesWindow : Adw.PreferencesDialog {
             string uri = "mailto:%s".printf (Constants.CONTACT_US);
 
             try {
-                AppInfo.launch_default_for_uri (uri, null);
+                Util.open_url (uri);
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
@@ -290,7 +290,7 @@ public class Dialogs.Preferences.PreferencesWindow : Adw.PreferencesDialog {
 
         signal_map[tweet_us_row.activated.connect (() => {
             try {
-                AppInfo.launch_default_for_uri (Constants.TWITTER_URL, null);
+                Util.open_url (Constants.TWITTER_URL);
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
@@ -305,7 +305,7 @@ public class Dialogs.Preferences.PreferencesWindow : Adw.PreferencesDialog {
 
         signal_map[discord_row.activated.connect (() => {
             try {
-                AppInfo.launch_default_for_uri (Constants.DISCORD_URL, null);
+                Util.open_url (Constants.DISCORD_URL);
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
@@ -320,7 +320,7 @@ public class Dialogs.Preferences.PreferencesWindow : Adw.PreferencesDialog {
 
         signal_map[mastodon_row.activated.connect (() => {
             try {
-                AppInfo.launch_default_for_uri (Constants.MASTODON_URL, null);
+                Util.open_url (Constants.MASTODON_URL);
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
@@ -365,7 +365,7 @@ public class Dialogs.Preferences.PreferencesWindow : Adw.PreferencesDialog {
 
         signal_map[privacy_policy_row.activated.connect (() => {
             try {
-                AppInfo.launch_default_for_uri (Constants.PRIVACY_POLICY_URL, null);
+                Util.open_url (Constants.PRIVACY_POLICY_URL);
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
@@ -405,7 +405,7 @@ public class Dialogs.Preferences.PreferencesWindow : Adw.PreferencesDialog {
         if (page_map.has_key (page)) {
             return page_map[page];
         }
-        
+
         switch (page) {
             case "accounts":
                 page_map[page] = new Dialogs.Preferences.Pages.Accounts (this);
@@ -470,7 +470,7 @@ public class Dialogs.Preferences.PreferencesWindow : Adw.PreferencesDialog {
 
     private void setup_visibility_detection (Widgets.TranslationRow translation_row) {
         translation_row.load_translation_data.begin ();
-        
+
         translation_row.map.connect (() => {
             Timeout.add (1500, () => {
                 translation_row.trigger_animation ();

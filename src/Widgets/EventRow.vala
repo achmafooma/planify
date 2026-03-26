@@ -124,7 +124,7 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
 
     private void update_timelabel () {
         string time_format = Utils.Datetime.is_clock_format_12h () ? "%I:%M %p" : "%H:%M";
-        
+
         if (show_date) {
             if (is_allday) {
                 time_label.label = start_time.format ("%d %b");
@@ -143,17 +143,17 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
         if (start_time.get_day_of_year () == end_time.get_day_of_year () && start_time.get_year () == end_time.get_year ()) {
             return start_time.format (time_format);
         }
-        
+
         var day_normalized = new GLib.DateTime.local (day.get_year (), day.get_month (), day.get_day_of_month (), 0, 0, 0);
         var start_normalized = new GLib.DateTime.local (start_time.get_year (), start_time.get_month (), start_time.get_day_of_month (), 0, 0, 0);
         var end_normalized = new GLib.DateTime.local (end_time.get_year (), end_time.get_month (), end_time.get_day_of_month (), 0, 0, 0);
-        
+
         bool is_first_day = day_normalized.equal (start_normalized);
         bool is_last_day = day_normalized.equal (end_normalized);
-        
+
         string end_of_day = Utils.Datetime.is_clock_format_12h () ? "11:59 PM" : "23:59";
         string start_of_day = Utils.Datetime.is_clock_format_12h () ? "12:00 AM" : "00:00";
-        
+
         string result;
         if (is_first_day && is_last_day) {
             result = start_time.format (time_format);
@@ -162,10 +162,10 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
         } else if (is_last_day) {
             result = start_of_day + " - " + end_time.format (time_format);
         } else {
-            result = start_time.format ("%d %b ") + start_time.format (time_format) + " - " + 
+            result = start_time.format ("%d %b ") + start_time.format (time_format) + " - " +
                      end_time.format ("%d %b ") + end_time.format (time_format);
         }
-        
+
         return result;
     }
 
@@ -212,7 +212,7 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
             date_text = start_time.format ("%A, %e de %B");
         } else {
             string time_format = Utils.Datetime.is_clock_format_12h () ? "%I:%M %p" : "%H:%M";
-            
+
             if (start_time.get_day_of_year () == end_time.get_day_of_year () && start_time.get_year () == end_time.get_year ()) {
                 date_text = start_time.format ("%A, %e de %B · ") + start_time.format (time_format) + " - " + end_time.format (time_format);
             } else {
@@ -236,7 +236,7 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
         if (!is_allday && start_time.get_day_of_year () == now.get_day_of_year () && start_time.get_year () == now.get_year ()) {
             var time_diff = start_time.difference (now) / TimeSpan.MINUTE;
             string time_status = "";
-            
+
             if (time_diff > 0) {
                 if (time_diff < 60) {
                     time_status = GLib.ngettext ("In %d minute", "In %d minutes", (ulong)time_diff).printf ((int)time_diff);
@@ -249,7 +249,7 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
                     time_status = _("Happening now");
                 }
             }
-            
+
             if (time_status != "") {
                 var time_status_label = new Gtk.Label (time_status) {
                     xalign = 0,
@@ -280,7 +280,7 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
                 selectable = true,
                 can_focus = false
             };
-            
+
             popover_box.append (create_info_widget ("map-marker-symbolic", _("Location"), location_label));
         }
 
@@ -323,7 +323,7 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
         var description = component.get_description ();
         if (description != null && description != "") {
             bool content_added = false;
-            
+
             if ("meet.google.com" in description || "Google Meet" in description) {
                 var meet_url = extract_meet_url (description);
                 if (meet_url != null) {
@@ -343,7 +343,7 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
                     content_added = true;
                 }
             }
-            
+
             if (!content_added) {
                 var description_label = new Gtk.Label (description) {
                     xalign = 0,
@@ -352,7 +352,7 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
                     can_focus = false,
                     use_markup = false
                 };
-                
+
                 popover_box.append (create_info_widget ("text-justify-left-symbolic", _("Description"), description_label));
             }
         }
@@ -378,26 +378,26 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
             column_spacing = 6,
             row_spacing = 6
         };
-        
+
         var icon = new Gtk.Image.from_icon_name (icon_name) {
             pixel_size = 12,
             valign = Gtk.Align.CENTER
         };
         icon.add_css_class ("dimmed");
-        
+
         var header = new Gtk.Label (header_text) {
             xalign = 0,
             css_classes = { "caption", "dimmed" }
         };
-        
+
         grid.attach (icon, 0, 0, 1, 1);
         grid.attach (header, 1, 0, 1, 1);
         grid.attach (content_widget, 1, 1, 1, 1);
-        
+
         return grid;
     }
 
-    private Gtk.Widget create_meeting_widget (string title, string url) {        
+    private Gtk.Widget create_meeting_widget (string title, string url) {
         var header = new Gtk.Label (title) {
             xalign = 0,
             hexpand = true,
@@ -412,14 +412,14 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
         };
         url_entry.add_css_class ("caption");
         url_entry.add_css_class ("accent");
-        
+
         var join_button = new Gtk.Button.with_label (_("Join")) {
             valign = Gtk.Align.CENTER
         };
-        
+
         join_button.clicked.connect (() => {
             try {
-                AppInfo.launch_default_for_uri (url, null);
+                Util.open_url (url);
             } catch (Error e) {
                 warning ("Error opening URL: %s", e.message);
             }
@@ -433,7 +433,7 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
         grid.attach (header, 0, 0, 1, 1);
         grid.attach (url_entry, 0, 1, 1, 1);
         grid.attach (join_button, 1, 0, 1, 2);
-        
+
         return grid;
     }
 
@@ -471,7 +471,7 @@ public class Widgets.EventRow : Gtk.ListBoxRow {
         }
 
         signal_map.clear ();
-        
+
         if (popover != null) {
             popover.unparent ();
         }

@@ -119,7 +119,7 @@ public class Widgets.AttachmentRow : Gtk.ListBoxRow {
                 file_list.append (file);
                 app_info.launch (file_list, null);
             } else {
-                GLib.AppInfo.launch_default_for_uri (attachment.file_path, null);
+                Util.open_url (attachment.file_path);
             }
 
             close_button.is_loading = false;

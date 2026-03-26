@@ -824,7 +824,7 @@ public class Objects.Project : Objects.BaseObject {
         string uri = "";
         uri += "mailto:?subject=%s&body=%s".printf (name, to_markdown ());
         try {
-            AppInfo.launch_default_for_uri (uri, null);
+            Util.open_url (uri);
         } catch (Error e) {
             warning ("%s\n", e.message);
         }

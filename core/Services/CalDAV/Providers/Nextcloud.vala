@@ -80,7 +80,7 @@ public class Services.CalDAV.Providers.Nextcloud : Object {
             var poll_token = poll.get_string_member ("token");
             var poll_endpoint = poll.get_string_member ("endpoint");
 
-            AppInfo.launch_default_for_uri (login_link, null);
+            Util.open_url (login_link);
 
             int timeout = 20 * 60;
             int interval = 5;

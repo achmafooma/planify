@@ -24,7 +24,7 @@ public class Widgets.NewVersionPopup : Adw.Bin {
 
     public void show_with_animation () {
         star_icon.add_css_class ("fancy-bounce-turn-animation");
-        
+
         Timeout.add (800, () => {
             star_icon.remove_css_class ("fancy-bounce-turn-animation");
             return Source.REMOVE;
@@ -78,7 +78,7 @@ public class Widgets.NewVersionPopup : Adw.Bin {
 
         update_button.clicked.connect (() => {
             try {
-                AppInfo.launch_default_for_uri ("appstream://io.github.alainm23.planify", null);
+                Util.open_url ("appstream://io.github.alainm23.planify");
             } catch (Error e) {
                 warning ("Error opening GNOME Software: %s", e.message);
             }

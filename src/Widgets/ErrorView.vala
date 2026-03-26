@@ -125,7 +125,7 @@ public class Widgets.ErrorView : Adw.Bin {
 
         issue_button.clicked.connect (() => {
             try {
-                AppInfo.launch_default_for_uri ("https://github.com/alainm23/planify/issues/new?assignees=&labels=&projects=&template=bug_report.md", null);
+                Util.open_url ("https://github.com/alainm23/planify/issues/new?assignees=&labels=&projects=&template=bug_report.md");
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
