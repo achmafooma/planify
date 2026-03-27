@@ -4,3 +4,4 @@ option('webkit', type : 'boolean', description: 'build with webkit gtk for in ap
 option('spelling', type: 'feature')
 option('portal', type : 'boolean', description: 'build with xdg-portal support for ')
 option('evolution', type : 'boolean', description: 'build with evolution for integration with evolution calendars')
+option('winconsole', type : 'boolean', value: false, description: 'run with diagnostic console on Windows')

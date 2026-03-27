@@ -16,11 +16,12 @@ if is_windows
     add_project_arguments('-D', 'IS_WINDOWS', language: 'vala')
 endif
 
-# parse webkit, portal, and evolution options
+# parse webkit, portal, evolution, and winconsole options
 # on Windows these are unsupported and are forced to false
 with_webkit = (get_option('webkit') and not is_windows)
 with_portal = (get_option('portal') and not is_windows)
 with_evolution = (get_option('evolution') and not is_windows)
+with_win_console = (get_option('winconsole'))
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 add_project_arguments('-DLIBICAL_GLIB_UNSTABLE_API=1', language: 'c')

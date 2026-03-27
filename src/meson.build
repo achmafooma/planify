@@ -172,7 +172,7 @@ app = executable(
   config_file,
   dependencies: deps,
   install: true,
-  win_subsystem: 'windows'  # prevent unnecessary console window on Windows
+  win_subsystem: (with_win_console) ? 'console' : 'windows'
 )
 
 # on Windows, run the script to put all necessary files in build/dist
