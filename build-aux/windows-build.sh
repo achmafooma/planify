@@ -34,6 +34,13 @@ cp -v /ucrt64/share/glib-2.0/schemas/gschemas.compiled dist/share/glib-2.0/schem
 mkdir -p dist/lib/gio/modules
 cp -v /ucrt64/lib/gio/modules/libgioopenssl.dll dist/lib/gio/modules/
 
+# copy GStreamer and the necessary plugins (otherwise task-complete sound doesn't work and crashes)
+cp -rv /ucrt64/lib/gstreamer-1.0 dist/lib/
+for dll in dist/lib/gstreamer-1.0/*.dll; do
+    # make sure we have all the necessary dependencies too
+    ldd "$dll" | grep '/ucrt64.*\.dll' -o | xargs -i cp -vu {} dist/bin
+done
+
 # copy the libical time zone data
 cp -rv /ucrt64/share/libical dist/share
 
