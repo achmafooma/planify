@@ -195,8 +195,7 @@ public class MainWindow : Adw.ApplicationWindow {
                 Objects.Item item = Services.Database.get_default ().get_item_by_id (id);
                 Gee.ArrayList<Objects.Reminder> reminders = Services.Database.get_default ().get_reminders_by_item_id (id);
 
-                Services.Store.instance ().clear_project_cache (item.project_id);
-                Services.Store.instance ().add_item (item);
+                Services.Store.instance ().insert_item (item, true, false);
 
                 foreach (Objects.Reminder reminder in reminders) {
                     item.add_reminder_events (reminder);
@@ -730,6 +729,8 @@ public class MainWindow : Adw.ApplicationWindow {
         var preferences_item = new Widgets.ContextMenu.MenuItem (_("Preferences"));
         preferences_item.secondary_text = "Ctrl+,";
 
+        var productivity_item = new Widgets.ContextMenu.MenuItem (Markup.escape_text (_("Summary & Productivity")));
+
         var keyboard_shortcuts_item = new Widgets.ContextMenu.MenuItem (_("Keyboard Shortcuts"));
         keyboard_shortcuts_item.secondary_text = "F1";
 
@@ -742,6 +743,8 @@ public class MainWindow : Adw.ApplicationWindow {
         menu_box.margin_top = menu_box.margin_bottom = 3;
         menu_box.append (preferences_item);
         menu_box.append (new Widgets.ContextMenu.MenuSeparator ());
+        menu_box.append (productivity_item);
+        menu_box.append (new Widgets.ContextMenu.MenuSeparator ());
         menu_box.append (archive_item);
         menu_box.append (archive_separator);
         menu_box.append (keyboard_shortcuts_item);
@@ -753,6 +756,12 @@ public class MainWindow : Adw.ApplicationWindow {
             width_request = 250,
             position = Gtk.PositionType.BOTTOM
         };
+
+        productivity_item.clicked.connect (() => {
+            popover.popdown ();
+            var dialog = new Dialogs.ProductivityReport.ProductivityReportDialog ();
+            dialog.present (Planify._instance.main_window);
+        });
 
         preferences_item.clicked.connect (() => {
             open_preferences_window ();
