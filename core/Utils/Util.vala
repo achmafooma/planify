@@ -29,33 +29,9 @@ public class Util : GLib.Object {
         return _instance;
     }
 
-    /* URL opener */
-    #if IS_WINDOWS
-
-    [CCode (cname = "ShellExecuteA", dll = "shell32.dll")]
-    public static extern void* ShellExecuteA (
-        void* hwnd,
-        [CCode (type = "const char*")] string operation,
-        [CCode (type = "const char*")] string file,
-        [CCode (type = "const char*")] string parameters,
-        [CCode (type = "const char*")] string directory,
-        int show_cmd
-    );
-
-    [CCode (cname = "ShellExecuteW", dll = "shell32.dll")]
-    public static extern void* ShellExecuteW (
-        void* hwnd,
-        [CCode (type = "const wchar_t*")] unowned string operation,
-        [CCode (type = "const wchar_t*")] unowned string file,
-        [CCode (type = "const wchar_t*")] unowned string parameters,
-        [CCode (type = "const wchar_t*")] unowned string directory,
-        int show_cmd
-    );
-    #endif
-
     public static void open_url(string url) throws Error {
         #if IS_WINDOWS
-        void* result = ShellExecuteA (null, "open", url, null, null, 1);
+        void* result = Win32.ShellExecuteA (null, "open", url, null, null, 1);
         long code = (long) result;
         if (code <= 32) {
             // Wrap the Windows error code in a GLib.Error

@@ -1,0 +1,23 @@
+@define-color sidebar_bg_color #eef4f9;
+
+background {
+    border-radius: 8px;
+}
+
+.planify-main {
+    background-color: @sidebar_bg_color;
+    border-radius: 0;
+    font-size: 10pt;
+}
+
+.planify-main .sidebar-pane {
+    box-shadow: none;
+}
+
+.planify-main .content-pane {
+    background-color: @window_bg_color;
+    border: 1px solid color(srgb 0 0 0.0235294 / 0.12);
+    border-radius: 8px;
+    margin-right: 14px;
+    margin-bottom: 14px;
+}

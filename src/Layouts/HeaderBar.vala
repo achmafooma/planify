@@ -131,6 +131,11 @@ public class Layouts.HeaderBar : Adw.Bin {
         headerbar.pack_start (sidebar_button);
         headerbar.pack_start (back_button_revealer);
 
+        #if IS_WINDOWS
+        // on Windows we're using the native titlebar & window controls, so don't show the duplicative GTK/Adwaita ones
+        headerbar.set_show_end_title_buttons(false);
+        #endif
+
         child = headerbar;
 
         signal_map[sidebar_button.clicked.connect (() => {

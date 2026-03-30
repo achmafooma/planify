@@ -65,6 +65,8 @@ public class MainWindow : Adw.ApplicationWindow {
             add_css_class ("devel");
         }
 
+        this.add_css_class("planify-main");
+
         action_manager = new Services.ActionManager (app, this);
 
         var settings_popover = build_menu_app ();
@@ -85,7 +87,12 @@ public class MainWindow : Adw.ApplicationWindow {
             css_classes = { "flat" }
         };
 
+        #if IS_WINDOWS
+        // on Windows we're using the native titlebar & window controls, so don't show the duplicative GTK/Adwaita title
+        var title_label = new Gtk.Label ("");
+        #else
         var title_label = new Gtk.Label ("Planify");
+        #endif
         title_label.add_css_class ("title");
 
         var sidebar_header = new Adw.HeaderBar () {
@@ -226,7 +233,7 @@ public class MainWindow : Adw.ApplicationWindow {
                     source.run_server ();
                 }
             });
-            
+
 #if WITH_EVOLUTION
             Services.Store.instance ().setup_calendar_events ();
 #endif
@@ -273,7 +280,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
         Services.Settings.get_default ().settings.changed["font-scale"].connect (Util.get_default ().update_font_scale);
 
-        Services.EventBus.get_default ().pane_selected.connect ((pane_type, id) => {  
+        Services.EventBus.get_default ().pane_selected.connect ((pane_type, id) => {
             if (Services.EventBus.get_default ().multi_select_enabled) {
                 clear_multi_select ();
             }
@@ -403,24 +410,24 @@ public class MainWindow : Adw.ApplicationWindow {
         key_controller.key_pressed.connect ((keyval, keycode, state) => {
             if (keyval == Gdk.Key.Escape) {
                 Services.EventBus.get_default ().escape_pressed ();
-                
+
                 if (Services.EventBus.get_default ().item_edit_active) {
                     Services.EventBus.get_default ().item_edit_active = false;
                     Services.EventBus.get_default ().dim_content (false, "");
                     return true;
                 }
-                
+
                 if (Services.EventBus.get_default ().multi_select_enabled) {
                     clear_multi_select ();
                     return true;
                 }
-                
+
                 if (views_split_view.show_sidebar) {
                     views_split_view.show_sidebar = false;
                     return true;
                 }
             }
-            
+
             return false;
         });
 
@@ -429,7 +436,7 @@ public class MainWindow : Adw.ApplicationWindow {
         window_gesture.pressed.connect ((n_press, x, y) => {
             if (Services.EventBus.get_default ().item_edit_active) {
                 var target = view_stack.pick (x, y, Gtk.PickFlags.DEFAULT);
-                
+
                 bool clicked_on_editing_task = false;
                 var widget = target;
                 while (widget != null) {
@@ -439,7 +446,7 @@ public class MainWindow : Adw.ApplicationWindow {
                     }
                     widget = widget.get_parent ();
                 }
-                
+
                 if (!clicked_on_editing_task) {
                     Services.EventBus.get_default ().item_edit_active = false;
                     Services.EventBus.get_default ().dim_content (false, "");
@@ -497,7 +504,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
     private void add_inbox_view () {
         var inbox_project = Services.Store.instance ().get_project (Services.Settings.get_default ().settings.get_string ("local-inbox-project-id"));
-        
+
         if (inbox_project != null) {
             add_project_view (inbox_project);
             previous_inbox_project_id = inbox_project.id;
@@ -530,7 +537,7 @@ public class MainWindow : Adw.ApplicationWindow {
                 cleanup_view (old_view);
                 views_stack.remove (old_view);
             }
-            
+
             add_inbox_view ();
         }
     }
@@ -787,7 +794,7 @@ public class MainWindow : Adw.ApplicationWindow {
         try {
             var shortcuts_builder = new Gtk.Builder ();
             shortcuts_builder.add_from_resource ("/io/github/alainm23/planify/shortcuts.ui");
-            
+
             var shortcuts_window = (Gtk.ShortcutsWindow) shortcuts_builder.get_object ("shortcuts-planify");
             shortcuts_window.set_transient_for (this);
             shortcuts_window.show ();

@@ -8,8 +8,9 @@
     <file alias="variables.css" compressed="true">resources/stylesheet/variables.css</file>
     <file alias="sidebar.css" compressed="true">resources/stylesheet/sidebar.css</file>
     <file alias="typography.css" compressed="true">resources/stylesheet/typography.css</file>
+    <file alias="windows.css" compressed="true">resources/stylesheet/windows.css</file>
   </gresource>
-  
+
   <gresource prefix="/io/github/alainm23/planify">
     <file alias="index.css" compressed="true">resources/stylesheet/index.css</file>
     <file alias="shortcuts.ui" compressed="true">resources/ui/shortcuts.ui</file>
@@ -26,6 +27,12 @@
     <file alias="light-mode.svg">resources/images/light-mode.svg</file>
     <file alias="dark-mode.svg">resources/images/dark-mode.svg</file>
     <file alias="blue-mode.svg">resources/images/blue-mode.svg</file>
+
+    <!-- Planify Icons -->
+    <file alias="planify-16.png">resources/icons/planify-16.png</file>
+    <file alias="planify-24.png">resources/icons/planify-24.png</file>
+    <file alias="planify-32.png">resources/icons/planify-32.png</file>
+    <file alias="planify-48.png">resources/icons/planify-48.png</file>
   </gresource>
 
   <gresource prefix="/io/github/alainm23/planify/icons/scalable/actions">
