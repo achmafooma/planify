@@ -18,7 +18,6 @@ endif
 
 # parse webkit, portal, evolution, and winconsole options
 # on Windows these are unsupported and are forced to false
-with_webkit = (get_option('webkit') and not is_windows)
 with_portal = (get_option('portal') and not is_windows)
 with_evolution = (get_option('evolution') and not is_windows)
 with_win_console = (get_option('winconsole'))
