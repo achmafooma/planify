@@ -4,12 +4,6 @@ deps = [
   m_dep
 ]
 
-if with_webkit
-  if webkitgtk_dep.found()
-      deps += webkitgtk_dep
-  endif
-endif
-
 
 if with_portal
   if libportal_dep.found()

@@ -72,6 +72,26 @@ public class Planify : Adw.Application {
         create_dir_with_parents ("/io.github.alainm23.planify/backups");
     }
 
+    protected override void open (File[] files, string hint) {
+        activate ();
+
+        foreach (var file in files) {
+            string uri = file.get_uri ();
+            if (uri.has_prefix ("planify://")) {
+                handle_uri (uri);
+            }
+        }
+    }
+
+    private void handle_uri (string uri) {
+        var parts = uri.replace ("planify://", "").split ("?", 2);
+        string path = parts[0].replace ("/", "");
+
+        if (path == "auth") {
+            Services.EventBus.get_default ().oauth_callback (uri);
+        }
+    }
+
     protected override void activate () {
         if (lang != "") {
             GLib.Environment.set_variable ("LANGUAGE", lang, true);
@@ -162,10 +182,6 @@ public class Planify : Adw.Application {
 
         Util.get_default ().update_theme ();
         Util.get_default ().update_font_scale ();
-
-        if (Services.Settings.get_default ().settings.get_string ("dismissed-update-version") != Build.VERSION) {
-            Services.Settings.get_default ().settings.set_boolean ("show-support-banner", true);
-        }
 
         // Actions
         build_shortcuts ();
@@ -263,13 +279,6 @@ public class Planify : Adw.Application {
     }
 
     public static int main (string[] args) {
-        #if USE_WEBKITGTK
-        // NOTE: Workaround for https://github.com/alainm23/planify/issues/1069
-        GLib.Environment.set_variable ("WEBKIT_DISABLE_COMPOSITING_MODE", "1", true);
-        // NOTE: Workaround for https://github.com/alainm23/planify/issues/1120
-        GLib.Environment.set_variable ("WEBKIT_DISABLE_DMABUF_RENDERER", "1", true);
-        #endif
-
         Planify app = Planify.instance;
         return app.run (args);
     }
