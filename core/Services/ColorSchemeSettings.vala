@@ -59,6 +59,12 @@ namespace ColorSchemeSettings {
         private Settings () {}
 
         private void setup_prefers_color_scheme () {
+            #if IS_WINDOWS
+            prefers_color_scheme = (Win32Util.system_is_dark_theme())
+                ? ColorScheme.DARK
+                : ColorScheme.LIGHT;
+                return;
+            #else
             try {
                 portal = Portal.Settings.get ();
 
@@ -76,6 +82,7 @@ namespace ColorSchemeSettings {
             } catch (Error e) {
                 debug ("cannot use the portal, using the AccountsService: %s", e.message);
             }
+            #endif
 
             prefers_color_scheme = ColorScheme.NO_PREFERENCE;
         }

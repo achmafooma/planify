@@ -6,7 +6,6 @@ core_files = files(
     'Utils/Util.vala',
     'Utils/Datetime.vala',
     'Utils/MarkdownProcessor.vala',
-    'Utils/Win32.vala',
 
     'Services/Settings.vala',
     'Services/EventBus.vala',
@@ -137,6 +136,10 @@ if with_evolution
     core_files += 'Services/CalendarEvents/Util.vala'
 endif
 
+if is_windows
+    core_files += 'Utils/Win32Util.vala'
+endif
+
 core_deps = [
   gio_dep,
   glib_dep,
@@ -152,6 +155,10 @@ core_deps = [
   libspelling,
   gtksourceview_dep
 ]
+
+if is_windows
+    core_deps += [cc.find_library('dwmapi')]
+endif
 
 if with_evolution
     if libecal_dep.found()

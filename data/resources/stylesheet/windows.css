@@ -1,23 +1,34 @@
-@define-color sidebar_bg_color #eef4f9;
-
 background {
     border-radius: 8px;
 }
 
 .planify-main {
-    background-color: @sidebar_bg_color;
+    background-color: @window_bg_color;
     border-radius: 0;
     font-size: 10pt;
 }
 
 .planify-main .sidebar-pane {
+    background-color: @window_bg_color;
     box-shadow: none;
 }
 
 .planify-main .content-pane {
-    background-color: @window_bg_color;
-    border: 1px solid color(srgb 0 0 0.0235294 / 0.12);
+    background-color: @card_bg_color;
+    border: 1px solid @item_border_color;
     border-radius: 8px;
     margin-right: 14px;
     margin-bottom: 14px;
+}
+
+.planify-main:backdrop,
+.planify-main .sidebar-pane:backdrop {
+    background-color: #f3f3f3;
+}
+
+.planify-main.theme-dark:backdrop,
+.planify-main.theme-dark .sidebar-pane:backdrop,
+.planify-main.theme-dark-blue:backdrop,
+.planify-main.theme-dark-blue .sidebar-pane:backdrop {
+    background-color: #202020;
 }

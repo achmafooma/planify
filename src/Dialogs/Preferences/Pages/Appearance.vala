@@ -29,14 +29,14 @@ public class Dialogs.Preferences.Pages.Appearance : Dialogs.Preferences.Pages.Ba
     private Gtk.CheckButton blue_radio;
     private Adw.PreferencesGroup theme_group;
     private Gtk.Revealer placeholder_revealer;
-    
+
     public Appearance (Adw.PreferencesDialog preferences_dialog) {
         Object (
             preferences_dialog: preferences_dialog,
             title: _("Appearance")
         );
     }
-    
+
     ~Appearance () {
         debug ("Destroying - Dialogs.Preferences.Pages.Appearance\n");
     }
@@ -204,7 +204,7 @@ public class Dialogs.Preferences.Pages.Appearance : Dialogs.Preferences.Pages.Ba
                 Services.Settings.get_default ().settings.set_enum ("appearance", 2);
             }
         })] = blue_radio;
-        
+
         uint update_timeout_id = 0;
         signal_map[font_size_scale.value_changed.connect (() => {
             if (update_timeout_id != 0) {

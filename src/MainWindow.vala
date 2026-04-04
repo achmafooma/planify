@@ -389,10 +389,26 @@ public class MainWindow : Adw.ApplicationWindow {
 
         Services.EventBus.get_default ().theme_changed.connect (() => {
             Appearance appearance_mode = Appearance.get_default ();
+
+            // Need to check if we're in the 'system-appearance' mode and adjust accordingly
+            bool system_dark = false;
+            bool system_appearance = Services.Settings.get_default ().settings.get_boolean ("system-appearance");
+            if (system_appearance) {
+                system_dark = color_scheme_settings.prefers_color_scheme == ColorSchemeSettings.Settings.ColorScheme.DARK;
+            }
+
             remove_css_class ("theme-dark");
             remove_css_class ("theme-dark-blue");
 
-            if (appearance_mode == Appearance.DARK) {
+            if (
+                (
+                    appearance_mode == Appearance.DARK ||
+                    // system-appearance & dark, but we haven't picked a dark theme
+                    (system_dark && appearance_mode == Appearance.LIGHT)
+                ) &&
+                    // but NOT if system appearance & light, with a dark setting
+                    !(system_appearance && !system_dark && appearance_mode != Appearance.LIGHT)
+            ) {
                 add_css_class ("theme-dark");
             } else if (appearance_mode == Appearance.DARK_BLUE) {
                 add_css_class ("theme-dark-blue");

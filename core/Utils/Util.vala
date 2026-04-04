@@ -31,18 +31,7 @@ public class Util : GLib.Object {
 
     public static void open_url(string url) throws Error {
         #if IS_WINDOWS
-        void* result = Win32.ShellExecuteA (null, "open", url, null, null, 1);
-        long code = (long) result;
-        if (code <= 32) {
-            // Wrap the Windows error code in a GLib.Error
-            throw new GLib.Error (
-                GLib.Quark.from_string ("util-open-url"),
-                (int) code,
-                "Failed to open URL '%s' (ShellExecute returned %ld)",
-                url,
-                code
-            );
-        }
+        Win32Util.url_opener (url);
         #else
         // GIO URL launcher
         AppInfo.launch_default_for_uri (url, null);
@@ -309,7 +298,11 @@ public class Util : GLib.Object {
 
         if (dark_mode) {
             if (appearance_mode == Appearance.DARK) {
+                #if IS_WINDOWS
+                window_bg_color = "#1a2228";
+                #else
                 window_bg_color = "#181818";
+                #endif
                 popover_bg_color = "#202020";
                 sidebar_bg_color = "#1f1f1f";
                 item_border_color = "#3a3a3a";
@@ -319,7 +312,11 @@ public class Util : GLib.Object {
                 card_bg_color = "#222222";
                 Adw.StyleManager.get_default ().color_scheme = Adw.ColorScheme.FORCE_DARK;
             } else if (appearance_mode == Appearance.DARK_BLUE) {
+                #if IS_WINDOWS
+                window_bg_color = "#1a2228";
+                #else
                 window_bg_color = "#0C0D12";
+                #endif
                 popover_bg_color = "#16171D";
                 sidebar_bg_color = "#14151a";
                 item_border_color = "#2d2f35";
@@ -328,9 +325,27 @@ public class Util : GLib.Object {
                 selected_color = "#2a303a";
                 card_bg_color = "#1E2026";
                 Adw.StyleManager.get_default ().color_scheme = Adw.ColorScheme.FORCE_DARK;
+            } else {
+                #if IS_WINDOWS
+                window_bg_color = "#1a2228";
+                #else
+                window_bg_color = "#181818";
+                #endif
+                popover_bg_color = "#202020";
+                sidebar_bg_color = "#1f1f1f";
+                item_border_color = "#3a3a3a";
+                upcoming_bg_color = "#2d2d2d";
+                upcoming_fg_color = "#f0f0f0";
+                selected_color = "#2e3a46";
+                card_bg_color = "#222222";
+                Adw.StyleManager.get_default ().color_scheme = Adw.ColorScheme.FORCE_DARK;
             }
         } else {
+            #if IS_WINDOWS
+            window_bg_color = "#eef4f9";
+            #else
             window_bg_color = "#f9f9f9";
+            #endif
             popover_bg_color = "#ffffff";
             sidebar_bg_color = "#f3f4f6";
             item_border_color = "#dcdfe3";
@@ -368,6 +383,15 @@ public class Util : GLib.Object {
             Gdk.Display.get_default (), provider,
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
         );
+
+        #if IS_WINDOWS
+        var app = (Gtk.Application) GLib.Application.get_default ();
+        var win = (Gtk.Window) app.get_active_window ();
+        var surface = win.get_surface();
+        void* hwnd = Win32Util.get_hwnd (surface);
+
+        Win32Util.set_dark_theme (hwnd, dark_mode);
+        #endif
 
         Services.EventBus.get_default ().theme_changed ();
     }
