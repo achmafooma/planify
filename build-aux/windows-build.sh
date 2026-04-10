@@ -30,6 +30,12 @@ cp -rv po/* dist/share/locale/
 mkdir -p dist/share/glib-2.0/schemas
 cp -v /ucrt64/share/glib-2.0/schemas/gschemas.compiled dist/share/glib-2.0/schemas
 
+# copy the enchant and hunspell libraries and dictionaries (otherwise spellcheck doesn't work)
+mkdir -p dist/lib/enchant-2
+cp -v /ucrt64/lib/enchant-2/enchant_hunspell.dll dist/lib/enchant-2
+cp -v /ucrt64/bin/libhunspell-1.7-0.dll dist/bin/
+cp -rv /ucrt64/share/hunspell dist/share/
+
 # copy the necessary gio module (otherwise TLS/SSL doesn't work)
 mkdir -p dist/lib/gio/modules
 cp -v /ucrt64/lib/gio/modules/libgioopenssl.dll dist/lib/gio/modules/
