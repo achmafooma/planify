@@ -297,26 +297,9 @@ public class Util : GLib.Object {
         string card_bg_color = "";
 
         if (dark_mode) {
-            if (appearance_mode == Appearance.DARK) {
-                #if IS_WINDOWS
-                window_bg_color = "#1a2228";
-                #else
-                window_bg_color = "#181818";
-                #endif
-                popover_bg_color = "#202020";
-                sidebar_bg_color = "#1f1f1f";
-                item_border_color = "#3a3a3a";
-                upcoming_bg_color = "#2d2d2d";
-                upcoming_fg_color = "#f0f0f0";
-                selected_color = "#2e3a46";
-                card_bg_color = "#222222";
-                Adw.StyleManager.get_default ().color_scheme = Adw.ColorScheme.FORCE_DARK;
-            } else if (appearance_mode == Appearance.DARK_BLUE) {
-                #if IS_WINDOWS
-                window_bg_color = "#1a2228";
-                #else
+            if (appearance_mode == Appearance.DARK_BLUE) {
+                // if Appearance.DARK_BLUE theme
                 window_bg_color = "#0C0D12";
-                #endif
                 popover_bg_color = "#16171D";
                 sidebar_bg_color = "#14151a";
                 item_border_color = "#2d2f35";
@@ -326,11 +309,8 @@ public class Util : GLib.Object {
                 card_bg_color = "#1E2026";
                 Adw.StyleManager.get_default ().color_scheme = Adw.ColorScheme.FORCE_DARK;
             } else {
-                #if IS_WINDOWS
-                window_bg_color = "#1a2228";
-                #else
+                // if Appearance.DARK theme, or if dark appearance isn't
                 window_bg_color = "#181818";
-                #endif
                 popover_bg_color = "#202020";
                 sidebar_bg_color = "#1f1f1f";
                 item_border_color = "#3a3a3a";
@@ -340,12 +320,14 @@ public class Util : GLib.Object {
                 card_bg_color = "#222222";
                 Adw.StyleManager.get_default ().color_scheme = Adw.ColorScheme.FORCE_DARK;
             }
-        } else {
+            // Windows dark overrides
             #if IS_WINDOWS
-            window_bg_color = "#eef4f9";
-            #else
-            window_bg_color = "#f9f9f9";
+            window_bg_color = "#202020";
+            card_bg_color = "#323232";
+            sidebar_bg_color = "#323232";
             #endif
+        } else {
+            window_bg_color = "#f9f9f9";
             popover_bg_color = "#ffffff";
             sidebar_bg_color = "#f3f4f6";
             item_border_color = "#dcdfe3";
@@ -354,6 +336,13 @@ public class Util : GLib.Object {
             selected_color = "#dbeafe";
             card_bg_color = "#ffffff";
             Adw.StyleManager.get_default ().color_scheme = Adw.ColorScheme.FORCE_LIGHT;
+
+            // Windows light overrides
+            #if IS_WINDOWS
+            //window_bg_color = "#f3f3f3";
+            window_bg_color = "#f8f8f8";
+            sidebar_bg_color = "#f3f3f3";
+            #endif
         }
 
         string css = """
