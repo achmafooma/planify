@@ -219,7 +219,7 @@ public class Dialogs.Preferences.Pages.TodoistSetup : Dialogs.Preferences.Pages.
         title = _("Waiting for login…");
 
         try {
-            AppInfo.launch_default_for_uri (oauth_url, null);
+            Util.open_url (oauth_url);
         } catch (Error e) {
             warning ("Error opening browser: %s", e.message);
             oauth_button.is_loading = false;
