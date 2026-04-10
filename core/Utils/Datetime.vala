@@ -598,62 +598,13 @@ public class Utils.Datetime {
         return ECal.util_get_system_timezone ();
         #elif IS_WINDOWS
         string win_tzid = new GLib.TimeZone.local ().get_identifier ();
-        string tzid = windows_to_ical_timezone(win_tzid);
+        string tzid = Win32Util.windows_to_ical_timezone(win_tzid);
         return ICal.Timezone.get_builtin_timezone (tzid);
         #else
         string tzid = new GLib.TimeZone.local ().get_identifier ();
         return ICal.Timezone.get_builtin_timezone (tzid);
         #endif
     }
-
-    #if IS_WINDOWS
-    /** Converts a Windows timezone ID to a timezone ID that libical understands */
-    public static string windows_to_ical_timezone (string tzid) {
-        try {
-            string tz_path = GLib.Path.build_filename ("..", "share", "windowsZones.xml");
-            var root = new GXml.XDocument.from_file (GLib.File.new_for_path(tz_path)).document_element;
-
-            if (root == null)
-                return null;
-
-
-            // Walk the tree manually (simplest possible)
-            foreach (var windowsZones in root.child_nodes) {
-                if (windowsZones.node_name != "windowsZones")
-                    continue;
-
-                foreach (var mapTimezones in windowsZones.child_nodes) {
-                    if (mapTimezones.node_name != "mapTimezones")
-                        continue;
-
-                    foreach (var node in mapTimezones.child_nodes) {
-                        if (node.node_name != "mapZone")
-                            continue;
-
-                        var elem = node as GXml.DomElement;
-                        if (elem == null)
-                            continue;
-
-                        // Windows ID is in "other"
-                        if (elem.get_attribute ("other") == tzid) {
-                            // IANA IDs are in "type"
-                            var type = elem.get_attribute ("type");
-                            if (type != null && type.length > 0) {
-                                // Return the first IANA ID
-                                return type.split (" ")[0];
-                            }
-                        }
-                    }
-                }
-            }
-        } catch (Error e) {
-            warning ("Failed to load windowsZones.xml: %s", e.message);
-        }
-
-        return null;
-    }
-    #endif
-
 
     public static string get_markdown_format_date (Objects.Item item) {
         if (!item.has_due) {

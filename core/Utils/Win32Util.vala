@@ -131,4 +131,72 @@ public class Win32Util {
     )]
     public extern static void* get_hwnd (Gdk.Surface surface);
 
+
+    // Get the full path of the running executable
+    public static string get_exe_path () {
+        string? exe_path = Module.build_path(null, Environment.get_prgname());
+
+        if (exe_path == null || exe_path == "") {
+            // Fallback: use argv[0]
+            exe_path = File.new_for_path(Environment.get_prgname()).get_path();
+        }
+
+        File exe_file = File.new_for_path(exe_path);
+        File? parent = exe_file.get_parent();
+
+        return parent != null ? parent.get_path() : ".";
+    }
+
+
+    // Converts a Windows timezone ID to a timezone ID that libical understands
+    public static string windows_to_ical_timezone (string tzid) {
+        try {
+            string tz_path = GLib.Path.build_filename (
+                get_exe_path(),
+                "..",
+                "share",
+                "windowsZones.xml"
+            );
+            var root = new GXml.XDocument.from_file (GLib.File.new_for_path(tz_path)).document_element;
+
+            if (root == null)
+                return null;
+
+
+            // Walk the tree manually (simplest possible)
+            foreach (var windowsZones in root.child_nodes) {
+                if (windowsZones.node_name != "windowsZones")
+                    continue;
+
+                foreach (var mapTimezones in windowsZones.child_nodes) {
+                    if (mapTimezones.node_name != "mapTimezones")
+                        continue;
+
+                    foreach (var node in mapTimezones.child_nodes) {
+                        if (node.node_name != "mapZone")
+                            continue;
+
+                        var elem = node as GXml.DomElement;
+                        if (elem == null)
+                            continue;
+
+                        // Windows ID is in "other"
+                        if (elem.get_attribute ("other") == tzid) {
+                            // IANA IDs are in "type"
+                            var type = elem.get_attribute ("type");
+                            if (type != null && type.length > 0) {
+                                // Return the first IANA ID
+                                return type.split (" ")[0];
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (Error e) {
+            warning ("Failed to load windowsZones.xml: %s", e.message);
+        }
+
+        return null;
+    }
+
 }
