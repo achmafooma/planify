@@ -1,12 +1,15 @@
-background {
+window,
+popover,
+popover contents,
+.background,
+.boxed-list {
     border-radius: 8px;
 }
 
-.planify-main {
+window.planify-main {
     background-color: @window_bg_color;
     border-top: 1px solid @item_border_color;
     border-radius: 0;
-    font-size: 10pt;
 }
 
 .planify-main .sidebar-pane {

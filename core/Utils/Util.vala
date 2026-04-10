@@ -389,15 +389,22 @@ public class Util : GLib.Object {
         string _css = """
             popover,
             window {
-                font-size: %s%%;
+                font-size: calc(%s * %s);
             }
         """;
+
 
         var provider = new Gtk.CssProvider ();
 
         try {
-            string scale = (100 * Services.Settings.get_default ().get_double ("font-scale")).to_string ();
-            var css = _css.printf (scale);
+            #if IS_WINDOWS
+            // GTK doesn't quite get the Windows font size right; use fixed 10pt as our "1.0" size baseline
+            string base_font = "10pt";
+            #else
+            string base_font = "1em";
+            #endif
+            string scale = (Services.Settings.get_default ().get_double ("font-scale")).to_string ();
+            var css = _css.printf (scale, base_font);
 
             provider.load_from_string (css);
             Gtk.StyleContext.add_provider_for_display (
