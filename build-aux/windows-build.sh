@@ -40,7 +40,8 @@ cp -rv /ucrt64/share/hunspell dist/share/
 mkdir -p dist/lib/gio/modules
 cp -v /ucrt64/lib/gio/modules/libgioopenssl.dll dist/lib/gio/modules/
 
-# copy GStreamer and the necessary plugins (otherwise task-complete sound doesn't work and crashes)
+# copy GStreamer and the necessary plugins (otherwise task-complete sound doesn't work)
+cp -v /ucrt64/bin/libgst*.dll dist/bin
 cp -rv /ucrt64/lib/gstreamer-1.0 dist/lib/
 for dll in dist/lib/gstreamer-1.0/*.dll; do
     # make sure we have all the necessary dependencies too
