@@ -1,7 +1,7 @@
 project(
   'io.github.alainm23.planify',
   'vala', 'c',
-  version: '4.18.3'
+  version: '4.19.0'
 )
 
 cc = meson.get_compiler('c')
@@ -89,6 +89,7 @@ if profile == 'development'
   rev = '-@0@'.format(rev_txt)
   application_id = 'io.github.alainm23.planify.Devel'
   application_path = '/io/github/alainm23/planify/Devel'
+  add_project_arguments(['--define=DEVELOPMENT'], language: 'vala')
 else
   rev = ''
   application_id = 'io.github.alainm23.planify'
