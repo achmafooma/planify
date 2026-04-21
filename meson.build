@@ -4,6 +4,29 @@ project(
   version: '4.19.0'
 )
 
+###########
+# Profile #
+###########
+
+profile = get_option('profile')
+if profile == 'development'
+  find_program('git')
+  rev_txt = run_command('git','rev-parse','--short','HEAD').stdout().strip()
+  rev = '-@0@'.format(rev_txt)
+  application_id = 'io.github.alainm23.planify.Devel'
+  application_path = '/io/github/alainm23/planify/Devel'
+  add_project_arguments(['--define=DEVELOPMENT'], language: 'vala')
+else
+  rev = ''
+  application_id = 'io.github.alainm23.planify'
+  application_path = '/io/github/alainm23/planify'
+endif
+
+################
+# Dependencies #
+################
+
+
 cc = meson.get_compiler('c')
 
 gnome = import('gnome')
@@ -22,7 +45,19 @@ with_portal = (get_option('portal') and not is_windows)
 with_evolution = (get_option('evolution') and not is_windows)
 with_win_console = (get_option('winconsole'))
 
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
+# is this a Windows build?
+is_windows = (host_machine.system() == 'windows')
+if is_windows
+    add_project_arguments('-D', 'IS_WINDOWS', language: 'vala')
+endif
+
+# parse webkit, portal, evolution, and winconsole options
+# on Windows these are unsupported and are forced to false
+with_portal = (get_option('portal') and not is_windows)
+with_evolution = (get_option('evolution') and not is_windows)
+with_win_console = (get_option('winconsole'))
+
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (application_id), language:'c')
 add_project_arguments('-DLIBICAL_GLIB_UNSTABLE_API=1', language: 'c')
 
 gio_dep = dependency('gio-2.0')
@@ -39,6 +74,11 @@ libsecret_dep = dependency('libsecret-1')
 libspelling = dependency('libspelling-1', required: get_option('spelling'))
 gtksourceview_dep = dependency('gtksourceview-5')
 m_dep = meson.get_compiler('c').find_library('m', required : false)
+icu_uc_dep = dependency('icu-uc')
+
+if icu_uc_dep.found ()
+  add_project_arguments(['--vapidir=' + meson.project_source_root() / 'vapi'], language: 'vala')
+endif
 
 if libspelling.found ()
   add_project_arguments(['--define=WITH_LIBSPELLING'], language: 'vala')
@@ -77,24 +117,6 @@ asresources = gnome.compile_resources (
     source_dir: 'data',
     c_name: 'as'
 )
-
-###########
-# Profile #
-###########
-
-profile = get_option('profile')
-if profile == 'development'
-  find_program('git')
-  rev_txt = run_command('git','rev-parse','--short','HEAD').stdout().strip()
-  rev = '-@0@'.format(rev_txt)
-  application_id = 'io.github.alainm23.planify.Devel'
-  application_path = '/io/github/alainm23/planify/Devel'
-  add_project_arguments(['--define=DEVELOPMENT'], language: 'vala')
-else
-  rev = ''
-  application_id = 'io.github.alainm23.planify'
-  application_path = '/io/github/alainm23/planify'
-endif
 
 ############
 # Config #
@@ -141,6 +163,7 @@ config_file = configure_file(
 subdir('core')
 subdir('src')
 subdir('quick-add')
+subdir('cli')
 subdir('data')
 subdir('search-provider')
 subdir('po')
