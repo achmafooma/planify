@@ -288,13 +288,15 @@ public class Util : GLib.Object {
         }
 
         string accent_color = "#3584e4";
-        if (Adw.StyleManager.get_default ().get_system_supports_accent_colors ()) {
-            var rgba = Adw.StyleManager.get_default ().get_accent_color_rgba ();
-            accent_color = "#%02x%02x%02x".printf (
-                (uint) (rgba.red * 255),
-                (uint) (rgba.green * 255),
-                (uint) (rgba.blue * 255)
-            );
+        if (Services.Settings.get_default ().settings.get_boolean ("use-system-accent")) {
+            if (Adw.StyleManager.get_default ().get_system_supports_accent_colors ()) {
+                var rgba = Adw.StyleManager.get_default ().get_accent_color_rgba ();
+                accent_color = "#%02x%02x%02x".printf (
+                    (uint) (rgba.red * 255),
+                    (uint) (rgba.green * 255),
+                    (uint) (rgba.blue * 255)
+                );
+            }
         }
 
         string window_bg_color = "";
@@ -319,7 +321,7 @@ public class Util : GLib.Object {
                 card_bg_color = "#1E2026";
                 Adw.StyleManager.get_default ().color_scheme = Adw.ColorScheme.FORCE_DARK;
             } else {
-                // if Appearance.DARK theme, or if dark appearance isn't
+                // if Appearance.DARK theme, or if dark appearance isn't configured
                 window_bg_color = "#181818";
                 popover_bg_color = "#202020";
                 sidebar_bg_color = "#1f1f1f";
