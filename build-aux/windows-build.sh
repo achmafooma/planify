@@ -28,7 +28,8 @@ cp -rv po/* dist/share/locale/
 
 # copy the necessary glib schemas
 mkdir -p dist/share/glib-2.0/schemas
-cp -v /ucrt64/share/glib-2.0/schemas/gschemas.compiled dist/share/glib-2.0/schemas
+cp -v ../data/io.github.alainm23.planify.gschema.xml dist/share/glib-2.0/schemas/
+glib-compile-schemas ./dist/share/glib-2.0/schemas/
 
 # copy the enchant and hunspell libraries and dictionaries (otherwise spellcheck doesn't work)
 mkdir -p dist/lib/enchant-2
