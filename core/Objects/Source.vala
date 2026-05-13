@@ -115,7 +115,7 @@ public class Objects.Source : Objects.BaseObject {
         added_at = node.get_object ().get_string_member ("added_at");
         updated_at = node.get_object ().get_string_member ("updated_at");
         is_visible = node.get_object ().get_boolean_member ("is_visible");
-        child_order = (int32) node.get_object ().get_int_member ("is_visible");
+        child_order = (int32) node.get_object ().get_int_member ("child_order");
         sync_server = node.get_object ().get_boolean_member ("sync_server");
         last_sync = node.get_object ().get_string_member ("last_sync");
         display_name = node.get_object ().get_string_member ("display_name");
@@ -127,13 +127,16 @@ public class Objects.Source : Objects.BaseObject {
         }
     }
 
-    public void run_server () {
+    public void run_server (bool skip_first_sync = false) {
         if (source_type == SourceType.LOCAL) {
             return;
         }
 
         Services.LogService.get_default ().info ("Source", "Starting sync server for source: %s".printf (display_name));
-        _run_server ();
+
+        if (!skip_first_sync) {
+            _run_server ();
+        }
 
         server_timeout = Timeout.add_seconds (15 * 60, () => {
             if (sync_server) {

@@ -190,6 +190,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
             Services.Notification.get_default ();
             Services.TimeMonitor.get_default ().init_timeout ();
+            Services.BackupManager.get_default ().init_auto_backup ();
 
             go_homepage ();
 
@@ -223,7 +224,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
             Services.Store.instance ().source_added.connect ((source) => {
                 if (source.sync_server) {
-                    source.run_server ();
+                    source.run_server (true);
                 }
             });
 
