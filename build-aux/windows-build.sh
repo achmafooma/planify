@@ -16,6 +16,9 @@ cp -v /ucrt64/bin/libgnutls* dist/bin
 cp -v src/io.github.alainm23.planify.exe dist/bin
 cp -v core/libplanify-0.dll dist/bin
 
+# copy Chrono subproject
+cp -v subprojects/chrono/lib/libchrono.dll dist/bin
+
 # copy the necessary icon themes
 mkdir -p dist/share/icons
 cp -rv /ucrt64/share/icons/Adwaita dist/share/icons
