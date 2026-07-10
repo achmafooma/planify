@@ -58,7 +58,7 @@
   <url type="bugtracker">https://github.com/alainm23/planify/issues</url>
   <url type="vcs-browser">https://github.com/alainm23/planify</url>
   <url type="translate">https://github.com/alainm23/planify/tree/main/po#readme</url>
-  <url type="donation">https://useplanify.com/donate</url>
+  <url type="donation">https://www.patreon.com/alainm23</url>
   <launchable type="desktop-id">@appid@.desktop</launchable>
   <releases>
     <release version="4.19.4" date="2026-05-20" urgency="medium">
