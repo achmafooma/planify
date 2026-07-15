@@ -1699,7 +1699,7 @@ public class Widgets.MarkdownEditor : Adw.Bin {
     private string normalize_url (string url) {
         var trimmed_url = url.strip ();
 
-        if (trimmed_url.contains ("://")) {
+        if (GLib.Uri.parse_scheme (trimmed_url) != null) {
             return trimmed_url;
         }
 
