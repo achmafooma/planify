@@ -117,7 +117,7 @@ if with_evolution
     core_files += 'Services/CalendarEvents/Util.vala'
 endif
 
-if get_option('goa')
+if with_goa
     core_files += 'Services/GOA.vala'
 endif
 
@@ -155,7 +155,7 @@ if with_evolution
     endif
 endif
 
-if get_option('goa')
+if with_goa
     if goa_dep.found()
         core_deps += goa_dep
     endif

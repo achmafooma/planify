@@ -43,12 +43,7 @@ endif
 # on Windows these are unsupported and are forced to false
 with_portal = (get_option('portal') and not is_windows)
 with_evolution = (get_option('evolution') and not is_windows)
-with_win_console = (get_option('winconsole'))
-
-# parse webkit, portal, evolution, and winconsole options
-# on Windows these are unsupported and are forced to false
-with_portal = (get_option('portal') and not is_windows)
-with_evolution = (get_option('evolution') and not is_windows)
+with_goa = (get_option('goa') and not is_windows)
 with_win_console = (get_option('winconsole'))
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (application_id), language:'c')
@@ -108,7 +103,7 @@ if with_evolution
     endif
 endif
 
-if get_option('goa')
+if with_goa
     goa_dep = dependency('goa-1.0', required: true)
     add_project_arguments('-D', 'WITH_GOA', language: 'vala')
     add_project_arguments('-DGOA_API_IS_SUBJECT_TO_CHANGE', language: 'c')
