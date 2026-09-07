@@ -117,6 +117,10 @@ if with_evolution
     core_files += 'Services/CalendarEvents/Util.vala'
 endif
 
+if get_option('goa')
+    core_files += 'Services/GOA.vala'
+endif
+
 chrono_dep = dependency('chrono', fallback: ['chrono', 'libchrono_dep'])
 
 if is_windows
@@ -148,6 +152,12 @@ if with_evolution
     if libecal_dep.found()
         core_deps += libecal_dep
         core_deps += libedataserver_dep
+    endif
+endif
+
+if get_option('goa')
+    if goa_dep.found()
+        core_deps += goa_dep
     endif
 endif
 
