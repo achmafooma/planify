@@ -16,12 +16,12 @@ msgstr ""
 
 #: core/Enum.vala:168 core/Widgets/ProjectPicker/ProjectPickerCore.vala:264
 #: core/Widgets/ProjectPicker/ProjectPickerCore.vala:282
-#: src/Dialogs/Preferences/Pages/Backup.vala:511
+#: src/Dialogs/Preferences/Pages/Backup.vala:619
 #: src/Dialogs/Preferences/Pages/General.vala:55
 msgid "Projects"
 msgstr "项目"
 
-#: core/Enum.vala:171 src/Dialogs/Preferences/Pages/Backup.vala:515
+#: core/Enum.vala:171 src/Dialogs/Preferences/Pages/Backup.vala:623
 msgid "Sections"
 msgstr "分区"
 
@@ -31,7 +31,7 @@ msgstr "任务"
 
 #: core/Enum.vala:177 core/Enum.vala:548 core/Objects/Filters/Labels.vala:33
 #: core/Widgets/LabelPicker/LabelButton.vala:76 src/Dialogs/LabelPicker.vala:46
-#: src/Dialogs/Preferences/Pages/Backup.vala:523 src/Layouts/ItemBoard.vala:825
+#: src/Dialogs/Preferences/Pages/Backup.vala:631 src/Layouts/ItemBoard.vala:825
 #: src/Layouts/ItemRow.vala:1262
 msgid "Labels"
 msgstr "标签"
@@ -137,7 +137,7 @@ msgstr "目录"
 
 #: core/Enum.vala:539 src/Dialogs/Project.vala:151 src/Dialogs/Section.vala:91
 #: src/Layouts/ItemRow.vala:2014 src/Layouts/ItemSidebarView.vala:184
-#: src/Widgets/EventRow.vala:356 src/Widgets/ItemDetailCompleted.vala:115
+#: src/Widgets/EventRow.vala:359 src/Widgets/ItemDetailCompleted.vala:115
 msgid "Description"
 msgstr "描述"
 
@@ -152,7 +152,7 @@ msgid "Pin"
 msgstr "置顶"
 
 #: core/Enum.vala:554 core/Widgets/DeadlineButton.vala:152
-#: src/Services/ExportService.vala:73
+#: src/Services/ExportService.vala:57
 msgid "Deadline"
 msgstr "截止日期"
 
@@ -321,7 +321,7 @@ msgstr "无标签"
 msgid "unlabeled"
 msgstr "尚无标签"
 
-#: core/Objects/Item.vala:1594 src/Services/ExportService.vala:187
+#: core/Objects/Item.vala:1594 src/Services/ExportService.vala:138
 msgid "Deadline:"
 msgstr "截止日期："
 
@@ -351,7 +351,7 @@ msgstr "已删除标签%s"
 #: core/Objects/Section.vala:427
 #: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:198
 #: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:272
-#: src/Layouts/ItemSidebarView.vala:604 src/Services/BackupManager.vala:224
+#: src/Layouts/ItemSidebarView.vala:604 src/Services/BackupManager.vala:225
 msgid "This can not be undone"
 msgstr "无法撤销"
 
@@ -366,9 +366,9 @@ msgstr "无法撤销"
 #: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:274
 #: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:318
 #: src/Dialogs/Preferences/Pages/Accounts/TodoistSetup.vala:107
-#: src/Dialogs/Preferences/Pages/Backup.vala:594
+#: src/Dialogs/Preferences/Pages/Backup.vala:702
 #: src/Dialogs/QuickFind/QuickFind.vala:56 src/Layouts/ItemSidebarView.vala:607
-#: src/Services/BackupManager.vala:227 src/Views/Filter.vala:900
+#: src/Services/BackupManager.vala:228 src/Views/Filter.vala:900
 #: src/Widgets/BypassResolveSwitchRow.vala:48
 #: src/Widgets/IgnoreSSLSwitchRow.vala:48
 #: src/Widgets/MultiSelectToolbar.vala:344
@@ -380,8 +380,8 @@ msgstr "取消"
 #: src/Dialogs/CompletedTasks.vala:173
 #: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:201
 #: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:275
-#: src/Dialogs/Preferences/Pages/Backup.vala:360
-#: src/Layouts/ItemSidebarView.vala:608 src/Services/BackupManager.vala:228
+#: src/Dialogs/Preferences/Pages/Backup.vala:468
+#: src/Layouts/ItemSidebarView.vala:608 src/Services/BackupManager.vala:229
 #: src/Views/Filter.vala:901 src/Widgets/AttachmentRow.vala:52
 #: src/Widgets/MultiSelectToolbar.vala:276
 #: src/Widgets/MultiSelectToolbar.vala:345
@@ -756,39 +756,21 @@ msgid "%d day ago"
 msgid_plural "%d days ago"
 msgstr[0] "%d 天前"
 
-#: core/Utils/Datetime.vala:803
-msgid "%a, %b %-e, %Y"
-msgstr "%Y年%m月%d日 %a"
-
-#: core/Utils/Datetime.vala:806
-msgid "%b %-e %Y"
-msgstr "%Y年%m月%d日"
-
-#: core/Utils/Datetime.vala:809 core/Widgets/Calendar/CalendarHeader.vala:36
+#: core/Utils/Datetime.vala:853 core/Widgets/Calendar/CalendarHeader.vala:36
 #: core/Widgets/Calendar/CalendarHeader.vala:57
 msgid "%Y"
 msgstr "%Y"
 
-#: core/Utils/Datetime.vala:812
-#, fuzzy
-msgid "%b %-e"
-msgstr "%m月%d日"
-
-#: core/Utils/Datetime.vala:815
+#: core/Utils/Datetime.vala:858
 msgid "%a %Y"
 msgstr "%a %Y"
 
-#: core/Utils/Datetime.vala:818
+#: core/Utils/Datetime.vala:861
 #, c-format
 msgid "%a"
 msgstr "%a"
 
-#: core/Utils/Datetime.vala:821
-#, fuzzy
-msgid "%a, %b %-e"
-msgstr "%a, %m月%d日"
-
-#: core/Utils/Datetime.vala:824
+#: core/Utils/Datetime.vala:866
 msgid "%b"
 msgstr "%b"
 
@@ -2202,118 +2184,123 @@ msgstr "使用系统浅色主题时，自定义主题不可用"
 msgid "Font Size"
 msgstr "字体大小"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:29
+#: src/Dialogs/Preferences/Pages/Backup.vala:34
 #: src/Dialogs/Preferences/PreferencesWindow.vala:147
 msgid "Backups"
 msgstr "备份"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:39
+#: src/Dialogs/Preferences/Pages/Backup.vala:44
 msgid ""
 "Never worry about losing your data. You can create backups of your active "
 "projects, tasks and comments and import them later."
 msgstr ""
 "再也不用担心丢失数据。您可以创建活跃项目、任务和评论的备份，并在以后导入。"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:50
+#: src/Dialogs/Preferences/Pages/Backup.vala:55
 msgid "Automatic Daily Backup"
 msgstr "每日自动备份"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:51
+#: src/Dialogs/Preferences/Pages/Backup.vala:56
 msgid "Creates a backup every day at midnight"
 msgstr "每天午夜创建备份"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:58
+#: src/Dialogs/Preferences/Pages/Backup.vala:61
+msgid "Backups to Keep"
+msgstr ""
+
+#: src/Dialogs/Preferences/Pages/Backup.vala:62
+msgid "Older backups are removed automatically. Zero keeps them all"
+msgstr ""
+
+#: src/Dialogs/Preferences/Pages/Backup.vala:70
 msgid "Create Backup"
 msgstr "创建备份"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:62
+#: src/Dialogs/Preferences/Pages/Backup.vala:74
 msgid "Import Backup"
 msgstr "导入备份"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:64
+#: src/Dialogs/Preferences/Pages/Backup.vala:76
 msgid "Backup Files"
 msgstr "备份文件"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:67
+#: src/Dialogs/Preferences/Pages/Backup.vala:79
 msgid "No backups found, create one clicking the button above."
 msgstr "未找到备份，点击上方按钮创建一个。"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:72
-#, c-format
-msgid "Backup files are stored in: %s"
-msgstr "备份文件存储在：%s"
+#: src/Dialogs/Preferences/Pages/Backup.vala:88
+msgid "Open backup folder"
+msgstr ""
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:81
-msgid ""
-"Only the last 30 backups are shown here. To access older backups, open the "
-"backup folder directly."
-msgstr "此处仅显示最近 30 个备份。要访问更早的备份，请直接打开备份文件夹。"
+#: src/Dialogs/Preferences/Pages/Backup.vala:93
+msgid "Backup Location"
+msgstr ""
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:97
+#: src/Dialogs/Preferences/Pages/Backup.vala:132
 msgid "Extra Backup Locations"
 msgstr "额外备份位置"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:100
+#: src/Dialogs/Preferences/Pages/Backup.vala:135
 msgid "No extra locations added yet."
 msgstr "尚未添加额外位置。"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:112
+#: src/Dialogs/Preferences/Pages/Backup.vala:147
 msgid ""
 "Backup copies will also be saved to these folders after each backup is "
 "created."
 msgstr "每次创建备份后，备份副本也将保存到这些文件夹中。"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:121
+#: src/Dialogs/Preferences/Pages/Backup.vala:156
 msgid "Migrate"
 msgstr "迁移"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:123
+#: src/Dialogs/Preferences/Pages/Backup.vala:158
 msgid "Migrate From Planner"
 msgstr "从 Planner 迁移"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:163
+#: src/Dialogs/Preferences/Pages/Backup.vala:212
 msgid "The Backup was created successfully."
 msgstr "备份创建成功。"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:180
+#: src/Dialogs/Preferences/Pages/Backup.vala:229
 msgid "Tasks Migrate Successfully"
 msgstr "任务迁移成功"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:184
+#: src/Dialogs/Preferences/Pages/Backup.vala:233
 msgid "The database file does not exist."
 msgstr "数据库文件不存在。"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:261
+#: src/Dialogs/Preferences/Pages/Backup.vala:369
 msgid "Selected file is invalid"
 msgstr "所选文件无效"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:359
+#: src/Dialogs/Preferences/Pages/Backup.vala:467
 msgid "Download"
 msgstr "下载"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:495
-#: src/Dialogs/Preferences/Pages/Backup.vala:536
-#: src/Dialogs/Preferences/Pages/Backup.vala:595
+#: src/Dialogs/Preferences/Pages/Backup.vala:603
+#: src/Dialogs/Preferences/Pages/Backup.vala:644
+#: src/Dialogs/Preferences/Pages/Backup.vala:703
 msgid "Restore Backup"
 msgstr "恢复备份"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:507 src/Dialogs/Project.vala:450
+#: src/Dialogs/Preferences/Pages/Backup.vala:615 src/Dialogs/Project.vala:450
 msgid "Sources"
 msgstr "来源"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:519
+#: src/Dialogs/Preferences/Pages/Backup.vala:627
 msgid "To-Dos"
 msgstr "待办事项"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:580
+#: src/Dialogs/Preferences/Pages/Backup.vala:688
 msgid "This will replace all your current data"
 msgstr "这将替换您当前的所有数据"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:589
+#: src/Dialogs/Preferences/Pages/Backup.vala:697
 msgid "Restore backup"
 msgstr "恢复备份"
 
-#: src/Dialogs/Preferences/Pages/Backup.vala:590
+#: src/Dialogs/Preferences/Pages/Backup.vala:698
 msgid ""
 "Are you sure you want to continue? This operation will delete your current "
 "data and replace it with the backup data."
@@ -3219,6 +3206,10 @@ msgstr "导出为 PDF"
 msgid "Project exported as PDF"
 msgstr "项目已导出为 PDF"
 
+#: src/Layouts/ProjectRow.vala:787 src/Widgets/Attachments.vala:142
+msgid "Open"
+msgstr "打开"
+
 #: src/Layouts/SectionBoard.vala:77 src/Layouts/SectionRow.vala:89
 msgid "(No Section)"
 msgstr "（无分区）"
@@ -3353,32 +3344,32 @@ msgstr ""
 msgid "Reset Database"
 msgstr "重置数据库"
 
-#: src/Services/BackupManager.vala:153
+#: src/Services/BackupManager.vala:154
 msgid "Automatic backup failed"
 msgstr "自动备份失败"
 
-#: src/Services/BackupManager.vala:199
+#: src/Services/BackupManager.vala:200
 #, c-format
 msgid "Failed to copy backup to %s"
 msgstr "复制备份到 %s 失败"
 
-#: src/Services/BackupManager.vala:223
+#: src/Services/BackupManager.vala:224
 msgid "Delete Backup"
 msgstr "删除备份"
 
-#: src/Services/BackupManager.vala:355
+#: src/Services/BackupManager.vala:394
 msgid "Backup Successfully Imported"
 msgstr "备份导入成功"
 
-#: src/Services/BackupManager.vala:356
+#: src/Services/BackupManager.vala:395
 msgid "Planify will restart to apply the changes"
 msgstr "Planify 将重新启动以应用更改"
 
-#: src/Services/BackupManager.vala:359
+#: src/Services/BackupManager.vala:398
 msgid "Restart Now"
 msgstr "立即重启"
 
-#: src/Services/BackupManager.vala:373
+#: src/Services/BackupManager.vala:412
 msgid "Planify Backup Files"
 msgstr "Planify 备份文件"
 
@@ -3651,10 +3642,6 @@ msgstr "我"
 msgid "Attachments"
 msgstr "附件"
 
-#: src/Widgets/Attachments.vala:142
-msgid "Open"
-msgstr "打开"
-
 #: src/Widgets/Attachments.vala:248
 msgid "No attachments found. Add files here."
 msgstr "未找到附件。在此处添加文件。"
@@ -3717,39 +3704,39 @@ msgstr "报告问题"
 msgid "Account migration required."
 msgstr "需要迁移账户。"
 
-#: src/Widgets/EventRow.vala:242
+#: src/Widgets/EventRow.vala:245
 #, c-format
 msgid "In %d minute"
 msgid_plural "In %d minutes"
 msgstr[0] "%d 分钟后"
 
-#: src/Widgets/EventRow.vala:244
+#: src/Widgets/EventRow.vala:247
 #, c-format
 msgid "In %d hour"
 msgid_plural "In %d hours"
 msgstr[0] "%d 小时后"
 
-#: src/Widgets/EventRow.vala:249
+#: src/Widgets/EventRow.vala:252
 msgid "Happening now"
 msgstr "正在进行"
 
-#: src/Widgets/EventRow.vala:284
+#: src/Widgets/EventRow.vala:287
 msgid "Location"
 msgstr "位置"
 
-#: src/Widgets/EventRow.vala:297
+#: src/Widgets/EventRow.vala:300
 msgid "Organizer"
 msgstr "组织者"
 
-#: src/Widgets/EventRow.vala:311
+#: src/Widgets/EventRow.vala:314
 msgid "URL"
 msgstr "URL"
 
-#: src/Widgets/EventRow.vala:321
+#: src/Widgets/EventRow.vala:324
 msgid "Calendar"
 msgstr "日历"
 
-#: src/Widgets/EventRow.vala:416
+#: src/Widgets/EventRow.vala:419
 msgid "Join"
 msgstr "加入"
 
@@ -4070,6 +4057,29 @@ msgstr ""
 msgctxt "shortcut window"
 msgid "Open Previous Project"
 msgstr ""
+
+#~ msgid "%a, %b %-e, %Y"
+#~ msgstr "%Y年%m月%d日 %a"
+
+#~ msgid "%b %-e %Y"
+#~ msgstr "%Y年%m月%d日"
+
+#, fuzzy
+#~ msgid "%b %-e"
+#~ msgstr "%m月%d日"
+
+#, fuzzy
+#~ msgid "%a, %b %-e"
+#~ msgstr "%a, %m月%d日"
+
+#, c-format
+#~ msgid "Backup files are stored in: %s"
+#~ msgstr "备份文件存储在：%s"
+
+#~ msgid ""
+#~ "Only the last 30 backups are shown here. To access older backups, open "
+#~ "the backup folder directly."
+#~ msgstr "此处仅显示最近 30 个备份。要访问更早的备份，请直接打开备份文件夹。"
 
 #~ msgid "You can sort your accounts by dragging and dropping"
 #~ msgstr "您可以通过拖放来排序账户"
