@@ -152,7 +152,7 @@ public class Utils.Datetime {
             duedate.recurrency_weeks = "";
             return;
         }
-        
+
         duedate.recurrence_supported = true;
         duedate.is_recurring = true;
         duedate.recurrency_interval = result.recurrence.interval;
@@ -562,7 +562,7 @@ public class Utils.Datetime {
         if (due.recurrence_string != "" && due.is_recurring) {
             return due.recurrence_string;
         }
-        
+
         if (due.date != "" && !is_iso_due_date (due.date)) {
             return due.date;
         }
@@ -591,7 +591,7 @@ public class Utils.Datetime {
             returned += due.recurrency_interval.to_string () + " ";
             returned += recurrency_type_string;
             returned += "s ";
-        } else if (!(due.recurrency_type == RecurrencyType.EVERY_WEEK && due.recurrency_weeks != "")) { 
+        } else if (!(due.recurrency_type == RecurrencyType.EVERY_WEEK && due.recurrency_weeks != "")) {
             returned += recurrency_type_string + " ";
         }
         if (due.recurrency_type == RecurrencyType.EVERY_WEEK && due.recurrency_weeks != "") {
@@ -621,7 +621,7 @@ public class Utils.Datetime {
         if (due.recurrency_end != "") {
             returned += "until ";
             returned += due.end_datetime.format ("%F");
-        }        
+        }
         return returned;
     }
 
@@ -805,19 +805,24 @@ public class Utils.Datetime {
     // from the locale's short date format (LC_TIME) and cached.
     private static int _day_first = -1; // -1 unknown, 0 month-first, 1 day-first
     private static bool locale_day_before_month () {
-        if (_day_first == -1) {
-            _day_first = 0; // default to month-first if it can't be determined
-            unowned string d_fmt = Posix.NLItem.D_FMT.to_string ();
-            if (d_fmt != null && d_fmt != "") {
-                int day_pos = first_token_pos (d_fmt, "de");   // %d, %e
-                int month_pos = first_token_pos (d_fmt, "mbBh"); // %m, %b, %B, %h
-                if (day_pos >= 0 && month_pos >= 0 && day_pos < month_pos) {
-                    _day_first = 1;
+        #if IS_WINDOWS
+            // system locale info not available on Windows; just return default of 0
+            return _day_first == 0;
+        #else
+            if (_day_first == -1) {
+                _day_first = 0; // default to month-first if it can't be determined
+
+                unowned string d_fmt = Posix.NLItem.D_FMT.to_string ();
+                if (d_fmt != null && d_fmt != "") {
+                    int day_pos = first_token_pos (d_fmt, "de");   // %d, %e
+                    int month_pos = first_token_pos (d_fmt, "mbBh"); // %m, %b, %B, %h
+                    if (day_pos >= 0 && month_pos >= 0 && day_pos < month_pos) {
+                        _day_first = 1;
+                    }
                 }
             }
-        }
-
-        return _day_first == 1;
+            return _day_first == 1;
+        #endif
     }
 
     // Position of the first %<token> in `fmt` whose letter is in `tokens`,
