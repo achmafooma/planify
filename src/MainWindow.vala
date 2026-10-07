@@ -118,7 +118,8 @@ public class MainWindow : Adw.ApplicationWindow {
             hexpand = true,
             vexpand = true,
             vhomogeneous = false,
-            hhomogeneous = false
+            hhomogeneous = false,
+            css_classes = { "main-content" }
         };
 
         item_sidebar_view = new Layouts.ItemSidebarView ();
@@ -265,6 +266,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
         Services.Settings.get_default ().settings.changed["appearance"].connect (Util.get_default ().update_theme);
         Services.Settings.get_default ().settings.changed["dark-mode"].connect (Util.get_default ().update_theme);
+        Services.Settings.get_default ().settings.changed["use-adwaita-colors"].connect (Util.get_default ().update_theme);
 
         #if WITH_LIBPORTAL
         Services.Settings.get_default ().settings.changed["run-on-startup"].connect (() => {
@@ -419,8 +421,16 @@ public class MainWindow : Adw.ApplicationWindow {
 
             remove_css_class ("theme-dark");
             remove_css_class ("theme-dark-blue");
+            remove_css_class ("adwaita-colors");
 
-            if (
+            // Adwaita colors replace the Dark and Dark Blue palettes.
+            if (Services.Settings.get_default ().settings.get_boolean ("use-adwaita-colors")) {
+                add_css_class ("adwaita-colors");
+
+                if (Util.get_default ().is_dark_mode_active ()) {
+                    add_css_class ("theme-dark");
+                }
+            } else if (
                 (
                     appearance_mode == Appearance.DARK ||
                     // system-appearance & dark, but we haven't picked a dark theme
