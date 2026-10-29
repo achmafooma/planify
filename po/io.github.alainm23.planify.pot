@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.alainm23.planify\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-16 20:22+0000\n"
+"POT-Creation-Date: 2026-10-29 18:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -782,6 +782,7 @@ msgid "%a"
 msgstr ""
 
 #: core/Utils/Datetime.vala:866
+#, c-format
 msgid "%b"
 msgstr ""
 

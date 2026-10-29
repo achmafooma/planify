@@ -806,6 +806,7 @@ msgid "%a"
 msgstr "%a"
 
 #: core/Utils/Datetime.vala:866
+#, c-format
 msgid "%b"
 msgstr "%b"
 
