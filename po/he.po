@@ -31,7 +31,7 @@ msgstr "מטלות"
 
 #: core/Enum.vala:177 core/Enum.vala:548 core/Objects/Filters/Labels.vala:33
 #: core/Widgets/LabelPicker/LabelButton.vala:76 src/Dialogs/LabelPicker.vala:46
-#: src/Dialogs/Preferences/Pages/Backup.vala:697 src/Layouts/ItemBoard.vala:842
+#: src/Dialogs/Preferences/Pages/Backup.vala:697 src/Layouts/ItemBoard.vala:843
 #: src/Layouts/ItemRow.vala:1266
 msgid "Labels"
 msgstr "תוויות"
@@ -95,7 +95,7 @@ msgstr[1] "כל %d שנים"
 msgid "Nextcloud"
 msgstr "‏Nextcloud"
 
-#: core/Enum.vala:279 core/Services/CalDAV/CalDAVClient.vala:111
+#: core/Enum.vala:279 core/Services/CalDAV/CalDAVClient.vala:392
 #: src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:46
 #: src/Dialogs/Preferences/Pages/Accounts/CalDAVSetup.vala:43
 msgid "CalDAV"
@@ -139,8 +139,8 @@ msgstr "מטלה עודכנה"
 msgid "Content"
 msgstr "תוכן"
 
-#: core/Enum.vala:539 src/Dialogs/Project.vala:153 src/Dialogs/Section.vala:91
-#: src/Layouts/ItemRow.vala:2106 src/Layouts/ItemSidebarView.vala:184
+#: core/Enum.vala:539 src/Dialogs/Project.vala:153 src/Dialogs/Section.vala:93
+#: src/Layouts/ItemRow.vala:2118 src/Layouts/ItemSidebarView.vala:184
 #: src/Widgets/EventRow.vala:359 src/Widgets/ItemDetailCompleted.vala:115
 msgid "Description"
 msgstr "תיאור"
@@ -150,7 +150,7 @@ msgid "Scheduled"
 msgstr "מתוזמן"
 
 #: core/Enum.vala:551 core/Widgets/PinButton.vala:47
-#: src/Layouts/ItemBoard.vala:823 src/Layouts/ItemBoard.vala:836
+#: src/Layouts/ItemBoard.vala:824 src/Layouts/ItemBoard.vala:837
 #: src/Layouts/ItemRow.vala:1245 src/Layouts/ItemRow.vala:1260
 msgid "Pin"
 msgstr "הצמד"
@@ -288,7 +288,7 @@ msgstr "מתקרב"
 #: core/Utils/Util.vala:261 core/Widgets/Calendar/CalendarHeader.vala:82
 #: core/Widgets/Calendar/CalendarScroll.vala:58
 #: core/Widgets/DateTimePicker/DateTimePicker.vala:391
-#: src/Dialogs/DatePicker.vala:209 src/Layouts/ItemBoard.vala:830
+#: src/Dialogs/DatePicker.vala:209 src/Layouts/ItemBoard.vala:831
 #: src/Layouts/ItemRow.vala:1252 src/Layouts/ItemSortFilter.vala:83
 #: src/Layouts/ItemSortFilter.vala:265 src/Views/Project/Project.vala:610
 #: src/Views/Project/Project.vala:803 src/Views/Today.vala:213
@@ -303,7 +303,7 @@ msgstr "היום"
 #: core/Utils/Datetime.vala:776
 #: core/Widgets/DateTimePicker/DateTimePicker.vala:397
 #: core/Widgets/DeadlineButton.vala:223 src/Dialogs/DatePicker.vala:210
-#: src/Layouts/ItemBoard.vala:833 src/Layouts/ItemRow.vala:1255
+#: src/Layouts/ItemBoard.vala:834 src/Layouts/ItemRow.vala:1255
 msgid "Tomorrow"
 msgstr "מחר"
 
@@ -343,7 +343,7 @@ msgstr ""
 msgid "Task exported successfully"
 msgstr ""
 
-#: core/Objects/Item.vala:2235 core/Utils/Util.vala:891
+#: core/Objects/Item.vala:2254 core/Utils/Util.vala:891
 #, fuzzy, c-format
 msgid "Moved to %s"
 msgstr "המטלה הועברה אל %s"
@@ -353,7 +353,7 @@ msgstr "המטלה הועברה אל %s"
 msgid "Delete Label %s"
 msgstr "מחק תווית %s"
 
-#: core/Objects/Label.vala:221 core/Objects/Project.vala:907
+#: core/Objects/Label.vala:221 core/Objects/Project.vala:912
 #: core/Objects/Section.vala:432
 #: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:206
 #: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:283
@@ -361,8 +361,8 @@ msgstr "מחק תווית %s"
 msgid "This can not be undone"
 msgstr "לא ניתן לבטל"
 
-#: core/Objects/Label.vala:224 core/Objects/Project.vala:910
-#: core/Objects/Project.vala:990 core/Objects/Section.vala:435
+#: core/Objects/Label.vala:224 core/Objects/Project.vala:915
+#: core/Objects/Project.vala:995 core/Objects/Section.vala:435
 #: core/Objects/Section.vala:481 core/Utils/Util.vala:479
 #: src/Dialogs/CompletedTasks.vala:172
 #: src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:638
@@ -382,7 +382,7 @@ msgstr "לא ניתן לבטל"
 msgid "Cancel"
 msgstr "ביטול"
 
-#: core/Objects/Label.vala:225 core/Objects/Project.vala:911
+#: core/Objects/Label.vala:225 core/Objects/Project.vala:916
 #: core/Objects/Section.vala:436 core/QuickAddCore.vala:1038
 #: core/Widgets/DeadlineButton.vala:248 src/Dialogs/CompletedTasks.vala:173
 #: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:209
@@ -395,25 +395,25 @@ msgstr "ביטול"
 msgid "Delete"
 msgstr "מחק"
 
-#: core/Objects/Project.vala:870
+#: core/Objects/Project.vala:875
 msgid "The project was copied to the Clipboard."
 msgstr "הפרויקט הועתק ללוח."
 
-#: core/Objects/Project.vala:906
+#: core/Objects/Project.vala:911
 #, c-format
 msgid "Delete Project %s?"
 msgstr "האם למחוק את הפרויקט %s?"
 
-#: core/Objects/Project.vala:986 core/Objects/Section.vala:477
+#: core/Objects/Project.vala:991 core/Objects/Section.vala:477
 msgid "Archive?"
 msgstr "האם להעביר לארכיון?"
 
-#: core/Objects/Project.vala:987 core/Objects/Section.vala:478
+#: core/Objects/Project.vala:992 core/Objects/Section.vala:478
 #, c-format
 msgid "This will archive %s and all its tasks."
 msgstr "זה יעביר לארכיון %s ואת כל המטלות שלו."
 
-#: core/Objects/Project.vala:991 core/Objects/Section.vala:482
+#: core/Objects/Project.vala:996 core/Objects/Section.vala:482
 #: src/Layouts/ProjectRow.vala:707 src/Layouts/SectionBoard.vala:629
 #: src/Layouts/SectionRow.vala:723 src/Views/Project/Project.vala:405
 msgid "Archive"
@@ -478,7 +478,7 @@ msgid "Add Reminders"
 msgstr "הוסף תזכורות"
 
 #: core/QuickAddCore.vala:298 core/QuickAddCore.vala:962
-#: src/Layouts/ItemRow.vala:2183
+#: src/Layouts/ItemRow.vala:2195
 msgid "Add Attachments"
 msgstr ""
 
@@ -569,42 +569,46 @@ msgstr "עצה"
 msgid "Combine shortcuts in the title field for faster creation"
 msgstr ""
 
-#: core/Services/CalDAV/CalDAVClient.vala:290
+#: core/Services/CalDAV/CalDAVClient.vala:89
+msgid "Couldn't reach the server. Check your connection and try again."
+msgstr ""
+
+#: core/Services/CalDAV/CalDAVClient.vala:571
 #, c-format
 msgid "Loading tasks for %s…"
 msgstr "המשימות עבור %s נטענות…"
 
-#: core/Services/CalDAV/CalDAVClient.vala:301
-#: core/Services/CalDAV/CalDAVClient.vala:327
+#: core/Services/CalDAV/CalDAVClient.vala:582
+#: core/Services/CalDAV/CalDAVClient.vala:608
 #, c-format
 msgid "Loaded tasks for %s…"
 msgstr "המשימות עבור %s נטענו…"
 
-#: core/Services/CalDAV/CalDAVClient.vala:320
+#: core/Services/CalDAV/CalDAVClient.vala:601
 #, c-format
 msgid "Syncing task %d of %d"
 msgstr ""
 
-#: core/Services/CalDAV/CalDAVClient.vala:763
+#: core/Services/CalDAV/CalDAVClient.vala:1056
 msgid ""
 "This server does not allow creating projects via CalDAV. Please create it "
 "directly from your calendar provider's website."
 msgstr ""
 
-#: core/Services/CalDAV/CalDAVClient.vala:818
+#: core/Services/CalDAV/CalDAVClient.vala:1109
 msgid ""
 "This server does not allow deleting projects via CalDAV. Please delete it "
 "directly from your calendar provider's website."
 msgstr ""
 
-#: core/Services/CalDAV/CalDAVClient.vala:822
+#: core/Services/CalDAV/CalDAVClient.vala:1113
 msgid ""
 "This server does not support deleting projects via CalDAV. Please delete it "
 "from the server directly."
 msgstr ""
 
-#: core/Services/CalDAV/CalDAVClient.vala:856
-#: core/Services/CalDAV/CalDAVClient.vala:902
+#: core/Services/CalDAV/CalDAVClient.vala:1172
+#: core/Services/CalDAV/CalDAVClient.vala:1227
 msgid ""
 "Task was modified on another device. Please sync to get the latest version."
 msgstr ""
@@ -636,21 +640,21 @@ msgstr ""
 msgid "Sync completed"
 msgstr ""
 
-#: core/Services/CalDAV/Core.vala:369
+#: core/Services/CalDAV/Core.vala:373
 msgid "Authentication Expired"
 msgstr ""
 
-#: core/Services/CalDAV/Core.vala:370
+#: core/Services/CalDAV/Core.vala:374
 msgid ""
 "Your session has expired. Please remove and re-add your account in "
 "Preferences."
 msgstr ""
 
-#: core/Services/CalDAV/Core.vala:377
+#: core/Services/CalDAV/Core.vala:381 core/Services/Todoist/Todoist.vala:157
 msgid "Too Many Requests"
 msgstr ""
 
-#: core/Services/CalDAV/Core.vala:378
+#: core/Services/CalDAV/Core.vala:382
 msgid ""
 "The server is rate limiting requests. Please wait a few minutes and try "
 "again."
@@ -660,36 +664,45 @@ msgstr ""
 msgid "On this computer"
 msgstr "במחשב זה"
 
-#: core/Services/Todoist/Todoist.vala:608 src/Widgets/ErrorView.vala:187
+#: core/Services/Todoist/Todoist.vala:159
+#, c-format
+msgid ""
+"Todoist is limiting how often Planify can sync.\n"
+"Syncing will resume automatically at %s.\n"
+"Changes you make in the meantime are saved\n"
+"and will be synced then."
+msgstr ""
+
+#: core/Services/Todoist/Todoist.vala:1054 src/Widgets/ErrorView.vala:187
 msgid "The request was incorrect."
 msgstr "הבקשה הייתה שגויה."
 
-#: core/Services/Todoist/Todoist.vala:609 src/Widgets/ErrorView.vala:188
+#: core/Services/Todoist/Todoist.vala:1055 src/Widgets/ErrorView.vala:188
 msgid ""
 "Authentication is required, and has failed, or has not yet been provided."
 msgstr ""
 
-#: core/Services/Todoist/Todoist.vala:610 src/Widgets/ErrorView.vala:189
+#: core/Services/Todoist/Todoist.vala:1056 src/Widgets/ErrorView.vala:189
 msgid "The request was valid, but for something that is forbidden."
 msgstr ""
 
-#: core/Services/Todoist/Todoist.vala:611 src/Widgets/ErrorView.vala:190
+#: core/Services/Todoist/Todoist.vala:1057 src/Widgets/ErrorView.vala:190
 msgid "The requested resource could not be found."
 msgstr ""
 
-#: core/Services/Todoist/Todoist.vala:612 src/Widgets/ErrorView.vala:192
+#: core/Services/Todoist/Todoist.vala:1058 src/Widgets/ErrorView.vala:192
 msgid "The user has sent too many requests in a given amount of time."
 msgstr ""
 
-#: core/Services/Todoist/Todoist.vala:613 src/Widgets/ErrorView.vala:193
+#: core/Services/Todoist/Todoist.vala:1059 src/Widgets/ErrorView.vala:193
 msgid "The request failed due to a server error."
 msgstr ""
 
-#: core/Services/Todoist/Todoist.vala:614 src/Widgets/ErrorView.vala:194
+#: core/Services/Todoist/Todoist.vala:1060 src/Widgets/ErrorView.vala:194
 msgid "The server is currently unable to handle the request."
 msgstr ""
 
-#: core/Services/Todoist/Todoist.vala:615 src/Widgets/ErrorView.vala:197
+#: core/Services/Todoist/Todoist.vala:1061 src/Widgets/ErrorView.vala:197
 msgid "Unknown error"
 msgstr ""
 
@@ -1080,8 +1093,8 @@ msgstr "🏡️ בית"
 msgid "🏃‍♀️️Follow Up"
 msgstr ""
 
-#: core/Utils/Util.vala:826 src/Layouts/ItemBoard.vala:1303
-#: src/Layouts/ItemRow.vala:1701 src/Layouts/ItemRow.vala:1845
+#: core/Utils/Util.vala:826 src/Layouts/ItemBoard.vala:1304
+#: src/Layouts/ItemRow.vala:1713 src/Layouts/ItemRow.vala:1857
 #: src/Layouts/ItemSidebarView.vala:601 src/Widgets/MultiSelectToolbar.vala:493
 msgid "Moving tasks to or from a Nextcloud Deck board isn't supported yet"
 msgstr ""
@@ -1257,7 +1270,7 @@ msgstr "שעה"
 #: core/Widgets/DateTimePicker/DateTimePicker.vala:867
 #: core/Widgets/DateTimePicker/RepeatConfig.vala:610
 #: core/Widgets/DateTimePicker/ScheduleButton.vala:250
-#: src/Layouts/ItemBoard.vala:745 src/Layouts/ItemRow.vala:1194
+#: src/Layouts/ItemBoard.vala:746 src/Layouts/ItemRow.vala:1194
 msgid "until"
 msgstr "עד"
 
@@ -1265,7 +1278,7 @@ msgstr "עד"
 #: core/Widgets/DateTimePicker/DateTimePicker.vala:870
 #: core/Widgets/DateTimePicker/RepeatConfig.vala:614
 #: core/Widgets/DateTimePicker/ScheduleButton.vala:253
-#: src/Layouts/ItemBoard.vala:748 src/Layouts/ItemRow.vala:1197
+#: src/Layouts/ItemBoard.vala:749 src/Layouts/ItemRow.vala:1197
 msgid "for"
 msgstr ""
 
@@ -1273,7 +1286,7 @@ msgstr ""
 #: core/Widgets/DateTimePicker/DateTimePicker.vala:870
 #: core/Widgets/DateTimePicker/RepeatConfig.vala:614
 #: core/Widgets/DateTimePicker/ScheduleButton.vala:253
-#: src/Layouts/ItemBoard.vala:748 src/Layouts/ItemRow.vala:1197
+#: src/Layouts/ItemBoard.vala:749 src/Layouts/ItemRow.vala:1197
 msgid "times"
 msgstr ""
 
@@ -1281,7 +1294,7 @@ msgstr ""
 #: core/Widgets/DateTimePicker/DateTimePicker.vala:870
 #: core/Widgets/DateTimePicker/RepeatConfig.vala:614
 #: core/Widgets/DateTimePicker/ScheduleButton.vala:253
-#: src/Layouts/ItemBoard.vala:748 src/Layouts/ItemRow.vala:1197
+#: src/Layouts/ItemBoard.vala:749 src/Layouts/ItemRow.vala:1197
 msgid "time"
 msgstr ""
 
@@ -1396,7 +1409,7 @@ msgid "After"
 msgstr "לאחר"
 
 #: core/Widgets/DateTimePicker/RepeatConfig.vala:386
-#: core/Widgets/MarkdownEditor.vala:1422 src/Layouts/ItemBoard.vala:903
+#: core/Widgets/MarkdownEditor.vala:1422 src/Layouts/ItemBoard.vala:904
 #: src/Layouts/ItemRow.vala:1350
 msgid "Apply"
 msgstr "החלה"
@@ -1557,7 +1570,7 @@ msgstr ""
 msgid "Press Enter to create and assign it"
 msgstr ""
 
-#: core/Widgets/MarkdownEditor.vala:99 src/Layouts/ItemRow.vala:2116
+#: core/Widgets/MarkdownEditor.vala:99 src/Layouts/ItemRow.vala:2128
 msgid "Task description"
 msgstr ""
 
@@ -1686,7 +1699,7 @@ msgid "To Do"
 msgstr "מטלה"
 
 #: core/Widgets/StatusButton.vala:77 core/Widgets/StatusButton.vala:111
-#: src/Layouts/ItemBoard.vala:845 src/Layouts/ItemRow.vala:1269
+#: src/Layouts/ItemBoard.vala:846 src/Layouts/ItemRow.vala:1269
 #: src/Services/Notification.vala:194
 msgid "Complete"
 msgstr "השלמה"
@@ -1807,7 +1820,7 @@ msgstr[1] ""
 msgid "Filter By"
 msgstr "סינון לפי"
 
-#: src/Dialogs/DatePicker.vala:84 src/Layouts/ItemBoard.vala:838
+#: src/Dialogs/DatePicker.vala:84 src/Layouts/ItemBoard.vala:839
 #: src/Layouts/ItemRow.vala:1262 src/Layouts/ItemSortFilter.vala:88
 #: src/Layouts/ItemSortFilter.vala:280 src/Views/Project/Project.vala:615
 #: src/Views/Project/Project.vala:813
@@ -1881,7 +1894,7 @@ msgstr ""
 msgid "You can sort your sections by dragging and dropping"
 msgstr ""
 
-#: src/Dialogs/ManageSectionOrder.vala:81 src/Dialogs/Section.vala:46
+#: src/Dialogs/ManageSectionOrder.vala:81 src/Dialogs/Section.vala:48
 #: src/Views/Project/Project.vala:258 src/Views/Project/Project.vala:365
 #: src/Views/Project/Project.vala:396
 msgid "New Section"
@@ -3090,7 +3103,7 @@ msgid "Project added successfully!"
 msgstr ""
 
 #: src/Dialogs/ProjectPicker.vala:38 src/Dialogs/ProjectPicker.vala:47
-#: src/Layouts/ItemBoard.vala:841 src/Layouts/ItemRow.vala:1265
+#: src/Layouts/ItemBoard.vala:842 src/Layouts/ItemRow.vala:1265
 #: src/Layouts/ItemRow.vala:1417 src/Layouts/ItemSidebarView.vala:517
 msgid "Move"
 msgstr ""
@@ -3110,25 +3123,25 @@ msgstr[1] ""
 msgid "Quickly switch projects and views, find tasks, search by labels"
 msgstr ""
 
-#: src/Dialogs/Section.vala:53 src/Layouts/SectionBoard.vala:623
+#: src/Dialogs/Section.vala:55 src/Layouts/SectionBoard.vala:623
 #: src/Layouts/SectionRow.vala:717
 msgid "Edit Section"
 msgstr ""
 
-#: src/Dialogs/Section.vala:67
+#: src/Dialogs/Section.vala:69
 msgid "Section Name"
 msgstr ""
 
-#: src/Dialogs/Section.vala:102 src/Widgets/SectionsOrderPopover.vala:39
+#: src/Dialogs/Section.vala:104 src/Widgets/SectionsOrderPopover.vala:39
 msgid "Add Section"
 msgstr ""
 
-#: src/Dialogs/Section.vala:102
+#: src/Dialogs/Section.vala:104
 msgid "Update Section"
 msgstr ""
 
-#: src/Dialogs/Section.vala:244 src/Dialogs/Section.vala:258
-#: src/Dialogs/Section.vala:282 src/Dialogs/Section.vala:296
+#: src/Dialogs/Section.vala:254 src/Dialogs/Section.vala:268
+#: src/Dialogs/Section.vala:292 src/Dialogs/Section.vala:306
 msgid "Section added"
 msgstr ""
 
@@ -3136,47 +3149,47 @@ msgstr ""
 msgid "Open/Close Sidebar"
 msgstr ""
 
-#: src/Layouts/ItemBoard.vala:173 src/Layouts/ItemBoard.vala:823
-#: src/Layouts/ItemBoard.vala:836 src/Layouts/ItemRow.vala:1245
+#: src/Layouts/ItemBoard.vala:173 src/Layouts/ItemBoard.vala:824
+#: src/Layouts/ItemBoard.vala:837 src/Layouts/ItemRow.vala:1245
 #: src/Layouts/ItemRow.vala:1260
 msgid "Unpin"
 msgstr ""
 
-#: src/Layouts/ItemBoard.vala:663 src/Layouts/ItemSidebarView.vala:697
+#: src/Layouts/ItemBoard.vala:664 src/Layouts/ItemSidebarView.vala:697
 #, c-format
 msgid "Completed. Next occurrence: %s"
 msgstr ""
 
-#: src/Layouts/ItemBoard.vala:844 src/Layouts/ItemRow.vala:1268
+#: src/Layouts/ItemBoard.vala:845 src/Layouts/ItemRow.vala:1268
 msgid "Add Subtask"
 msgstr ""
 
-#: src/Layouts/ItemBoard.vala:846 src/Layouts/ItemRow.vala:1270
+#: src/Layouts/ItemBoard.vala:847 src/Layouts/ItemRow.vala:1270
 msgid "Edit"
 msgstr ""
 
-#: src/Layouts/ItemBoard.vala:847 src/Layouts/ItemRow.vala:1271
+#: src/Layouts/ItemBoard.vala:848 src/Layouts/ItemRow.vala:1271
 #: src/Layouts/ItemRow.vala:1416 src/Layouts/ItemSidebarView.vala:516
 #: src/Layouts/ProjectRow.vala:704 src/Layouts/SectionBoard.vala:626
 #: src/Layouts/SectionRow.vala:720 src/Views/Project/Project.vala:394
 msgid "Duplicate"
 msgstr ""
 
-#: src/Layouts/ItemBoard.vala:849 src/Layouts/ItemRow.vala:1273
+#: src/Layouts/ItemBoard.vala:850 src/Layouts/ItemRow.vala:1273
 #: src/Layouts/ItemRow.vala:1421 src/Layouts/ItemSidebarView.vala:520
 msgid "Delete Task"
 msgstr ""
 
-#: src/Layouts/ItemBoard.vala:1153 src/Layouts/ItemRow.vala:1952
+#: src/Layouts/ItemBoard.vala:1154 src/Layouts/ItemRow.vala:1964
 msgid "Order changed to 'Custom sort order'"
 msgstr ""
 
-#: src/Layouts/ItemBoard.vala:1280 src/Layouts/ItemRow.vala:1678
+#: src/Layouts/ItemBoard.vala:1281 src/Layouts/ItemRow.vala:1690
 #, c-format
 msgid "%s was deleted"
 msgstr ""
 
-#: src/Layouts/ItemBoard.vala:1281 src/Layouts/ItemRow.vala:1679
+#: src/Layouts/ItemBoard.vala:1282 src/Layouts/ItemRow.vala:1691
 msgid "Undo"
 msgstr ""
 
@@ -3219,12 +3232,12 @@ msgstr ""
 msgid "Created: %s"
 msgstr ""
 
-#: src/Layouts/ItemRow.vala:1654
+#: src/Layouts/ItemRow.vala:1666
 #, c-format
 msgid "Task completed · Next: %s"
 msgstr ""
 
-#: src/Layouts/ItemRow.vala:1837
+#: src/Layouts/ItemRow.vala:1849
 msgid "A task can only become a subtask of a task in the same account"
 msgstr ""
 
