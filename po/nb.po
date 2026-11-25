@@ -95,7 +95,7 @@ msgstr[1] "Hvert %d år"
 msgid "Nextcloud"
 msgstr "Nextcloud"
 
-#: core/Enum.vala:279 core/Services/CalDAV/CalDAVClient.vala:392
+#: core/Enum.vala:279 core/Services/CalDAV/CalDAVClient.vala:477
 #: src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:46
 #: src/Dialogs/Preferences/Pages/Accounts/CalDAVSetup.vala:43
 msgid "CalDAV"
@@ -353,24 +353,24 @@ msgstr "Oppgave flyttet til %s"
 msgid "Delete Label %s"
 msgstr "Slett etikett %s"
 
-#: core/Objects/Label.vala:221 core/Objects/Project.vala:912
-#: core/Objects/Section.vala:432
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:206
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:283
+#: core/Objects/Label.vala:221 core/Objects/Project.vala:916
+#: core/Objects/Section.vala:427
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:228
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:305
 #: src/Layouts/ItemSidebarView.vala:619 src/Services/BackupManager.vala:285
 msgid "This can not be undone"
 msgstr "Dette kan ikke angres"
 
-#: core/Objects/Label.vala:224 core/Objects/Project.vala:915
-#: core/Objects/Project.vala:995 core/Objects/Section.vala:435
-#: core/Objects/Section.vala:481 core/Utils/Util.vala:479
+#: core/Objects/Label.vala:224 core/Objects/Project.vala:919
+#: core/Objects/Project.vala:992 core/Objects/Section.vala:430
+#: core/Objects/Section.vala:471 core/Utils/Util.vala:479
 #: src/Dialogs/CompletedTasks.vala:172
 #: src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:638
 #: src/Dialogs/Preferences/Pages/Accounts/CalDAVSetup.vala:151
 #: src/Dialogs/Preferences/Pages/Accounts/NextcloudSetup.vala:118
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:208
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:285
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:384
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:230
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:307
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:415
 #: src/Dialogs/Preferences/Pages/Accounts/TodoistSetup.vala:107
 #: src/Dialogs/Preferences/Pages/Backup.vala:768
 #: src/Dialogs/QuickFind/QuickFind.vala:56 src/Layouts/ItemSidebarView.vala:622
@@ -382,11 +382,11 @@ msgstr "Dette kan ikke angres"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: core/Objects/Label.vala:225 core/Objects/Project.vala:916
-#: core/Objects/Section.vala:436 core/QuickAddCore.vala:1038
+#: core/Objects/Label.vala:225 core/Objects/Project.vala:920
+#: core/Objects/Section.vala:431 core/QuickAddCore.vala:1029
 #: core/Widgets/DeadlineButton.vala:248 src/Dialogs/CompletedTasks.vala:173
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:209
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:286
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:231
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:308
 #: src/Dialogs/Preferences/Pages/Backup.vala:525
 #: src/Layouts/ItemSidebarView.vala:623 src/Services/BackupManager.vala:289
 #: src/Views/Filter.vala:816 src/Views/Project/Project.vala:557
@@ -395,27 +395,27 @@ msgstr "Avbryt"
 msgid "Delete"
 msgstr "Slett"
 
-#: core/Objects/Project.vala:875
+#: core/Objects/Project.vala:879
 msgid "The project was copied to the Clipboard."
 msgstr "Prosjektet ble kopiert til utklippstavlen."
 
-#: core/Objects/Project.vala:911
+#: core/Objects/Project.vala:915
 #, c-format
 msgid "Delete Project %s?"
 msgstr "Slett prosjekt %s?"
 
-#: core/Objects/Project.vala:991 core/Objects/Section.vala:477
+#: core/Objects/Project.vala:988 core/Objects/Section.vala:467
 msgid "Archive?"
 msgstr "Arkiver?"
 
-#: core/Objects/Project.vala:992 core/Objects/Section.vala:478
+#: core/Objects/Project.vala:989 core/Objects/Section.vala:468
 #, c-format
 msgid "This will archive %s and all its tasks."
 msgstr "Dette vil arkivere %s og alle tilhørende oppgaver."
 
-#: core/Objects/Project.vala:996 core/Objects/Section.vala:482
+#: core/Objects/Project.vala:993 core/Objects/Section.vala:472
 #: src/Layouts/ProjectRow.vala:707 src/Layouts/SectionBoard.vala:629
-#: src/Layouts/SectionRow.vala:723 src/Views/Project/Project.vala:405
+#: src/Layouts/SectionRow.vala:722 src/Views/Project/Project.vala:405
 msgid "Archive"
 msgstr "Arkiver"
 
@@ -424,7 +424,7 @@ msgstr "Arkiver"
 msgid "%s · Next occurrence"
 msgstr ""
 
-#: core/Objects/Section.vala:431
+#: core/Objects/Section.vala:426
 #, c-format
 msgid "Delete Section %s"
 msgstr "Slett seksjon %s"
@@ -477,19 +477,19 @@ msgstr "Angi prioriteten"
 msgid "Add Reminders"
 msgstr "Legg til påminnelser"
 
-#: core/QuickAddCore.vala:298 core/QuickAddCore.vala:962
+#: core/QuickAddCore.vala:298 core/QuickAddCore.vala:953
 #: src/Layouts/ItemRow.vala:2195
 msgid "Add Attachments"
 msgstr "Legg til vedlegg"
 
 #: core/QuickAddCore.vala:357 src/Layouts/SectionBoard.vala:622
-#: src/Layouts/SectionRow.vala:716 src/Views/Scheduled/ScheduledDay.vala:148
+#: src/Layouts/SectionRow.vala:715 src/Views/Scheduled/ScheduledDay.vala:148
 #: src/Views/Scheduled/ScheduledMonth.vala:137
 #: src/Views/Scheduled/ScheduledRange.vala:147 src/Widgets/MagicButton.vala:50
 msgid "Add Task"
 msgstr "Legg til oppgave"
 
-#: core/QuickAddCore.vala:363 core/QuickAddCore.vala:1730
+#: core/QuickAddCore.vala:363 core/QuickAddCore.vala:1721
 msgid "Keep adding"
 msgstr "Fortsett å legge til"
 
@@ -505,111 +505,111 @@ msgstr ""
 "Beklager, men Hurtigtillegg finner ingen tilgjengelige prosjekter. Prøv å "
 "opprette et prosjekt fra Planify."
 
-#: core/QuickAddCore.vala:949 src/Widgets/Attachments.vala:58
+#: core/QuickAddCore.vala:940 src/Widgets/Attachments.vala:58
 msgid "Attachments"
 msgstr "Vedlegg"
 
-#: core/QuickAddCore.vala:981 src/Widgets/Attachments.vala:231
+#: core/QuickAddCore.vala:972 src/Widgets/Attachments.vala:231
 msgid "No attachments found. Add files here."
 msgstr "Ingen vedlegg funnet. Legg til filer her."
 
-#: core/QuickAddCore.vala:1082 src/Layouts/ProjectRow.vala:790
+#: core/QuickAddCore.vala:1073 src/Layouts/ProjectRow.vala:790
 #: src/Widgets/Attachments.vala:144
 msgid "Open"
 msgstr "Åpne"
 
-#: core/QuickAddCore.vala:1692 src/MainWindow.vala:791
+#: core/QuickAddCore.vala:1683 src/MainWindow.vala:791
 msgid "Keyboard Shortcuts"
 msgstr "Tastatursnarveier"
 
-#: core/QuickAddCore.vala:1698
+#: core/QuickAddCore.vala:1689
 msgid "Speed up task creation with these shortcuts"
 msgstr "Få fart på oppgaveopprettingen med disse snarveiene"
 
-#: core/QuickAddCore.vala:1712
+#: core/QuickAddCore.vala:1703
 msgid "Set priority"
 msgstr "Angi prioritet"
 
-#: core/QuickAddCore.vala:1712
+#: core/QuickAddCore.vala:1703
 msgid "p1 = highest, p4 = lowest"
 msgstr "p1 = høyest, p4 = lavest"
 
-#: core/QuickAddCore.vala:1713
+#: core/QuickAddCore.vala:1704
 msgid "Add labels"
 msgstr "Legg til etiketter"
 
-#: core/QuickAddCore.vala:1713
+#: core/QuickAddCore.vala:1704
 msgid "Opens label selector"
 msgstr "Åpner etikettvelgeren"
 
-#: core/QuickAddCore.vala:1714
+#: core/QuickAddCore.vala:1705
 msgid "Assign project"
 msgstr "Tilordne prosjekt"
 
-#: core/QuickAddCore.vala:1714
+#: core/QuickAddCore.vala:1705
 msgid "Opens project selector"
 msgstr "Åpner prosjektvelgeren"
 
-#: core/QuickAddCore.vala:1715
+#: core/QuickAddCore.vala:1706
 msgid "Set reminder"
 msgstr "Angi påminnelse"
 
-#: core/QuickAddCore.vala:1715
+#: core/QuickAddCore.vala:1706
 msgid "Opens reminder options"
 msgstr "Åpner påminnelsesalternativer"
 
-#: core/QuickAddCore.vala:1730
+#: core/QuickAddCore.vala:1721
 msgid "Toggle stay open after creating task"
 msgstr "Veksle mellom å holde åpent etter at oppgaven er opprettet"
 
-#: core/QuickAddCore.vala:1736
+#: core/QuickAddCore.vala:1727
 msgid "Tip"
 msgstr "Tips"
 
-#: core/QuickAddCore.vala:1736
+#: core/QuickAddCore.vala:1727
 msgid "Combine shortcuts in the title field for faster creation"
 msgstr "Kombiner snarveier i tittelfeltet for raskere oppretting"
 
-#: core/Services/CalDAV/CalDAVClient.vala:89
+#: core/Services/CalDAV/CalDAVClient.vala:130
 msgid "Couldn't reach the server. Check your connection and try again."
 msgstr ""
 
-#: core/Services/CalDAV/CalDAVClient.vala:571
+#: core/Services/CalDAV/CalDAVClient.vala:665
 #, c-format
 msgid "Loading tasks for %s…"
 msgstr "Laster oppgaver for %s…"
 
-#: core/Services/CalDAV/CalDAVClient.vala:582
-#: core/Services/CalDAV/CalDAVClient.vala:608
+#: core/Services/CalDAV/CalDAVClient.vala:676
+#: core/Services/CalDAV/CalDAVClient.vala:702
 #, c-format
 msgid "Loaded tasks for %s…"
 msgstr ""
 
-#: core/Services/CalDAV/CalDAVClient.vala:601
+#: core/Services/CalDAV/CalDAVClient.vala:695
 #, c-format
 msgid "Syncing task %d of %d"
 msgstr ""
 
-#: core/Services/CalDAV/CalDAVClient.vala:1056
+#: core/Services/CalDAV/CalDAVClient.vala:1184
 msgid ""
 "This server does not allow creating projects via CalDAV. Please create it "
 "directly from your calendar provider's website."
 msgstr ""
 
-#: core/Services/CalDAV/CalDAVClient.vala:1109
+#: core/Services/CalDAV/CalDAVClient.vala:1256
 msgid ""
 "This server does not allow deleting projects via CalDAV. Please delete it "
 "directly from your calendar provider's website."
 msgstr ""
 
-#: core/Services/CalDAV/CalDAVClient.vala:1113
+#: core/Services/CalDAV/CalDAVClient.vala:1260
 msgid ""
 "This server does not support deleting projects via CalDAV. Please delete it "
 "from the server directly."
 msgstr ""
 
-#: core/Services/CalDAV/CalDAVClient.vala:1172
-#: core/Services/CalDAV/CalDAVClient.vala:1227
+#: core/Services/CalDAV/CalDAVClient.vala:1319
+#: core/Services/CalDAV/CalDAVClient.vala:1374
 msgid ""
 "Task was modified on another device. Please sync to get the latest version."
 msgstr ""
@@ -641,21 +641,21 @@ msgstr "Synker %s…"
 msgid "Sync completed"
 msgstr "Synk fullført"
 
-#: core/Services/CalDAV/Core.vala:373
+#: core/Services/CalDAV/Core.vala:372
 msgid "Authentication Expired"
 msgstr ""
 
-#: core/Services/CalDAV/Core.vala:374
+#: core/Services/CalDAV/Core.vala:373
 msgid ""
 "Your session has expired. Please remove and re-add your account in "
 "Preferences."
 msgstr ""
 
-#: core/Services/CalDAV/Core.vala:381 core/Services/Todoist/Todoist.vala:157
+#: core/Services/CalDAV/Core.vala:380 core/Services/Todoist/Todoist.vala:157
 msgid "Too Many Requests"
 msgstr ""
 
-#: core/Services/CalDAV/Core.vala:382
+#: core/Services/CalDAV/Core.vala:381
 msgid ""
 "The server is rate limiting requests. Please wait a few minutes and try "
 "again."
@@ -1939,7 +1939,7 @@ msgid "Archived Projects"
 msgstr "Arkivert prosjekter"
 
 #: src/Dialogs/ManageSectionOrder.vala:35 src/Layouts/SectionBoard.vala:625
-#: src/Layouts/SectionRow.vala:719 src/Views/Project/Project.vala:398
+#: src/Layouts/SectionRow.vala:718 src/Views/Project/Project.vala:398
 msgid "Manage Sections"
 msgstr "Administrer seksjoner"
 
@@ -2036,7 +2036,7 @@ msgstr ""
 "Innboks-prosjektet ditt først."
 
 #: src/Dialogs/Preferences/Pages/Accounts/Accounts.vala:639
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:385
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:416
 msgid "Change Inbox"
 msgstr "Endre Innboks"
 
@@ -2139,20 +2139,20 @@ msgstr ""
 msgid "Enable Deck"
 msgstr ""
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:29
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:31
 #: src/Dialogs/Project.vala:183
 msgid "Source"
 msgstr "Kilde"
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:74
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:76
 msgid "Display Name"
 msgstr "Visningsnavn"
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:80
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:82
 msgid "Sync Server"
 msgstr "Synk Server"
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:83
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:85
 msgid ""
 "Activate this setting so that Planify automatically synchronizes with your "
 "account account every 15 minutes"
@@ -2160,63 +2160,54 @@ msgstr ""
 "Aktiver denne innstillingen slik at Planify automatisk synkroniseres med "
 "kontoen din hvert 15. minutt"
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:96
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:98
 msgid "Last Sync"
 msgstr "Siste synk"
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:121
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:123
 msgid "Nextcloud Deck"
 msgstr ""
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:122
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:124
 msgid "Sync boards and cards from Nextcloud Deck"
 msgstr ""
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:141
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:164
 msgid "Nextcloud Deck is not available on this server"
 msgstr ""
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:157
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:222
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:179
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:244
 msgid "Delete Source"
 msgstr "Slett kilde"
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:205
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:282
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:227
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:304
 msgid "Delete Source?"
 msgstr "Slett kilde?"
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:332
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:358
 msgid "Apply Certificate"
 msgstr ""
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:338
-msgid "Client Certificate (mTLS)"
-msgstr ""
-
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:339
-msgid ""
-"Use a client certificate to authenticate with servers that require mutual TLS"
-msgstr ""
-
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:354
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:387
 #, c-format
 msgid "Invalid certificate: %s"
 msgstr ""
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:370
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:400
 msgid "Client certificate updated"
 msgstr ""
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:370
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:400
 msgid "Client certificate removed"
 msgstr ""
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:380
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:411
 msgid "Cannot Delete This Source"
 msgstr "Kilden kan ikke slettes"
 
-#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:381
+#: src/Dialogs/Preferences/Pages/Accounts/SourceView.vala:412
 msgid ""
 "This source contains your current Inbox project. Please change your Inbox "
 "project first."
@@ -3180,7 +3171,7 @@ msgstr ""
 msgid "Create a Nextcloud Deck board instead of a task list"
 msgstr ""
 
-#: src/Dialogs/Project.vala:581
+#: src/Dialogs/Project.vala:575
 msgid "Project added successfully!"
 msgstr "Prosjekt lagt til!"
 
@@ -3206,7 +3197,7 @@ msgid "Quickly switch projects and views, find tasks, search by labels"
 msgstr "Bytt raskt prosjekter og visninger, finn oppgaver, søk etter etiketter"
 
 #: src/Dialogs/Section.vala:55 src/Layouts/SectionBoard.vala:623
-#: src/Layouts/SectionRow.vala:717
+#: src/Layouts/SectionRow.vala:716
 msgid "Edit Section"
 msgstr "Rediger seksjon"
 
@@ -3222,8 +3213,8 @@ msgstr "Legg til Seksjon"
 msgid "Update Section"
 msgstr "Oppdater seksjon"
 
-#: src/Dialogs/Section.vala:254 src/Dialogs/Section.vala:268
-#: src/Dialogs/Section.vala:292 src/Dialogs/Section.vala:306
+#: src/Dialogs/Section.vala:252 src/Dialogs/Section.vala:266
+#: src/Dialogs/Section.vala:288 src/Dialogs/Section.vala:302
 msgid "Section added"
 msgstr "Seksjon lagt til"
 
@@ -3253,7 +3244,7 @@ msgstr "Rediger"
 #: src/Layouts/ItemBoard.vala:848 src/Layouts/ItemRow.vala:1271
 #: src/Layouts/ItemRow.vala:1416 src/Layouts/ItemSidebarView.vala:516
 #: src/Layouts/ProjectRow.vala:704 src/Layouts/SectionBoard.vala:626
-#: src/Layouts/SectionRow.vala:720 src/Views/Project/Project.vala:394
+#: src/Layouts/SectionRow.vala:719 src/Views/Project/Project.vala:394
 msgid "Duplicate"
 msgstr "Dupliser"
 
@@ -3478,25 +3469,25 @@ msgstr "Legg til oppgaver"
 msgid "Load more"
 msgstr "Last mer"
 
-#: src/Layouts/SectionBoard.vala:604 src/Layouts/SectionRow.vala:673
+#: src/Layouts/SectionBoard.vala:604 src/Layouts/SectionRow.vala:672
 #: src/Widgets/SubItems.vala:422
 msgid "completed tasks"
 msgstr "fullførte oppgaver"
 
-#: src/Layouts/SectionBoard.vala:624 src/Layouts/SectionRow.vala:718
+#: src/Layouts/SectionBoard.vala:624 src/Layouts/SectionRow.vala:717
 msgid "Move Section"
 msgstr "Flytt seksjon"
 
-#: src/Layouts/SectionBoard.vala:627 src/Layouts/SectionRow.vala:721
+#: src/Layouts/SectionBoard.vala:627 src/Layouts/SectionRow.vala:720
 msgid "Show Completed Tasks"
 msgstr "Vis fullførte oppgaver"
 
-#: src/Layouts/SectionBoard.vala:630 src/Layouts/SectionRow.vala:724
+#: src/Layouts/SectionBoard.vala:630 src/Layouts/SectionRow.vala:723
 #: src/Widgets/SectionItemRow.vala:186
 msgid "Delete Section"
 msgstr "Slett seksjon"
 
-#: src/Layouts/SectionRow.vala:676 src/Views/Filter.vala:542
+#: src/Layouts/SectionRow.vala:675 src/Views/Filter.vala:542
 msgid "No more tasks"
 msgstr ""
 
